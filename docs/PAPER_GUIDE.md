@@ -93,11 +93,12 @@ R1~R5, C1~C3은 [RESULTS.md](RESULTS.md)의 항목 번호입니다.
 | 26개 과제 구성이 공식 split과 다르다 | 이름에 -Long이 붙은 변형 전체다. 공식 split으로는 long 14개 + medium 12개이며, 공식 long 중 44-46, 76-78, 88-89는 제외됐다. env_id를 표로 명시한다. |
 | 왜 CPU physics인가 | MP로 수집된 demo는 CPU physics다. demo 행동을 재생하면 CPU에서는 8/8 성공, GPU에서는 0/8 성공(2.5~4.5cm 오차)이다. 벤치마크 관련 발견으로 함께 보고한다. |
 
-## 7. 원고 작성 상태
+## 7. 원고 작성 상태 (초안 v0.1, 11/1)
 
 | 부분 | 상태 |
 |---|---|
-| 제목, 초록 초안, 키워드, Method | `paper/main.tex`에 초안 있음 |
-| 나머지 절 | 주석으로 내용만 잡혀 있음 |
-| 수치 | 확정되지 않은 수치는 `\tbd{}`(빨간색)로 표시. 실험 마감(11/5) 후 RESULTS_AUTO.md 기준으로 채움 |
-| 참고문헌 | arXiv 번호만 있음. IJCAS 형식으로 완성 필요 |
+| 전체 | `paper/main.tex`에 영문 초안 v0.1. 모든 절 본문 작성 완료 |
+| 그림 | `paper/figs/`: Fig.1 파이프라인, Fig.2 노트 예시, Fig.3 오류 분해. `paper/make_figs.py`로 다시 생성 가능 |
+| 표 | Table 1 설정, Table 2 RC-Long, Table 3 노트 교체와 통제, Table 4 Long 26개 |
+| 미정 | 진행 중인 실험 결과(C1~C4, B, C, D)와 저자 정보, 참고문헌 저자 목록은 빨간 `\tbd{}`로 표시 |
+| 컴파일 | 서버에 LaTeX이 없어 아직 컴파일하지 못함. Overleaf에서 `paper/` 폴더를 올려 확인 필요 |

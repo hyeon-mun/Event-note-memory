@@ -1,0 +1,7 @@
+RESET
+0 a red cube, a blue cube, a yellow cube.
+60 Gone: a gray square.
+216 Gone: a gray table.
+246 Gone: a gray cabinet.
+342 Gone: a gray book.
+562 Gone: a silver and white eye.

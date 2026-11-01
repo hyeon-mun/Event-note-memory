@@ -1444,3 +1444,50 @@ RESET
 91 Gone: a orange cube.
 106 Gone: a blue square.
 388 Gone: a orange cube.
+RESET
+0 a yellow block.
+28 Gone: a yellow block.
+55 Gone: orange.
+82 Gone: a fuchsia block.
+109 Gone: a teal cube.
+137 Gone: a blue square.
+163 Gone: a red square.
+190 Gone: a lime square.
+302 None
+1105 Gone: a gray robot.
+RESET
+0 a blue square.
+92 Gone: a teal cube.
+183 Gone: yellow.
+274 Gone: a fuchsia square.
+365 Gone: orange.
+456 Gone: a lime block.
+550 Gone: a red square.
+638 Gone: a blue square.
+872 None
+977 Gone: a orange picture.
+987 None
+RESET
+0 a red cube.
+37 Gone: a aqua cube.
+73 Gone: a teal cube.
+110 Gone: a lime square.
+145 Gone: a blue square.
+181 Gone: a maroon book.
+217 Gone: a orange block.
+253 Gone: a red book.
+357 None
+RESET
+0 a pink block.
+73 Gone: a fuchsia square.
+145 Gone: a red square.
+217 Gone: a orange square.
+289 Gone: a teal cube.
+361 Gone: a maroon square.
+434 Gone: a aqua cube.
+505 Gone: a lime block.
+620 None
+RESET
+0 a red cube.
+68 Gone: a maroon.
+135 Gone: a fuchsia block.

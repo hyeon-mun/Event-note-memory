@@ -1612,3 +1612,73 @@ RESET
 RESET
 0 white.
 26 Gone: a gray square.
+339 Gone: gray.
+408 Gone: a gray and black camera.
+557 Gone: a olive dog.
+RESET
+0 a white ball, a red ball, a green ball, a blue ball.
+17 Gone: a gray.
+23 Gone: a gray teapot.
+215 Gone: a olive and white object.
+323 Gone: a gray paper.
+397 Gone: a silver mask.
+442 Gone: a gray and white cat.
+460 Gone: a silver and black dog.
+470 Gone: a gray knife.
+483 None
+RESET
+0 a white ball, a red ball, a blue ball, a green ball.
+34 Gone: gray.
+41 Gone: a gray cube.
+277 Gone: two gray cubes.
+411 Gone: a gray square.
+446 Gone: a gray and black object.
+457 Gone: a silver person.
+524 Gone: a gray knife.
+565 None
+RESET
+0 a white cube.
+105 Gone: gray.
+499 None
+RESET
+0 The table is empty.
+92 Gone: a gray cube.
+303 Gone: a gray paper.
+401 Gone: a maroon face.
+RESET
+0 a red cube, a blue cube, a green cube.
+76 Gone: a gray square.
+149 Gone: a gray hat.
+221 Gone: a gray hat.
+401 Gone: a gray hat.
+533 Gone: a gray dog.
+551 Gone: a silver knife.
+593 Gone: a black knife.
+RESET
+0 a red ball, a green ball, a blue ball.
+42 Gone: a olive square.
+265 Gone: a silver object.
+490 Gone: a silver person.
+497 Gone: a gray robot.
+535 Gone: a gray robot.
+558 Gone: a maroon and white animal.
+584 Gone: silver.
+RESET
+0 a white ball, a green ball, a red ball.
+43 Gone: a olive cube.
+249 Gone: a gray teapot.
+416 Gone: a silver ball.
+497 Gone: a gray dog.
+525 Gone: a gray and white mask.
+597 Gone: a silver and black object.
+RESET
+0 white ball, green, red, blue.
+38 Gone: a gray cube.
+68 Gone: a orange teapot.
+124 Gone: a orange teapot.
+208 Gone: a orange teapot.
+288 Gone: a silver square.
+359 Gone: a silver face.
+393 Gone: a gray and white dog.
+403 Gone: a silver face.
+503 Gone: a gray and white image.

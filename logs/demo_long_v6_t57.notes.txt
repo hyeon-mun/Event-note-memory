@@ -5,3 +5,9 @@ RESET
 RESET
 0 red.
 47 Gone: a red cube.
+348 None
+356 Gone: a silver dog.
+394 Gone: a gray block.
+470 Gone: a silver dog.
+549 Gone: a silver dog.
+597 Gone: a blue cube.

@@ -1504,3 +1504,49 @@ RESET
 61 Gone: yellow.
 71 Gone: a aqua cube.
 370 Gone: a gray cube.
+RESET
+0 a yellow block.
+52 Gone: orange.
+103 Gone: a fuchsia block.
+154 Gone: a red square.
+205 Gone: a aqua cube.
+256 Gone: a teal cube.
+307 Gone: a blue square.
+358 Gone: yellow.
+716 Gone: a orange button.
+895 Gone: a silver sword.
+RESET
+0 a blue button.
+87 Gone: a aqua cube.
+173 Gone: a teal cube.
+259 Gone: a yellow block.
+345 Gone: a orange block.
+431 Gone: a lime block.
+517 Gone: a blue block.
+603 Gone: a red.
+793 Gone: a gray book.
+RESET
+0 The table is empty.
+72 Gone: a orange cube.
+394 Gone: a silver clock.
+406 Gone: a olive knife.
+419 Gone: a gray knife.
+RESET
+0 The table is empty.
+20 Gone: a olive.
+513 None
+565 Gone: a gray toilet.
+RESET
+0 a red ball.
+36 Gone: a orange.
+433 Gone: a silver dog.
+443 Gone: a gray knife.
+RESET
+0 The table is empty.
+77 Gone: a orange.
+79 None
+RESET
+0 The table is empty.
+35 Gone: a gray cube.
+42 Gone: a gray toy.
+202 Gone: a gray teapot.

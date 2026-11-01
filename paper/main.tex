@@ -1,13 +1,16 @@
-%% IJCAS regular paper (6-10 pages, two-column, IJCAS.cls from the 2026-02-19 template)
-%% Status: skeleton + method draft. Numbers marked \tbd{} are filled after the final evals (11/6).
+%% IJCAS regular paper (6-10 pages, two-column; IJCAS.cls from the 2026-02-19 template)
+%% Draft v0.1 (2026-11-01). Red \tbd{} = placeholder for results that are still running (see docs/EXPERIMENTS.md)
+%% or facts to verify. Figures: paper/figs/*.pdf (python paper/make_figs.py).
 \documentclass{IJCAS}
 
 \usepackage{url}
 \usepackage{array,tabularx}
 \usepackage{multicol}
+\usepackage{multirow}
 
 \newcommand{\tbd}[1]{\textcolor{red}{[#1]}}
 \newcommand{\note}[1]{\texttt{\small #1}}
+\newcommand{\pizf}{$\pi_{0.5}$}
 
 %%%% Editorial Information (do not modify)
 \journalvolumn{VV}
@@ -24,14 +27,14 @@
 \author{\tbd{Author names}*}
 
 \begin{abstract}
-Vision-language-action (VLA) policies act on the current observation and therefore fail on tasks whose decisive cue disappears from view long before it is needed.
-We study a lightweight alternative to architectural memory: an event-driven pipeline that detects when something disappears from the scene, describes only the disappeared content with a vision-language model, and appends the resulting short text notes to the instruction of an unmodified $\pi_{0.5}$ policy.
-On the long-horizon RememberColor tasks of MIKASA-Robo-VLA, the notes raise the success rate of the same policy, trained on the same data for the same number of steps, from 0.14 to 0.96/0.94 with three and five candidate colors and from 0.08 to 0.49 with nine.
+Vision-language-action (VLA) policies act on the current observation and therefore fail on manipulation tasks whose decisive cue disappears from view long before it is needed.
+We study a lightweight alternative to architectural memory: an event-driven pipeline that detects when something disappears from the scene, describes only the disappeared content with a small vision-language model, and appends the resulting short text notes to the instruction of an otherwise unmodified $\pi_{0.5}$ policy.
+On the long-horizon RememberColor tasks of the MIKASA-Robo-VLA benchmark, the notes raise the success rate of the same policy, trained on the same demonstrations for the same number of steps, from 0.14 to 0.96 and 0.94 with three and five candidate colors and from 0.08 to 0.49 with nine.
 We decompose the remaining gap to an oracle note (0.87) along three axes.
-Selection: writing only what disappeared removes distractor notes, and swapping note writers at test time changes the success of a fixed policy by up to 24 points.
+Selection: writing only what disappeared removes distractor notes, and changing the note writer of a fixed policy at test time changes its success by up to 24 points.
 Representation: naming colors from measured pixels instead of free-form captions reduces confusions between similar colors from 13 to 5 of 50 episodes.
 Utilization: in the remaining failures the note is correct, yet the policy approaches the wrong object.
-Across \tbd{26} long-horizon tasks, the notes help single-cue recall of colors and shapes, but not tasks that require multiple cues, object tracking, or counting, which delineates the scope of language memory for VLA policies.
+Across 26 long-horizon memory tasks, the notes help single-cue recall of colors and shapes but not tasks that require multiple cues, object tracking, counting, or timing, which delineates where lightweight language memory is and is not sufficient for VLA policies.
 \end{abstract}
 
 \begin{keywords}
@@ -49,68 +52,281 @@ Long-horizon manipulation, memory, partial observability, robot learning, vision
 \runningtitle{2026}{\tbd{Authors}}{Event-Driven Language Memory for Long-Horizon Vision-Language-Action Policies}{xxx}{xxxx}{x}
 
 
+%======================================================================
 \section{INTRODUCTION}
-% 1. Partial observability: decisive cue disappears hundreds of steps before the decision.
-% 2. VLAs condition on the current frame / short history -> cannot solve these tasks (base 0.048 over 26 Long tasks).
-% 3. Prior answers: recurrent/latent memory tokens (muVLA), visual keyframe memory (RePlanMem-VLA), memory banks (MemoryVLA).
-%    Open question: what to remember, in which form, and does the policy use it.
-% 4. Our approach: event-driven text notes, no change to the policy; analysis along Selection / Representation / Utilization.
-% 5. Contributions (4 bullets, see report).
-\tbd{To be written.}
+%======================================================================
+Many manipulation tasks are partially observable in time: the information that determines the correct action is shown once and is no longer visible when the action must be taken.
+A robot that is shown a colored cube, waits while the cube is removed, and must later touch the cube of the same color among several candidates cannot solve the task from its current camera image alone.
+Vision-language-action (VLA) policies such as $\pi_{0.5}$~\cite{pi05} are trained to map the current observation and a language instruction to actions, and they have no mechanism to carry such information across hundreds of control steps.
+On the 26 long-horizon memory tasks we study, a $\pi_{0.5}$ policy fine-tuned without memory reaches a mean success rate of only 0.048.
 
+Recent work adds memory to VLA policies in several forms: latent memory banks~\cite{memoryvla,memoryvlapp}, recurrent memory tokens inside the backbone~\cite{muvla}, visual keyframes selected when the action plan changes~\cite{replanmem}, and histories of past frames~\cite{simplememvla}.
+These approaches change what the policy sees, but it remains difficult to tell \emph{why} a memory-augmented policy fails: because the relevant information was never written, because it was written in a form the policy cannot use, or because the policy does not act on correct information.
+Language memory makes these questions measurable.
+A text note can be read, replaced by the ground truth, or edited at test time without retraining, so each stage can be tested in isolation.
+RoboMME~\cite{robomme} observed that VLM-written language subgoals reach only about a third of the success obtained with ground-truth subgoals; our goal is to understand and reduce such a gap.
+
+We present an event-driven language memory for VLA policies (Fig.~\ref{fig:pipeline}).
+A detector fires when a part of the scene changes while the robot is still, the changed region is cropped and described by a small vision-language model, and only the content that \emph{disappeared} is kept as a short note such as \note{Gone: a aqua cube.}
+The notes are appended to the instruction string; the policy architecture, inputs, and training recipe are unchanged.
+We analyze the pipeline along three axes: \emph{selection} (when and what to write), \emph{representation} (in which words), and \emph{utilization} (whether the policy acts on the note).
+
+Our contributions are:
+\begin{itemize}
+\item An event-driven semantic memory pipeline that preserves task-relevant information disappearing from view, without modifying the VLA architecture.
+\item Controlled evidence that selective writing and normalized attribute names change downstream decisions, including test-time note swaps on a fixed policy, and that redundant or inconsistent notes degrade the policy.
+\item An analysis of the gap between memory correctness and action success using generated notes, oracle notes, content-swapped notes, and visual memory.
+\item An evaluation on 26 long-horizon memory tasks with one joint policy per method, characterizing where lightweight language memory helps and where it does not.
+\end{itemize}
+
+%======================================================================
 \section{RELATED WORK}
+%======================================================================
 \subsection{Memory-augmented VLA policies}
-\tbd{MemoryVLA, MemoryVLA++, SimpleMemVLA, muVLA (2606.12497).}
-\subsection{Event-driven memory selection}
-\tbd{RePlanMem-VLA (2610.22556): action-plan disagreement, visual keyframes, detection metrics; KEMO, EventVLA.}
-\subsection{Language memory for robots}
-\tbd{RoboMME (2603.04639): VLM-written language memory 33\% vs oracle 84\%.}
-\subsection{Memory benchmarks}
-\tbd{MIKASA-Robo, MIKASA-Robo-VLA (2610.00604).}
+MemoryVLA~\cite{memoryvla} and MemoryVLA++~\cite{memoryvlapp} maintain perceptual and cognitive memory banks queried by a diffusion action expert. $\mu$VLA~\cite{muvla} adds recurrent memory tokens to a pretrained VLA backbone. SimpleMemVLA~\cite{simplememvla} provides a timestamped visual history to a video-capable backbone. Non-VLA visuomotor policies with memory include GMP~\cite{gmp} and Chameleon~\cite{chameleon}. These methods report results on the standard MIKASA-Robo RememberColor tasks~\cite{mikasa} with different backbones, training sets, and checkpoint selection; we therefore compare against our own baselines under identical conditions and list published numbers only for reference.
 
+\subsection{Event-driven memory selection}
+RePlanMem-VLA~\cite{replanmem} writes a visual keyframe when overlapping action-chunk predictions disagree and evaluates the detection and retention of memory-relevant frames on MIKASA-Robo-VLA. Our trigger is an observation change rather than a plan change, and we store a text description of the removed content rather than the frame. We reimplement keyframe memory with our trigger as a baseline (Section~\ref{sec:setup}).
+
+\subsection{Language memory for robot policies}
+RoboMME~\cite{robomme} benchmarks fourteen memory variants on top of $\pi_{0.5}$ and finds that language subgoals are strong when accurate (84\% with oracle subgoals) but weak when generated by a VLM (33\%). We study the same kind of gap for event notes and attribute it to selection, representation, and utilization.
+
+\subsection{Benchmarks}
+MIKASA-Robo~\cite{mikasa} and its language-conditioned extension MIKASA-Robo-VLA~\cite{mikasavla} provide 90 manipulation tasks grouped by memory type, with 250 demonstrations per task. The reference $\pi_{0.5}$ policy of~\cite{mikasavla}, fine-tuned on 14 tasks, reaches a mean success of 0.211.
+
+%======================================================================
 \section{METHOD}
 \label{sec:method}
-The policy is $\pi_{0.5}$ fine-tuned with LeRobot; its architecture, inputs (top and wrist cameras, proprioception), and hyperparameters are identical with and without memory.
-Memory enters only through the instruction string: at every step the policy receives
+%======================================================================
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{figs/fig_pipeline.pdf}
+\caption{Event-driven language memory. Notes are written only at change events, only for the content that disappeared, and are appended to the instruction of an unmodified $\pi_{0.5}$ policy. The same pipeline labels the training demonstrations and runs online at test time.}
+\label{fig:pipeline}
+\end{figure*}
+
+The policy is $\pi_{0.5}$~\cite{pi05} fine-tuned with LeRobot~\cite{lerobot}. Its observations are a top and a wrist camera image ($128\times128$) and the proprioceptive state, and memory enters only through the instruction string. At every step the policy receives
 \begin{center}
 \note{\{instruction\} Notes: (1) $n_1$ (2) $n_2$ \dots}
 \end{center}
-where $n_1, n_2, \dots$ are the most recent notes written by the pipeline below. The same pipeline labels the demonstrations for training and runs online at test time.
+where $n_1, n_2, \dots$ are the notes written so far. The same pipeline is applied to the demonstrations to build the training instructions and runs online during evaluation.
 
-\subsection{Event detection (when to write)}
-Let $I_t$ be the top-camera image and $q_t$ the full proprioceptive state. A step is an event candidate when the robot has been still for the last $W{=}5$ steps ($\|q_t - q_{t-1}\|_\infty < 10^{-3}$), at least $N{=}8$ pixels changed by more than $\delta{=}40$ intensity levels with respect to $I_{t-1}$, and the number of changed pixels exceeds $\rho{=}4$ times its average over the previous $W$ steps. Requiring stillness filters out changes caused by the robot itself. The note is written once the scene has settled (change below threshold or $W$ steps). The rule uses no task labels.
-\subsection{Change localization (where to look)}
-The largest connected component of changed pixels is cropped with a square margin and upsampled to $384\times384$ (nearest neighbor). Objects of 3$\times$3 pixels in the $128\times128$ camera become legible to the VLM, and unchanged regions (robot, table) cannot enter the note.
-\subsection{Memory selection (what to keep)}
-SmolVLM2-2.2B captions the crop before and after the event separately. Content that appeared is still visible to the policy and is not stored; only the before side is kept as \note{Gone: X.}, and notes whose $X$ is empty or the table are dropped. A scene note is written once at $t{=}0$.
-\subsection{Memory representation (how to write)}
-VLM color names conflate similar colors (maroon/red, orange/yellow, teal/cyan). We replace the first color word by a measured name: the mean RGB of the 25\% most saturated pixels of the removed region, mapped to the nearest of the 16 HTML basic colors plus orange. Only the first object is kept.
-\subsection{Memory utilization (how the policy reads it)}
-Notes are kept in write order; a note identical to the previous one is dropped, and the last $K{=}8$ are appended to the instruction. The policy is fine-tuned on demonstrations whose instruction at each frame contains the notes written up to that frame.
+\subsection{Event detection}
+Let $I_t$ be the top-camera image and $q_t$ the proprioceptive state. Step $t$ is an event when
+(i) the robot has been still for the last $W=5$ steps, i.e. $\|q_{s}-q_{s-1}\|_\infty<10^{-3}$ for $s\in(t-W,t]$;
+(ii) at least $N=8$ pixels changed by more than $\delta=40$ intensity levels with respect to $I_{t-1}$; and
+(iii) this number exceeds $\rho=4$ times its mean over the previous $W$ steps.
+Condition (i) suppresses changes caused by the robot itself. The note is written once the scene has settled. The rule uses no task information. At test time, policy outputs below a small dead band are treated as still, which reproduces the event structure of the demonstrations.
 
-\section{EXPERIMENTAL SETUP}
-% tasks: RC-Long t50-52 (main), 26 "-Long" variants (t50-72, t82-84; 14 official long + 12 medium split) -> state as custom subset with env IDs
-% physics: MP-collected demos are CPU physics; replaying demo actions: CPU 8/8, GPU 0/8 -> evaluate on CPU
-% training: 250 demos per task, joint training, bf16, chunk 10, execute 5, batch 16, 20k (RC) / 90k (26 tasks)
-% eval: 50 episodes per task (seeds fixed), RC9 150 episodes, Wilson 95% CI; metrics: success and selection accuracy (closest-approached cube)
-% baselines: no memory, oracle note, visual memory (crop as third camera), \tbd{frame-history baseline}
-\tbd{To be written.}
+\subsection{Change localization}
+The largest connected component of changed pixels defines the event region. A square crop around it is taken from the frames before and after the event and upsampled to $384\times384$ with nearest-neighbor interpolation. A cue cube that covers $3\times3$ pixels of the $128\times128$ camera becomes legible to the captioner, and unchanged parts of the scene, including the robot, cannot enter the note.
 
-\section{RESULTS AND ANALYSIS}
-\subsection{Main results}
-\tbd{Table 1: RC-Long base / v2 / v3 / v4 / v6 / oracle.}
-\subsection{Selection}
-\tbd{v3 vs v4, test-time note swap.}
+\subsection{Captioning and selection}
+SmolVLM2-2.2B~\cite{smolvlm} captions the before and after crops separately with the prompt \emph{``List the objects in the image with precise color names, e.g. `a cyan cube, a maroon cube'. The wooden surface is not an object. If there are no objects, answer `nothing'.''}
+Captioning the two crops jointly was unreliable about which content appeared and which disappeared.
+Content that appeared remains visible to the policy and is therefore not stored.
+Only the before side is kept, as \note{Gone: X.}, and notes whose $X$ is empty or the table surface are dropped.
+A scene note of the full first frame is written once at $t=0$.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{figs/fig_example.pdf}
+\caption{Notes written for a RememberColor9-Long demonstration (cue: aqua cube). The change between $t=99$ and $t=101$ triggers an event; the zoomed crops show the removed cue. v3: \note{Change: a cyan cube, a maroon cube -> brown.} (the captioner splits the shaded faces into two objects); v4: \note{Gone: a cyan cube, a maroon cube.}; v6: \note{Gone: a aqua cube.} At the decision the v6 policy receives \note{Observe the cube's color, wait, then touch the cube of the same color. Notes: (1) a blue cube. (2) Gone: a aqua cube.}}
+\label{fig:example}
+\end{figure*}
+
 \subsection{Representation}
-\tbd{v4 vs v6 error decomposition; v5 vocabulary lesson.}
+The captioner identifies color families reliably but uses one name for pairs such as maroon and red, orange and yellow, or teal and cyan.
+We therefore replace the first color word of a note by a measured name: the mean RGB of the 25\% most saturated pixels of the removed region, mapped to the nearest of the 16 HTML basic colors plus orange.
+A coarse, standard vocabulary keeps the measured name stable between the demonstrations and the online rollouts; a finer vocabulary (148 CSS colors) produced different names for the same cue under small rendering differences.
+Only the first object of a note is kept, because the captioner occasionally describes the shaded top and side faces of one cube as two objects (Fig.~\ref{fig:example}).
+
+\subsection{Note memory and training}
+Notes are kept in write order. A note identical to the previous one is dropped, and the last $K=8$ notes are appended to the instruction.
+For training, the instruction of every demonstration frame contains the notes written up to that frame, and $\pi_{0.5}$ is fine-tuned on these instructions with the standard objective and hyperparameters.
+
+%======================================================================
+\section{EXPERIMENTAL SETUP}
+\label{sec:setup}
+%======================================================================
+\subsection{Tasks}
+We use the \emph{Long} variants of MIKASA-Robo-VLA~\cite{mikasavla}, in which the cue is followed by a delay of 50--450 steps before the decision. The main analysis uses RememberColor3/5/9-Long (RC3/5/9-L): a cue cube is shown, removed, and after the delay 3, 5, or 9 candidate cubes appear; the robot must touch the one with the cue color. The generality study uses all 26 environments whose names carry the \texttt{-Long} suffix (Table~\ref{tab:long}), which cover object, capacity, sequential, tracking, and temporal memory. This is a custom subset: by the official split, 14 of them belong to the long and 12 to the medium split, and the official long tasks BatteriesChecker, TraceShapeSeq, and GatherAndRecall are not included.
+
+\subsection{Physics backend}
+The demonstrations of these tasks were collected by a motion planner with the CPU physics backend. Replaying the recorded actions with the original seeds succeeds in 8/8 episodes on the CPU backend and 0/8 on the GPU backend used by the canonical evaluation, with trajectory deviations of 2.5--4.5\,cm caused by different inverse-kinematics solvers. We therefore evaluate on the CPU backend, consistent with the data.
+
+\subsection{Training and evaluation}
+\begin{table}[!t]
+\caption{Training and evaluation protocol (identical for all methods).}
+\label{tab:setup}
+\begin{center}
+{\footnotesize
+\begin{tabular}{ll}
+\hline
+Policy & $\pi_{0.5}$ (\texttt{pi05\_base}), LeRobot, bf16 \\
+Inputs & top + wrist RGB $128\times128$, proprioception \\
+Actions & chunk 10, execute 5, end-effector delta pose \\
+Data & 250 demonstrations per task \\
+Training & joint over a task set, batch 16 \\
+ & RC-L (3 tasks): 20k steps; Long-26: 90k steps \\
+Evaluation & 50 episodes per task, fixed seeds \\
+ & RC9-L: 150 episodes for the main models \\
+Checkpoint & last checkpoint (no best-checkpoint selection) \\
+Physics & CPU backend (matches demonstrations) \\
+Metrics & success; for RC tasks also the approached cube \\
+\hline
+\end{tabular}
+}
+\end{center}
+\end{table}
+Table~\ref{tab:setup} summarizes the protocol. One policy is trained jointly per task set and method. We report success rates with Wilson 95\% confidence intervals. For the RememberColor tasks we additionally record which candidate cube the gripper approached most closely, which separates the choice of the target from the execution of the touch.
+
+\subsection{Compared methods}
+All methods share data, training steps, and evaluation; only the memory differs.
+\begin{itemize}
+\item \textbf{No memory}: the original instruction.
+\item \textbf{Notes v2--v6}: successive versions of our pipeline (Table~\ref{tab:rc}). v2 captions the full frame with SmolVLM2-500M at each event; v3 captions zoomed before/after crops as \note{Change: X -> Y.}; v4 keeps only the removed side (selection); v5 and v6 add measured color names with a fine (148) and a coarse (17) vocabulary (representation).
+\item \textbf{v7}: v6 without the scene note at $t=0$.
+\item \textbf{Periodic captions}: a full-frame scene caption every 50 steps with the same captioner, without event detection or selection.
+\item \textbf{Visual memory}: the zoomed crops (\emph{crop}) or full frames (\emph{keyframe}, as in RePlanMem-VLA~\cite{replanmem}) written at our events are tiled into an additional camera image.
+\item \textbf{Oracle note}: the true cue color name appended to the instruction (upper bound for text memory).
+\end{itemize}
+
+%======================================================================
+\section{RESULTS AND ANALYSIS}
+%======================================================================
+\subsection{Main result on RememberColor-Long}
+\begin{table}[!t]
+\caption{Success rate on RememberColor-Long (one joint policy per row, 20k steps, 50 episodes per task; RC9-L also with 150 episodes and Wilson 95\% CI).}
+\label{tab:rc}
+\begin{center}
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccc}
+\hline
+Memory & RC3-L & RC5-L & RC9-L & RC9-L ($n{=}150$) \\
+\hline
+None & 0.14 & 0.14 & 0.06 & 0.08 [0.05, 0.13] \\
+Visual (crop) & 0.12 & 0.12 & 0.14 & -- \\
+Notes v2 & 0.86 & 0.86 & 0.50 & 0.50 [0.42, 0.58] \\
+Notes v3 & 0.96 & 0.84 & 0.38 & 0.41 [0.33, 0.49] \\
+Notes v4 & 0.94 & 0.90 & 0.54 & 0.49 [0.41, 0.57] \\
+Notes v5 & 1.00 & 0.92 & 0.50 & -- \\
+Notes v6 & 0.96 & 0.94 & 0.48 & 0.49 [0.41, 0.57] \\
+\hline
+Oracle note & 0.96 & 0.98 & 0.80 & 0.87 [0.80, 0.91] \\
+\hline
+\end{tabular}
+}
+\end{center}
+\end{table}
+Table~\ref{tab:rc} shows that event notes turn tasks the policy cannot solve into tasks it solves almost perfectly with three and five colors (0.14 to 0.96 and 0.94), and raise the nine-color task from 0.08 to 0.49; the confidence intervals do not overlap.
+The policy without memory performs at chance (1/3, 1/5, 1/9 for an always-reaching policy, lower when it does not touch).
+The visual crop memory, which contains the same cue image, stays at the no-memory level: inspection of the online memory image confirmed that it was written correctly, so the policy ignores the additional camera input under our data and training budget.
+The note versions v2, v4, and v6 are statistically indistinguishable on RC9-L; we therefore analyze how the versions change the \emph{types} of errors rather than claiming that a later version is better.
+
+Since the delay before the decision is drawn per episode, we also binned the episodes by delay (50--183, 184--316, 317--450 steps). The success of the note policy does not depend on the delay within the trained range (RC9-L v6: 0.48, 0.42, 0.57; oracle: 0.86, 0.87, 0.87), as expected from a memory that is written once and kept. \tbd{Out-of-range delay of 1000 steps for all memory types (experiment B).}
+
+\subsection{Selection}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figs/fig_errors.pdf}
+\caption{Which cube the policy approached on RC9-L (50 episodes): the cue color, the other member of a pair the captioner names alike (red/maroon, yellow/orange, cyan/teal), or another cube.}
+\label{fig:errors}
+\end{figure}
+\begin{table}[!t]
+\caption{Test-time note swaps on RC9-L (50 episodes): the policy is fixed and only the note writer changes. Right / pair / other as in Fig.~\ref{fig:errors}.}
+\label{tab:swap}
+\begin{center}
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llcc}
+\hline
+Trained with & Tested with & Success & Right / pair / other \\
+\hline
+v4 & v4 & 0.54 & 33 / 13 / 4 \\
+v4 & v3 (adds appeared content) & 0.30 & 17 / 9 / 24 \\
+v3 & v3 & 0.38 & 22 / 8 / 20 \\
+v3 & v4 (removes it) & 0.46 & 27 / 9 / 14 \\
+\hline
+v6 & no notes & \tbd{C1} & \tbd{} \\
+v6 & wrong cue color & \tbd{C1} & \tbd{} \\
+v6 & true cue color & \tbd{C1} & \tbd{} \\
+\hline
+\end{tabular}
+}
+\end{center}
+\end{table}
+v3 notes record both sides of every change. When the candidates appear, the note lists all nine candidate colors (\note{Change: a wooden surface -> a red cube, a green cube, \dots}), so the instruction contains every color word at the moment of the decision.
+Removing this appeared content (v4) reduces approaches to unrelated cubes from 20 to 4 of 50 (Fig.~\ref{fig:errors}).
+The effect is causal for a fixed policy (Table~\ref{tab:swap}): adding the appeared content at test time to the v4 policy lowers its success from 0.54 to 0.30, and removing it from the v3 policy raises its success from 0.38 to 0.46.
+Since v3 and v4 also differ in sentence form, the swap measures the joint effect of content and format.
+\tbd{Periodic captions on the 26 tasks (C2): effect of event-triggered writing versus writing at fixed intervals.}
+
+\subsection{Representation}
+With v4, 13 of 50 episodes end at the cube that forms a similar-color pair with the cue; both captioners call maroon ``red'' and orange ``yellow'', so the note cannot separate them.
+Measured color names (v6) reduce these confusions to 5.
+The finer CSS vocabulary (v5) also removed pair confusions but introduced different names for the same color in the demonstrations and in online rollouts (for example ``blue'' and ``mediumblue''), and approaches to unrelated cubes rose to 18.
+A representation must therefore be both discriminative for the task and stable between training and deployment.
+
 \subsection{Utilization}
-\tbd{v6 failures with correct notes; v7 (no scene note); visual memory; oracle gap; wrong/empty-note controls.}
-\subsection{Memory types across long-horizon tasks}
-\tbd{Table 2: 26 tasks by memory type.}
+v6 reduces pair confusions but not the total error.
+In all 17 v6 episodes in which the policy approached a wrong cube, the cue note named the correct color.
+Most of these errors are among blue, aqua, and teal, and in these episodes the scene note at $t=0$ describes the cue as ``a blue cube'' while the measured note says ``aqua'' or ``teal''.
+The policy thus receives two inconsistent descriptions of the same object. \tbd{v7 without the scene note (C4).}
+The oracle note, which names the cue exactly, reaches 0.87 on RC9-L; in its 50 standard episodes the policy still approached an unrelated cube seven times, and in two further episodes it approached the right cube without completing the touch.
+Together with the visual memory that is written correctly but ignored, these results indicate that, once the note is correct, the remaining bottleneck lies in grounding the remembered attribute to the current candidates. \tbd{Content-swap controls (Table~\ref{tab:swap}, C1): if the policy follows a wrong color, it reads the note.}
 
+\subsection{Memory types across 26 long-horizon tasks}
+\begin{table}[!t]
+\caption{Success on the 26 \texttt{-Long} tasks (one joint policy per method, 50 episodes per task). \tbd{Final columns at equal steps; the v6 column currently shows the 45k checkpoint against the 90k baseline.}}
+\label{tab:long}
+\begin{center}
+{\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llcc}
+\hline
+Family (memory type) & Variants & No memory & Notes v6 \\
+\hline
+RememberColor (object) & 3 / 5 / 9 & .18 / .16 / .06 & .74 / .68 / .28 \\
+RememberShape (object) & 3 / 5 / 9 & .08 / .06 / .06 & .38 / .26 / .16 \\
+ShapeAndColor (object) & 3x2 / 3x3 / 5x3 & .04 / .04 / .00 & .32 / .26 / .18 \\
+BunchOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 \\
+SeqOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / \tbd{} \\
+ChainOfColors (sequential) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / \tbd{} / \tbd{} \\
+ShellGame (tracking) & Touch / Lamp & .16 / .14 & \tbd{} / \tbd{} \\
+BlinkCount (temporal) & E / M / H & .02 / .00 / .04 & \tbd{} \\
+TimedTransfer (temporal) & E / M / H & .00 / .00 / .22 & \tbd{} \\
+\hline
+Mean (26 tasks) & & 0.048 & \tbd{} \\
+\hline
+\end{tabular}
+}
+\end{center}
+\end{table}
+Table~\ref{tab:long} reports one policy trained jointly on all 26 tasks with and without notes.
+Without memory, $\pi_{0.5}$ reaches 0.048 on average.
+Notes help all single-cue object tasks: colors, shapes, and their combinations \tbd{final numbers}.
+They do not help tasks that require several cues at once (BunchOfColors, SeqOfColors) or in order (ChainOfColors).
+For ChainOfColors3 we had verified separately that even the true color sequence in the instruction yields 0/50, so that family is limited by the multi-touch skill rather than by memory.
+In tracking tasks (ShellGame) the shuffle is a continuous motion of objects that remain visible, which our event trigger does not describe; in BlinkCount each blink produces a note but the window of eight notes truncates long sequences; and in TimedTransfer the frequent lamp and object changes produce about 97 events per episode, most of which are noise.
+\tbd{Comparison of the five memory types (no memory, v6, v7, periodic captions, keyframes) at 45k steps on all 26 tasks.}
+
+\subsection{Discussion and limitations}
+Event notes are effective when a single attribute of a single object must be carried across a long delay, and they make the failure modes of a memory-augmented policy observable.
+The measured color names are specific to color attributes and are not a general representation.
+The 26-task results come from one training seed per method; for the main RememberColor comparison the confidence intervals are reported over 150 episodes.
+Memory that must track continuous motion, count, or measure elapsed time requires structured state rather than event descriptions, which we leave to future work, together with object-centric and learned retrieval memories.
+\tbd{Interference experiment (C) and event-selection analysis (D) if completed.}
+
+%======================================================================
 \section{CONCLUSION}
-\tbd{To be written.}
+%======================================================================
+We showed that a VLA policy can solve long-horizon memory tasks it otherwise cannot, without architectural changes, by appending short notes about what disappeared from the scene.
+Selecting only removed content and naming attributes in a stable vocabulary are necessary for this, but not sufficient: with correct notes, a remaining gap lies in how the policy grounds the remembered attribute in the current scene.
+Text memory makes each of these stages measurable, which we hope will help design memories that go beyond single-cue recall.
 
+%======================================================================
 \section*{DECLARATIONS}
 \subsection*{Conflict of Interest}
 The authors declare that there is no competing financial interest or personal relationship that could have appeared to influence the work reported in this paper.
@@ -119,16 +335,27 @@ The authors declare that there is no competing financial interest or personal re
 \subsection*{Funding}
 \tbd{}
 \subsection*{Data Availability}
-\tbd{}
+\tbd{Code, note datasets, and evaluation logs: repository link.}
 \subsection*{Use of AI Tools}
-% Required by IJCAS: must be placed immediately before the References section. Fill in truthfully.
-\tbd{The authors used [tool] for [role]. The authors remain fully responsible for the content.}
+% Required by IJCAS: immediately before the References. Fill in truthfully.
+\tbd{The authors used [tool] for [role]. The authors remain fully responsible for the content of the manuscript.}
 
+%======================================================================
+% References: IJCAS numbered style. Author lists marked \tbd must be checked against the original papers.
 \begin{reference}
-\bibitem{mikasavla} \tbd{MIKASA-Robo-VLA, arXiv:2610.00604, 2026.}
-\bibitem{replanmem} \tbd{RePlanMem-VLA, arXiv:2610.22556, 2026.}
-\bibitem{muvla} \tbd{$\mu$VLA, arXiv:2606.12497, 2026.}
-\bibitem{robomme} \tbd{RoboMME, arXiv:2603.04639, 2026.}
+\bibitem{pi05} Physical Intelligence \tbd{K. Black et al.}, ``$\pi_{0.5}$: A vision-language-action model with open-world generalization,'' \textit{arXiv preprint} arXiv:2504.16054, 2025.
+\bibitem{lerobot} R. Cadene \tbd{et al.}, ``LeRobot: State-of-the-art machine learning for real-world robotics in PyTorch,'' [Online]. Available: https://github.com/huggingface/lerobot, 2024.
+\bibitem{smolvlm} A. Marafioti \tbd{et al.}, ``SmolVLM: Redefining small and efficient multimodal models,'' \textit{arXiv preprint} arXiv:2504.05299, 2025.
+\bibitem{mikasa} E. Cherepanov \tbd{et al.}, ``Memory, benchmark \& robots: A benchmark for solving complex tasks with reinforcement learning,'' \textit{Proc. of International Conference on Learning Representations (ICLR)}, 2026.
+\bibitem{mikasavla} \tbd{Authors}, ``MIKASA-Robo-VLA: Benchmarking memory in VLA models for long-horizon manipulation,'' \textit{arXiv preprint} arXiv:2610.00604, 2026.
+\bibitem{replanmem} \tbd{Authors}, ``When plans change, remember: Replanning-guided visual memory for vision-language-action models,'' \textit{arXiv preprint} arXiv:2610.22556, 2026.
+\bibitem{muvla} E. Cherepanov \tbd{et al.}, ``$\mu$VLA: On recurrent memory for partially observable manipulation in VLA models,'' \textit{arXiv preprint} arXiv:2606.12497, 2026.
+\bibitem{robomme} \tbd{Y. Dai et al.}, ``RoboMME: Benchmarking and understanding memory for robotic generalist policies,'' \textit{Proceedings of Machine Learning Research}, vol. 306, \tbd{pages}, 2026.
+\bibitem{memoryvla} \tbd{Authors}, ``MemoryVLA: Perceptual-cognitive memory in vision-language-action models for robotic manipulation,'' \textit{Proc. of International Conference on Learning Representations (ICLR)}, 2026, arXiv:2508.19236.
+\bibitem{memoryvlapp} \tbd{Authors}, ``MemoryVLA++: Temporal modeling via memory and imagination in vision-language-action models,'' \textit{arXiv preprint} arXiv:2606.09827, 2026.
+\bibitem{simplememvla} \tbd{Authors}, ``SimpleMemVLA,'' \textit{arXiv preprint} arXiv:2609.05533, 2026. \tbd{full title}
+\bibitem{gmp} \tbd{Gao, Liu, Li, Song}, ``Gated memory policy: In-context memorization and adaptation,'' \textit{arXiv preprint} arXiv:2604.18933, 2026.
+\bibitem{chameleon} \tbd{Authors}, ``Chameleon: Control-indexed prospective memory for visuomotor manipulation,'' \textit{arXiv preprint} arXiv:2603.24576, 2026.
 \end{reference}
 
 \end{document}
