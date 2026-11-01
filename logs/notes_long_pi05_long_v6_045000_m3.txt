@@ -1503,3 +1503,23 @@ RESET
 94 Gone: a gray ball.
 188 Gone: three olive mugs.
 250 Gone: three olive mugs.
+374 Gone: three olive mugs.
+403 Gone: a gray square.
+464 Gone: a silver person.
+468 Gone: a gray face.
+527 Gone: a gray dog.
+RESET
+0 a white ball, a red ball, a green ball, a blue ball.
+20 Gone: a gray ball.
+374 Gone: a silver paper.
+460 Gone: a gray sword.
+RESET
+0 white ball, green, red, blue.
+59 Gone: a gray square.
+165 Gone: three maroon cubes.
+228 Gone: three maroon cubes.
+270 Gone: three maroon cubes.
+359 Gone: a silver mug.
+RESET
+0 a red cube, a green cube, a blue cube.
+30 Gone: a gray cube.

@@ -1352,3 +1352,24 @@ RESET
 193 Gone: a orange block.
 257 Gone: a yellow block.
 321 Gone: a blue block.
+628 Gone: a white face.
+640 Gone: a gray book.
+RESET
+0 a blue button.
+76 Gone: a aqua cube.
+151 Gone: a maroon square.
+226 Gone: a teal cube.
+301 Gone: a fuchsia square.
+376 Gone: yellow.
+535 Gone: a gray cube.
+657 Gone: a silver dog.
+817 Gone: a olive mask.
+905 Gone: a gray and white image.
+926 None
+937 Gone: a olive wooden surface.
+RESET
+0 a red cube.
+94 Gone: a red.
+187 Gone: a fuchsia block.
+280 Gone: a blue square.
+373 Gone: a maroon heart.

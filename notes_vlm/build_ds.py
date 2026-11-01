@@ -9,20 +9,25 @@ from notes import color_note, gone_note, measured_color, BURST, ChangeNoteWriter
 
 tid, src, dst = int(sys.argv[1]), sys.argv[2], sys.argv[3]
 v = int(sys.argv[4]) if len(sys.argv) > 4 else 1
-v6 = v == 6                                                     # v6 = v5 with the HTML colour vocabulary, first object only
-v5 = v in (5, 6)                                                     # v5 = v4 + measured colour name
-v4, v = v in (4, 5, 6), 3 if v in (4, 5, 6) else v                   # v4 = v3 captions, only the 'gone' side kept
+p8 = v == 8                                                     # v8 = periodic baseline: full-frame scene caption every PERIOD steps
+v7 = v == 7                                                     # v7 = v6 without the t=0 scene note
+v6 = v in (6, 7)                                                # v6 = v5 with the HTML colour vocabulary, first object only
+v5 = v in (5, 6, 7)                                                  # v5 = v4 + measured colour name
+v4, v = v in (4, 5, 6, 7), 3 if v in (4, 5, 6, 7, 8) else v          # v4 = v3 captions, only the 'gone' side kept
+PERIOD = 50
 mm = f"/data/workspaces/mikasa/data_mikasa_robo/mm/t{tid:02d}"
 top = np.load(f"{mm}/top.npy", mmap_mode="r"); state = np.load(f"{mm}/state.npy")
 st, L = np.load(f"{mm}/ep_start.npy"), np.load(f"{mm}/ep_len.npy")
 base = pq.read_table(f"{src}/meta/tasks.parquet").to_pandas().index[0]
 
-ev_json = f"{os.path.dirname(dst.rstrip('/'))}/t{tid:02d}_events{f'_v{v}' if v > 1 else ''}.json"
+ev_json = f"{os.path.dirname(dst.rstrip('/'))}/t{tid:02d}_events{'_v8' if p8 else f'_v{v}' if v > 1 else ''}.json"
 cache = {}                                                       # captions are deterministic: reuse earlier ones
 if os.path.exists(ev_json):
     cache = {(int(e), t): c for e, v in json.load(open(ev_json)).items() for t, c in v}
 ev = {e: episode_events(top[st[e]:st[e] + L[e]], state[st[e]:st[e] + L[e], :None if v == 3 else 3], v) for e in range(len(L))}
 before = {}
+if p8:
+    ev = {e: [(t, None, None) for t in range(0, int(L[e]), PERIOD)] for e in range(len(L))}
 if v == 3:                                                       # (t, frame before the change) -> t
     before = {(e, t): (tb, m) for e in ev for t, tb, m in ev[e]}
     ev = {e: [x[0] for x in ev[e]] for e in ev}
@@ -30,7 +35,7 @@ flat = [(e, t) for e in ev for t in ev[e]]
 todo = [k for k in flat if k not in cache]
 print("events/episode", np.mean([len(v) for v in ev.values()]), "total", len(flat), "to caption", len(todo), flush=True)
 if todo and v == 3:
-    items = [(top[st[e] + t], top[st[e] + before[(e, t)][0]] if t > 0 else None, before[(e, t)][1]) for e, t in todo]
+    items = [(top[st[e] + t], top[st[e] + before[(e, t)][0]] if t > 0 and not p8 else None, before[(e, t)][1]) for e, t in todo]
     cache.update(zip(todo, ChangeNoteWriter()(items)))
 elif todo:
     cache.update(zip(todo, NoteWriter()([top[st[e] + t] for e, t in todo])))
@@ -44,6 +49,9 @@ if v4:
 if v5:
     notes = {e: [(t, color_note(n, measured_color(top[st[e] + t], top[st[e] + before[(e, t)][0]], before[(e, t)][1], "html" if v6 else "css4") if t > 0 else None, v6))
                  for t, n in x] for e, x in notes.items()}
+
+if v7:
+    notes = {e: [(t, n) for t, n in x if t > 0] for e, x in notes.items()}
 
 # per-frame task strings
 task_of = {}

@@ -117,9 +117,9 @@ class RemoteRunner:
         self.conn = Client(("127.0.0.1", self.port), authkey=b"seqpol")
         self.note = note
 
-    def reset(self, instruction, tid=None):
+    def reset(self, instruction, tid=None, swap=""):
         self.instr, self.tid, self.t = instruction, tid, 0
-        self.conn.send(("reset", "")); self.conn.recv()
+        self.conn.send(("reset", swap or "")); self.conn.recv()
 
     def act(self, obs):
         rgb = obs["rgb"][0].cpu().numpy(); prop = obs["proprio"][0].float().cpu().numpy()
@@ -148,6 +148,10 @@ class RemoteRunner:
         return torch.from_numpy(np.frombuffer(b, dtype=dt).reshape(shape).copy())
 
 
+SWAP = os.environ.get("NOTE_SWAP", "")                   # "oracle" / "wrong": replace the colour of online "Gone:" notes
+HTML_NAMES = ["red", "lime", "blue", "yellow", "fuchsia", "aqua", "maroon", "orange", "teal"]   # env colour index -> v6 vocabulary
+
+
 def run_task(runner, tid, n_eps, start_seed, log=None, ep_lo=0, sim_backend="gpu", video_dir=None):
     tt = task_table()[tid]
     if sim_backend == "auto":     # physics consistent with how the demos were collected (MP: CPU, PPO: GPU)
@@ -163,7 +167,14 @@ def run_task(runner, tid, n_eps, start_seed, log=None, ep_lo=0, sim_backend="gpu
         if isinstance(instr, (list, tuple)):
             instr = instr[0]
         runner.oracle = info.get("oracle_info")
-        runner.reset(instr, tid)
+        swap = ""
+        u = env.unwrapped
+        if SWAP and hasattr(u, "cubes") and hasattr(u, "true_color_indices"):   # note-content controls (NOTE_SWAP)
+            true = int(u.true_color_indices.reshape(-1)[0])
+            k = true if SWAP == "oracle" else np.random.RandomState(i).choice([c for c in sorted(u.cubes) if c != true])
+            swap = HTML_NAMES[int(k)]
+        if swap: runner.reset(instr, tid, swap)
+        else: runner.reset(instr, tid)
         ok, n, frames = False, 0, []
         for _ in range(int(env.max_episode_steps)):
             if video_dir:

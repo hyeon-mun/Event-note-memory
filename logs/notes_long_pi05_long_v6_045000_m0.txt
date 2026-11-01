@@ -1724,3 +1724,18 @@ RESET
 117 Gone: a orange square.
 146 Gone: a red square.
 473 None
+RESET
+0 a red cube.
+96 Gone: a aqua cube.
+191 Gone: a maroon book.
+286 Gone: a orange block.
+381 Gone: a blue block.
+476 Gone: red.
+871 Gone: a gray book.
+RESET
+0 a pink block.
+100 Gone: a fuchsia block.
+199 Gone: a lime square.
+298 Gone: a orange square.
+403 Gone: a maroon.
+496 Gone: a blue square.

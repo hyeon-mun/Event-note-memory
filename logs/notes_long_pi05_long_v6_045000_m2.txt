@@ -1413,3 +1413,23 @@ RESET
 806 Gone: a silver dog.
 811 Gone: a gray toilet.
 914 Gone: a silver elephant.
+RESET
+0 a pink block.
+65 Gone: a fuchsia square.
+129 Gone: a teal cube.
+194 Gone: a lime square.
+257 Gone: a blue cube.
+321 Gone: a maroon square.
+385 Gone: a aqua cube.
+449 Gone: yellow.
+774 Gone: a gray cube.
+RESET
+0 a red cube, a blue cube.
+27 Gone: a aqua cube.
+53 Gone: orange.
+79 Gone: a teal cube.
+105 Gone: a maroon square.
+132 Gone: a lime square.
+157 Gone: a fuchsia heart.
+183 Gone: yellow.
+364 None

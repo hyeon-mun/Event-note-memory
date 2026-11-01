@@ -286,3 +286,10 @@ memory-critical step reweighting via ΔL = L_flow(no-mem) - L_flow(mem) (pointwi
 - 우리 26개 = "-Long" 변형 전체; 공식 split으로는 long 14 + medium 12. 공식 long 중 44-46, 76-78, 88-89 미포함 → 논문에 명시.
 - 보고서 v3(팀 공유용): 영상 + 실시간 지시문 플레이어, 결과 4 중간값, 지표 정의(맞는 큐브=최근접, 성공=터치), 논문 방향(사용자 정리본 반영).
 - RESEARCH_SUMMARY_1101.md 작성.
+
+## 11/1 저녁 — 비교 실험을 26개 과제 45k로 통일 (seed 반복 취소, 사용자 결정)
+- 비교 방법(모두 26개 -Long 과제, 90k 스케줄로 학습하다 45k에서 중단 → base/v6의 45k checkpoint와 같은 LR 스케줄):
+  pi05_long_v7 (v6 - t=0 장면 노트), pi05_long_visfull (이벤트 시 전체 프레임 keyframe을 추가 카메라로, RePlanMem 방식), pi05_long_v8 (이벤트 감지 없이 50 step마다 전체 화면 캡션, SmolVLM2-2.2B scene prompt).
+- 코드: build_ds.py v7/v8, server.py NOTES_V=7/8, NOTE_SWAP(reset 메시지로 색 전달, "Gone:" 노트 색 교체), evaluate.py NOTE_SWAP=oracle|wrong.
+- 큐: tools/build_cmp.sh(v7 → visfull → [45k mid-eval 후] v8 데이터), tools/queue17.sh(train45.sh × 3), tools/evalq17.sh(base45k → v7 → visfull → v8, 각 4그룹), tools/controls.sh(t5x_v6 20k에 노트 비움/틀린 색/정답 색, RC 3과제).
+- GPU 예산: 학습 40 + long_v6 90k 평가 48 + VLM 빌드 ~8 + control 16. evalq17은 queue15 종료 후 시작.

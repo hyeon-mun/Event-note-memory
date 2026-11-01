@@ -21,10 +21,12 @@ policy = get_policy_class(cfg.type).from_pretrained(ckpt, config=cfg).to("cuda")
 pre, post = make_pre_post_processors(cfg, pretrained_path=ckpt)
 
 DEADBAND = float(os.environ.get("DEADBAND", 0))                           # zero tiny arm actions (|a| < DEADBAND)
-notes_v6 = os.environ.get("NOTES_V") == "6"                                 # v6: v5, HTML colour names, first object
-notes_v5 = os.environ.get("NOTES_V") in ("5", "6")                                 # v5: v4 + measured colour name
-notes_v4 = os.environ.get("NOTES_V") in ("4", "5", "6")                                 # v4: v3 notes, only the removed (before) side
-notes_v3 = os.environ.get("NOTES_V") == "3" or notes_v4                                # v3: v2 write rule + zoomed change notes
+notes_v8 = os.environ.get("NOTES_V") == "8"                                 # v8: periodic baseline, full-frame scene caption every 50 steps
+notes_v7 = os.environ.get("NOTES_V") == "7"                                 # v7: v6 without the t=0 scene note
+notes_v6 = os.environ.get("NOTES_V") in ("6", "7")                                 # v6: v5, HTML colour names, first object
+notes_v5 = os.environ.get("NOTES_V") in ("5", "6", "7")                                 # v5: v4 + measured colour name
+notes_v4 = os.environ.get("NOTES_V") in ("4", "5", "6", "7")                                 # v4: v3 notes, only the removed (before) side
+notes_v3 = os.environ.get("NOTES_V") == "3" or notes_v4 or notes_v8                               # v3: v2 write rule + zoomed change notes
 notes_v2 = os.environ.get("NOTES_V") == "2" or notes_v3                     # v2 write rule (Scribe, settle before writing)
 notes_on = os.environ.get("NOTES") == "1"                                 # online VLM event notes (notes_vlm/notes.py)
 vmem_on = "observation.images.memory" in cfg.input_features              # visual notes (notes.VisualMemory) as a camera
@@ -66,6 +68,7 @@ with Listener(("127.0.0.1", port), authkey=b"seqpol") as lst:
                 msg = conn.recv()
                 if msg[0] == "reset":
                     policy.reset(); conn.send("ok")
+                    swap = msg[1] if len(msg) > 1 and msg[1] else None     # control: force this colour into "Gone:" notes
                     if notes_on:
                         det, mem, pending, t, dump = EventDetector(), NoteMemory(), False, 0, []
                         if notes_v2: det, mem = Scribe(full=notes_v3), NoteMemory(0)
@@ -80,11 +83,18 @@ with Listener(("127.0.0.1", port), authkey=b"seqpol") as lst:
                     if notes_on:                                    # caption the frame after an event (t=0: the first frame)
                         top_u8 = arr(o["rgb"])[..., :3]
                         ev = det(np.ascontiguousarray(top_u8), arr(o["proprio"])[:None if notes_v3 else 3].astype(np.float64))
-                        if (ev and t == 0) or pending or (notes_v2 and ev):
+                        if notes_v8:
+                            if t % 50 == 0:
+                                n = writer([(top_u8, None, None)])[0]
+                                if n is not None: mem.add(t, n)
+                                if note_log: print(t, n, file=note_log, flush=True)
+                        elif (ev and t == 0) or pending or (notes_v2 and ev):
                             if notes_v3:
                                 n = writer([(top_u8, det.before, det.mask) if t > 0 else (top_u8, None, None)])[0]
                                 if notes_v4: n = gone_note(n)
                                 if notes_v5 and t > 0: n = color_note(n, measured_color(top_u8, det.before, det.mask, "html" if notes_v6 else "css4"), notes_v6)
+                                if notes_v7 and t == 0: n = None
+                                if swap and t > 0 and n is not None: n = color_note(n, swap, True)
                                 if n is not None: mem.add(t, n)
                                 if note_log: print(t, n, file=note_log, flush=True)
                             else:
