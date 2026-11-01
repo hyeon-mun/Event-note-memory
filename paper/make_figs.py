@@ -25,7 +25,7 @@ def pipeline():
     fig, ax = plt.subplots(figsize=(7.0, 2.0))
     ax.set_xlim(0, 100); ax.set_ylim(0, 27); ax.axis("off")
 
-    def box(x, y, w, h, title, sub, hl=False, ts=5.9):
+    def box(x, y, w, h, title, sub, hl=False, ts=5.3):
         ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.2,rounding_size=1.0",
                                     fc="#e4ecfb" if hl else "#f4f5f7", ec="#2f6fd6" if hl else "#8a93a3", lw=0.8))
         ax.text(x + w / 2, y + h * 0.68, title, ha="center", va="center", fontsize=ts, weight="bold")
@@ -35,9 +35,9 @@ def pipeline():
         ax.annotate("", (x1, y1), (x0, y0), arrowprops=dict(arrowstyle="-|>", lw=0.7, color="#4a5262"))
 
     y, w, g = 15.5, 14.2, 2.6
-    items = [("Top camera", "+ proprio\nevery step"), ("(1) Event detection", "robot still\n+ pixel burst"),
+    items = [("Top camera", "+ proprio\nevery step"), ("(1) Event detect.", "robot still\n+ pixel burst"),
              ("(2) Change crop", "largest changed region\nzoomed to 384 px"), ("(3) VLM caption", "SmolVLM2-2.2B\nbefore / after crop"),
-             ("(4) Selection", "keep removed side\n\"Gone: X.\""), ("(5) Representation", "measured colour\nHTML16 + orange")]
+             ("(4) Selection", "keep removed side\n\"Gone: X.\""), ("(5) Colour name", "measured colour\nHTML16 + orange")]
     xs = [i * (w + g) for i in range(len(items))]
     for x, (t, sub) in zip(xs, items):
         box(x + 0.3, y, w, 10, t, sub)

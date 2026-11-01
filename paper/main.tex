@@ -161,6 +161,7 @@ The demonstrations of these tasks were collected by a motion planner with the CP
 \label{tab:setup}
 \begin{center}
 {\footnotesize
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{ll}
 \hline
 Policy & $\pi_{0.5}$ (\texttt{pi05\_base}), LeRobot, bf16 \\
@@ -175,7 +176,7 @@ Checkpoint & last checkpoint (no best-checkpoint selection) \\
 Physics & CPU backend (matches demonstrations) \\
 Metrics & success; for RC tasks also the approached cube \\
 \hline
-\end{tabular}
+\end{tabular}}
 }
 \end{center}
 \end{table}
@@ -240,12 +241,13 @@ Since the delay before the decision is drawn per episode, we also binned the epi
 \begin{center}
 {\footnotesize
 \setlength{\tabcolsep}{4pt}
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{llcc}
 \hline
 Trained with & Tested with & Success & Right / pair / other \\
 \hline
 v4 & v4 & 0.54 & 33 / 13 / 4 \\
-v4 & v3 (adds appeared content) & 0.30 & 17 / 9 / 24 \\
+v4 & v3 (+ appeared content) & 0.30 & 17 / 9 / 24 \\
 v3 & v3 & 0.38 & 22 / 8 / 20 \\
 v3 & v4 (removes it) & 0.46 & 27 / 9 / 14 \\
 \hline
@@ -253,7 +255,7 @@ v6 & no notes & \tbd{C1} & \tbd{} \\
 v6 & wrong cue color & \tbd{C1} & \tbd{} \\
 v6 & true cue color & \tbd{C1} & \tbd{} \\
 \hline
-\end{tabular}
+\end{tabular}}
 }
 \end{center}
 \end{table}
@@ -284,6 +286,7 @@ Together with the visual memory that is written correctly but ignored, these res
 \begin{center}
 {\footnotesize
 \setlength{\tabcolsep}{3pt}
+\resizebox{\columnwidth}{!}{%
 \begin{tabular}{llcc}
 \hline
 Family (memory type) & Variants & No memory & Notes v6 \\
@@ -300,7 +303,7 @@ TimedTransfer (temporal) & E / M / H & .00 / .00 / .22 & \tbd{} \\
 \hline
 Mean (26 tasks) & & 0.048 & \tbd{} \\
 \hline
-\end{tabular}
+\end{tabular}}
 }
 \end{center}
 \end{table}
