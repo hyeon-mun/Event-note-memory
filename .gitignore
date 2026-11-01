@@ -15,3 +15,6 @@ logs/*
 !logs/demo_*.json
 !logs/demo_*.notes.txt
 !logs/notes_long_*.txt
+!logs/ctl_*.json
+!logs/rc_long_phases.json
+!docs/report/demo/*.mp4

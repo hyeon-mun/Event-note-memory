@@ -1581,3 +1581,34 @@ RESET
 0 a white ball.
 38 Gone: a gray.
 45 Gone: a gray mug.
+581 Gone: a silver dog.
+RESET
+0 a red ball, a green ball, a blue ball, a white ball.
+22 Gone: a olive square.
+107 Gone: two maroon objects.
+RESET
+0 red, green, blue.
+24 Gone: a gray cube.
+31 Gone: two gray objects.
+128 Gone: a olive cube.
+256 Gone: a olive cube.
+320 Gone: a olive cube.
+418 Gone: a silver square.
+RESET
+0 a white ball.
+34 Gone: a gray cube.
+217 Gone: a silver paper.
+272 Gone: a gray dog.
+296 Gone: a silver mug.
+412 Gone: a gray and black sewing machine.
+522 Gone: a silver person.
+555 Gone: a silver car.
+RESET
+0 a white ball, a green ball, a red ball.
+57 Gone: a gray ball.
+61 None
+450 Gone: a silver object.
+515 Gone: a maroon object.
+RESET
+0 white.
+26 Gone: a gray square.

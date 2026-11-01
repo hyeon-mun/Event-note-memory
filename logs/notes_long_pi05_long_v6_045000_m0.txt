@@ -1789,3 +1789,26 @@ RESET
 187 Gone: a aqua cube.
 249 Gone: a teal cube.
 311 Gone: a fuchsia square.
+438 Gone: a gray bed.
+RESET
+0 a green block.
+12 Gone: a lime square.
+23 Gone: a orange square.
+34 Gone: a fuchsia block.
+45 Gone: a red square.
+56 Gone: yellow.
+131 None
+RESET
+0 a red cube.
+91 Gone: a maroon.
+181 Gone: a aqua cube.
+271 Gone: a yellow block.
+361 Gone: a fuchsia block.
+451 Gone: a orange block.
+621 Gone: a gray book.
+RESET
+0 green.
+77 Gone: a lime square.
+153 Gone: a teal cube.
+230 Gone: a maroon square.
+308 Gone: a fuchsia square.

@@ -1,3 +1,8 @@
 RESET
 0 The table is empty.
 93 Gone: a blue plus sign.
+438 Gone: the gray image contains a wooden surface.
+470 Gone: a gray dog.
+498 None
+532 Gone: a gray dog.
+541 Gone: a gray robot.

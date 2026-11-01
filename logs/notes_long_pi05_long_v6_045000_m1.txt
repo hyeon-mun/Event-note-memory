@@ -1419,3 +1419,28 @@ RESET
 0 a blue button.
 87 Gone: a aqua cube.
 173 Gone: a teal cube.
+259 Gone: a yellow block.
+345 Gone: a orange block.
+431 Gone: a lime block.
+621 Gone: a gray book.
+RESET
+0 The table is empty.
+60 Gone: a maroon square.
+119 Gone: a yellow square.
+178 Gone: a blue square.
+238 Gone: a red square.
+296 Gone: a aqua cube.
+355 Gone: a lime square.
+414 Gone: a fuchsia block.
+696 Gone: a gray book.
+RESET
+0 a green block.
+16 Gone: a lime square.
+31 Gone: yellow.
+46 Gone: a maroon square.
+61 Gone: a fuchsia block.
+76 Gone: a aqua cube.
+81 Gone: a orange square.
+91 Gone: a orange cube.
+106 Gone: a blue square.
+388 Gone: a orange cube.

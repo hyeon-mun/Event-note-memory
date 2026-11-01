@@ -1,0 +1,7 @@
+RESET
+0 red.
+47 Gone: a red cube.
+348 None
+RESET
+0 red.
+47 Gone: a red cube.

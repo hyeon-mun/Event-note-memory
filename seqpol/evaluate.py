@@ -156,9 +156,15 @@ def run_task(runner, tid, n_eps, start_seed, log=None, ep_lo=0, sim_backend="gpu
     tt = task_table()[tid]
     if sim_backend == "auto":     # physics consistent with how the demos were collected (MP: CPU, PPO: GPU)
         sim_backend = "cpu" if tt["src"] == "MP" else "gpu"
+    if os.environ.get("DELAY"):                            # custom variant: fixed memory delay (empty phase) + longer episodes
+        import mikasa_robo_suite.vla.benchmarking as B
+        from mani_skill.utils.registration import REGISTERED_ENVS
+        d = int(os.environ["DELAY"]); REGISTERED_ENVS[tt["env_id"]].cls.EMPTY_PHASE_STEPS = [d, d]
+        if not hasattr(B, "_make0"): B._make0 = B.gym.make
+        B.gym.make = lambda i, **k: B._make0(i, max_episode_steps=int(os.environ["MAXSTEPS"]), **k)
     cfg = BenchmarkConfig(n_episodes=n_eps, start_seed=start_seed, sim_backend=sim_backend)
     env = make_benchmark_env(tt["env_id"], cfg)
-    succ, lens, prog = [], [], []
+    succ, lens, prog, phases = [], [], [], []
     for i in range(ep_lo, ep_lo + n_eps):
         obs, info = env.reset(seed=start_seed + i)
         instr = info.get("language_instruction", None)
@@ -192,6 +198,8 @@ def run_task(runner, tid, n_eps, start_seed, log=None, ep_lo=0, sim_backend="gpu
                 break
         succ.append(ok); lens.append(n)
         u = env.unwrapped
+        if hasattr(u, "empty_steps_per_env"):                # memory delay of this episode (cue / empty phase lengths)
+            phases.append((int(u.cue_steps_per_env.reshape(-1)[0]), int(u.empty_steps_per_env.reshape(-1)[0])))
         if hasattr(u, "cubes") and hasattr(u, "true_color_indices") and not hasattr(u, "touched_cubes_idx"):
             prog.append(dict(mind=mind, true=int(u.true_color_indices.reshape(-1)[0])))
         if hasattr(u, "touched_cubes_idx") and hasattr(u, "true_color_indices"):   # sequence tasks: partial progress
@@ -206,7 +214,7 @@ def run_task(runner, tid, n_eps, start_seed, log=None, ep_lo=0, sim_backend="gpu
         if log: print(f"  t{tid:02d} ep{i} ok={ok} n={n}", file=log, flush=True)
     env.close()
     return dict(tid=tid, mem_type=tt["mem"], split=tt["split"], sr=float(np.mean(succ)), successes=succ, lens=lens,
-                seeds=[start_seed + i for i in range(ep_lo, ep_lo + n_eps)], progress=prog)
+                seeds=[start_seed + i for i in range(ep_lo, ep_lo + n_eps)], progress=prog, phases=phases)
 
 
 if __name__ == "__main__":

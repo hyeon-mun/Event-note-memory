@@ -1479,3 +1479,28 @@ RESET
 135 Gone: a blue block.
 202 Gone: a yellow block.
 270 Gone: a aqua cube.
+337 Gone: a red.
+403 Gone: a maroon cloth.
+470 Gone: a orange block.
+865 None
+RESET
+0 a red cube.
+31 Gone: a maroon square.
+61 Gone: a orange square.
+91 Gone: a blue square.
+122 Gone: a yellow block.
+151 Gone: a lime block.
+181 Gone: a red square.
+211 Gone: a aqua cube.
+543 Gone: a orange block.
+RESET
+0 a red cube.
+11 Gone: a red square.
+21 Gone: orange.
+31 Gone: a maroon square.
+42 Gone: a teal cube.
+47 Gone: a silver wall.
+51 Gone: a blue cross.
+61 Gone: yellow.
+71 Gone: a aqua cube.
+370 Gone: a gray cube.
