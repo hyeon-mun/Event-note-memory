@@ -1373,3 +1373,49 @@ RESET
 187 Gone: a fuchsia block.
 280 Gone: a blue square.
 373 Gone: a maroon heart.
+466 Gone: a aqua cube.
+851 Gone: a gray and a maroon cube.
+RESET
+0 a yellow button.
+16 Gone: orange.
+31 Gone: a teal cube.
+46 Gone: a aqua cube.
+62 Gone: a fuchsia square.
+76 Gone: a blue square.
+207 None
+RESET
+0 a red cube.
+68 Gone: a teal cube.
+135 Gone: a blue block.
+202 Gone: a yellow block.
+269 Gone: a aqua cube.
+336 Gone: a red.
+731 None
+RESET
+0 a red cube.
+31 Gone: a maroon square.
+61 Gone: a orange square.
+91 Gone: a blue square.
+121 Gone: a yellow block.
+151 Gone: a lime square.
+483 Gone: a orange block.
+RESET
+0 a red cube.
+11 Gone: a red square.
+21 Gone: orange.
+31 Gone: a maroon square.
+42 Gone: a teal cube.
+51 Gone: a blue shirt.
+350 Gone: a gray cube.
+RESET
+0 a yellow block.
+52 Gone: orange.
+103 Gone: a fuchsia block.
+154 Gone: a red square.
+205 Gone: a aqua cube.
+256 Gone: a teal cube.
+614 Gone: a orange button.
+RESET
+0 a blue button.
+87 Gone: a aqua cube.
+173 Gone: a teal cube.

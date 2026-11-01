@@ -1523,3 +1523,61 @@ RESET
 RESET
 0 a red cube, a green cube, a blue cube.
 30 Gone: a gray cube.
+405 Gone: a gray paper.
+RESET
+0 a white ball, a red star, a green star.
+34 Gone: a gray cube.
+60 Gone: two maroon objects.
+135 Gone: two maroon objects.
+337 Gone: silver.
+551 Gone: a maroon and brown object.
+RESET
+0 a white ball, a green ball, a red ball, a blue ball.
+62 Gone: a gray frog.
+159 Gone: a olive cube.
+351 Gone: a silver square.
+RESET
+0 white, green, red, blue.
+102 Gone: a olive square.
+292 Gone: a silver paper.
+RESET
+0 a red ball, a green ball, a blue ball, a white ball.
+40 Gone: a gray cube.
+119 Gone: a maroon hat.
+171 Gone: a maroon hat.
+301 Gone: a maroon hat.
+348 Gone: a gray paper.
+RESET
+0 The table has a red ball, a green ball, a blue ball, and a white ball.
+92 Gone: a gray cube.
+284 Gone: a silver square.
+418 Gone: a gray knife.
+RESET
+0 The table is empty.
+33 Gone: gray.
+40 Gone: a maroon object.
+428 Gone: a silver teapot.
+507 None
+592 Gone: a gray dog.
+RESET
+0 white ball, green, red, blue.
+38 Gone: gray.
+45 Gone: a gray teapot.
+78 Gone: three gray cups.
+108 Gone: a olive teapot.
+232 Gone: a olive teapot.
+356 Gone: a olive teapot.
+383 Gone: a gray teapot.
+RESET
+0 The table has a white ball, a red ball, a green ball, and a blue ball.
+51 Gone: a gray square.
+145 Gone: two olive cubes.
+234 Gone: a silver circle.
+285 Gone: a maroon ball.
+RESET
+0 a white ball, a red ball, a green ball.
+40 Gone: a gray cube.
+RESET
+0 a white ball.
+38 Gone: a gray.
+45 Gone: a gray mug.

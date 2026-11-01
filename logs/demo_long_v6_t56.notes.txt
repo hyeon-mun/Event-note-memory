@@ -1,0 +1,4 @@
+RESET
+0 blue.
+19 Gone: a blue and purple cube.
+430 None

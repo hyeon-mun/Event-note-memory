@@ -1,0 +1,5 @@
+RESET
+0 blue.
+65 Gone: a blue square.
+295 Gone: the gray image contains a wooden surface.
+427 Gone: a silver and white eye.

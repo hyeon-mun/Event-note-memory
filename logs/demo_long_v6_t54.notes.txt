@@ -1,0 +1,3 @@
+RESET
+0 The table is empty.
+93 Gone: a blue plus sign.
