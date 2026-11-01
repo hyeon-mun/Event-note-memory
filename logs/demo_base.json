@@ -1,0 +1,77 @@
+{
+ "args": {
+  "ckpt": "../runs/lr/pi05_t5x_base/checkpoints/020000/pretrained_model",
+  "tasks": "52,50",
+  "episodes": 1,
+  "start_seed": 4242424242,
+  "guidance": 1.0,
+  "exec": 4,
+  "flow_steps": 10,
+  "mem_off": false,
+  "ep_lo": 2,
+  "sim_backend": "cpu",
+  "video_dir": "../logs/demo_base",
+  "note": null,
+  "out": "../logs/demo_base.json"
+ },
+ "results": [
+  {
+   "tid": 52,
+   "mem_type": "Object",
+   "split": "medium",
+   "sr": 0.0,
+   "successes": [
+    false
+   ],
+   "lens": [
+    600
+   ],
+   "seeds": [
+    4242424244
+   ],
+   "progress": [
+    {
+     "mind": [
+      0.048397649079561234,
+      0.2740814983844757,
+      0.18484438955783844,
+      0.3130433261394501,
+      0.34976518154144287,
+      0.09119388461112976,
+      0.09544471651315689,
+      0.21193253993988037,
+      0.15575343370437622
+     ],
+     "true": 6
+    }
+   ],
+   "sec": 141.5086371898651
+  },
+  {
+   "tid": 50,
+   "mem_type": "Object",
+   "split": "medium",
+   "sr": 1.0,
+   "successes": [
+    true
+   ],
+   "lens": [
+    600
+   ],
+   "seeds": [
+    4242424244
+   ],
+   "progress": [
+    {
+     "mind": [
+      0.3491961658000946,
+      0.18627165257930756,
+      0.03318507969379425
+     ],
+     "true": 2
+    }
+   ],
+   "sec": 137.23349285125732
+  }
+ ]
+}

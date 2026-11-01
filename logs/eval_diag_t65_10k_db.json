@@ -1,0 +1,184 @@
+{
+ "args": {
+  "ckpt": "../runs/lr/pi05_t65_notes/checkpoints/010000/pretrained_model",
+  "tasks": "65",
+  "episodes": 10,
+  "start_seed": 4242424242,
+  "guidance": 1.0,
+  "exec": 4,
+  "flow_steps": 10,
+  "mem_off": false,
+  "ep_lo": 0,
+  "sim_backend": "cpu",
+  "video_dir": "../logs/vid_t65_10k_db",
+  "note": null,
+  "out": "../logs/eval_diag_t65_10k_db.json"
+ },
+ "results": [
+  {
+   "tid": 65,
+   "mem_type": "Sequential",
+   "split": "long",
+   "sr": 0.0,
+   "successes": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+   ],
+   "lens": [
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800,
+    800
+   ],
+   "seeds": [
+    4242424242,
+    4242424243,
+    4242424244,
+    4242424245,
+    4242424246,
+    4242424247,
+    4242424248,
+    4242424249,
+    4242424250,
+    4242424251
+   ],
+   "progress": [
+    {
+     "touched": [
+      -1,
+      -1,
+      -1
+     ],
+     "true": [
+      6,
+      3,
+      2
+     ]
+    },
+    {
+     "touched": [
+      -1,
+      -1,
+      -1
+     ],
+     "true": [
+      1,
+      3,
+      6
+     ]
+    },
+    {
+     "touched": [
+      -1,
+      -1,
+      -1
+     ],
+     "true": [
+      3,
+      7,
+      4
+     ]
+    },
+    {
+     "touched": [
+      -1,
+      -1,
+      -1
+     ],
+     "true": [
+      8,
+      3,
+      4
+     ]
+    },
+    {
+     "touched": [
+      -1,
+      -1,
+      -1
+     ],
+     "true": [
+      5,
+      8,
+      1
+     ]
+    },
+    {
+     "touched": [
+      -1,
+      -1,
+      -1
+     ],
+     "true": [
+      4,
+      0,
+      7
+     ]
+    },
+    {
+     "touched": [
+      4,
+      -1,
+      -1
+     ],
+     "true": [
+      6,
+      4,
+      5
+     ]
+    },
+    {
+     "touched": [
+      8,
+      -1,
+      -1
+     ],
+     "true": [
+      6,
+      1,
+      4
+     ]
+    },
+    {
+     "touched": [
+      7,
+      -1,
+      -1
+     ],
+     "true": [
+      6,
+      5,
+      8
+     ]
+    },
+    {
+     "touched": [
+      -1,
+      -1,
+      -1
+     ],
+     "true": [
+      3,
+      5,
+      4
+     ]
+    }
+   ],
+   "sec": 749.6174273490906
+  }
+ ]
+}

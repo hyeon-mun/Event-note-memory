@@ -1,0 +1,134 @@
+%% IJCAS regular paper (6-10 pages, two-column, IJCAS.cls from the 2026-02-19 template)
+%% Status: skeleton + method draft. Numbers marked \tbd{} are filled after the final evals (11/6).
+\documentclass{IJCAS}
+
+\usepackage{url}
+\usepackage{array,tabularx}
+\usepackage{multicol}
+
+\newcommand{\tbd}[1]{\textcolor{red}{[#1]}}
+\newcommand{\note}[1]{\texttt{\small #1}}
+
+%%%% Editorial Information (do not modify)
+\journalvolumn{VV}
+\journalnumber{X}
+\journalyear{YYYY}
+\setarticlestartpagenumber{1}
+
+\allowdisplaybreaks
+
+\begin{document}
+
+\title{Event-Driven Language Memory for Long-Horizon Vision-Language-Action Policies}
+
+\author{\tbd{Author names}*}
+
+\begin{abstract}
+Vision-language-action (VLA) policies act on the current observation and therefore fail on tasks whose decisive cue disappears from view long before it is needed.
+We study a lightweight alternative to architectural memory: an event-driven pipeline that detects when something disappears from the scene, describes only the disappeared content with a vision-language model, and appends the resulting short text notes to the instruction of an unmodified $\pi_{0.5}$ policy.
+On the long-horizon RememberColor tasks of MIKASA-Robo-VLA, the notes raise the success rate of the same policy, trained on the same data for the same number of steps, from 0.14 to 0.96/0.94 with three and five candidate colors and from 0.08 to 0.49 with nine.
+We decompose the remaining gap to an oracle note (0.87) along three axes.
+Selection: writing only what disappeared removes distractor notes, and swapping note writers at test time changes the success of a fixed policy by up to 24 points.
+Representation: naming colors from measured pixels instead of free-form captions reduces confusions between similar colors from 13 to 5 of 50 episodes.
+Utilization: in the remaining failures the note is correct, yet the policy approaches the wrong object.
+Across \tbd{26} long-horizon tasks, the notes help single-cue recall of colors and shapes, but not tasks that require multiple cues, object tracking, or counting, which delineates the scope of language memory for VLA policies.
+\end{abstract}
+
+\begin{keywords}
+Long-horizon manipulation, memory, partial observability, robot learning, vision-language-action models.
+\end{keywords}
+
+\maketitle
+
+\makeAuthorInformation{
+\tbd{Manuscript received ...; affiliations; e-mails.}\\
+
+* Corresponding author.
+}
+
+\runningtitle{2026}{\tbd{Authors}}{Event-Driven Language Memory for Long-Horizon Vision-Language-Action Policies}{xxx}{xxxx}{x}
+
+
+\section{INTRODUCTION}
+% 1. Partial observability: decisive cue disappears hundreds of steps before the decision.
+% 2. VLAs condition on the current frame / short history -> cannot solve these tasks (base 0.048 over 26 Long tasks).
+% 3. Prior answers: recurrent/latent memory tokens (muVLA), visual keyframe memory (RePlanMem-VLA), memory banks (MemoryVLA).
+%    Open question: what to remember, in which form, and does the policy use it.
+% 4. Our approach: event-driven text notes, no change to the policy; analysis along Selection / Representation / Utilization.
+% 5. Contributions (4 bullets, see report).
+\tbd{To be written.}
+
+\section{RELATED WORK}
+\subsection{Memory-augmented VLA policies}
+\tbd{MemoryVLA, MemoryVLA++, SimpleMemVLA, muVLA (2606.12497).}
+\subsection{Event-driven memory selection}
+\tbd{RePlanMem-VLA (2610.22556): action-plan disagreement, visual keyframes, detection metrics; KEMO, EventVLA.}
+\subsection{Language memory for robots}
+\tbd{RoboMME (2603.04639): VLM-written language memory 33\% vs oracle 84\%.}
+\subsection{Memory benchmarks}
+\tbd{MIKASA-Robo, MIKASA-Robo-VLA (2610.00604).}
+
+\section{METHOD}
+\label{sec:method}
+The policy is $\pi_{0.5}$ fine-tuned with LeRobot; its architecture, inputs (top and wrist cameras, proprioception), and hyperparameters are identical with and without memory.
+Memory enters only through the instruction string: at every step the policy receives
+\begin{center}
+\note{\{instruction\} Notes: (1) $n_1$ (2) $n_2$ \dots}
+\end{center}
+where $n_1, n_2, \dots$ are the most recent notes written by the pipeline below. The same pipeline labels the demonstrations for training and runs online at test time.
+
+\subsection{Event detection (when to write)}
+Let $I_t$ be the top-camera image and $q_t$ the full proprioceptive state. A step is an event candidate when the robot has been still for the last $W{=}5$ steps ($\|q_t - q_{t-1}\|_\infty < 10^{-3}$), at least $N{=}8$ pixels changed by more than $\delta{=}40$ intensity levels with respect to $I_{t-1}$, and the number of changed pixels exceeds $\rho{=}4$ times its average over the previous $W$ steps. Requiring stillness filters out changes caused by the robot itself. The note is written once the scene has settled (change below threshold or $W$ steps). The rule uses no task labels.
+\subsection{Change localization (where to look)}
+The largest connected component of changed pixels is cropped with a square margin and upsampled to $384\times384$ (nearest neighbor). Objects of 3$\times$3 pixels in the $128\times128$ camera become legible to the VLM, and unchanged regions (robot, table) cannot enter the note.
+\subsection{Memory selection (what to keep)}
+SmolVLM2-2.2B captions the crop before and after the event separately. Content that appeared is still visible to the policy and is not stored; only the before side is kept as \note{Gone: X.}, and notes whose $X$ is empty or the table are dropped. A scene note is written once at $t{=}0$.
+\subsection{Memory representation (how to write)}
+VLM color names conflate similar colors (maroon/red, orange/yellow, teal/cyan). We replace the first color word by a measured name: the mean RGB of the 25\% most saturated pixels of the removed region, mapped to the nearest of the 16 HTML basic colors plus orange. Only the first object is kept.
+\subsection{Memory utilization (how the policy reads it)}
+Notes are kept in write order; a note identical to the previous one is dropped, and the last $K{=}8$ are appended to the instruction. The policy is fine-tuned on demonstrations whose instruction at each frame contains the notes written up to that frame.
+
+\section{EXPERIMENTAL SETUP}
+% tasks: RC-Long t50-52 (main), 26 "-Long" variants (t50-72, t82-84; 14 official long + 12 medium split) -> state as custom subset with env IDs
+% physics: MP-collected demos are CPU physics; replaying demo actions: CPU 8/8, GPU 0/8 -> evaluate on CPU
+% training: 250 demos per task, joint training, bf16, chunk 10, execute 5, batch 16, 20k (RC) / 90k (26 tasks)
+% eval: 50 episodes per task (seeds fixed), RC9 150 episodes, Wilson 95% CI; metrics: success and selection accuracy (closest-approached cube)
+% baselines: no memory, oracle note, visual memory (crop as third camera), \tbd{frame-history baseline}
+\tbd{To be written.}
+
+\section{RESULTS AND ANALYSIS}
+\subsection{Main results}
+\tbd{Table 1: RC-Long base / v2 / v3 / v4 / v6 / oracle.}
+\subsection{Selection}
+\tbd{v3 vs v4, test-time note swap.}
+\subsection{Representation}
+\tbd{v4 vs v6 error decomposition; v5 vocabulary lesson.}
+\subsection{Utilization}
+\tbd{v6 failures with correct notes; v7 (no scene note); visual memory; oracle gap; wrong/empty-note controls.}
+\subsection{Memory types across long-horizon tasks}
+\tbd{Table 2: 26 tasks by memory type.}
+
+\section{CONCLUSION}
+\tbd{To be written.}
+
+\section*{DECLARATIONS}
+\subsection*{Conflict of Interest}
+The authors declare that there is no competing financial interest or personal relationship that could have appeared to influence the work reported in this paper.
+\subsection*{Authors' Contributions}
+\tbd{}
+\subsection*{Funding}
+\tbd{}
+\subsection*{Data Availability}
+\tbd{}
+\subsection*{Use of AI Tools}
+% Required by IJCAS: must be placed immediately before the References section. Fill in truthfully.
+\tbd{The authors used [tool] for [role]. The authors remain fully responsible for the content.}
+
+\begin{reference}
+\bibitem{mikasavla} \tbd{MIKASA-Robo-VLA, arXiv:2610.00604, 2026.}
+\bibitem{replanmem} \tbd{RePlanMem-VLA, arXiv:2610.22556, 2026.}
+\bibitem{muvla} \tbd{$\mu$VLA, arXiv:2606.12497, 2026.}
+\bibitem{robomme} \tbd{RoboMME, arXiv:2603.04639, 2026.}
+\end{reference}
+
+\end{document}

@@ -1,0 +1,13 @@
+RESET
+0 a red cube.
+101 Gone: a maroon square.
+520 None
+RESET
+0 blue.
+53 Gone: a blue square.
+325 None
+407 Gone: a olive dog.
+459 Gone: a gray sword.
+508 Gone: a gray dog.
+542 Gone: a gray and black cow.
+573 Gone: a gray dog.

@@ -1,0 +1,17 @@
+# large / local-only
+runs/
+evalq/
+torchinductor_hmjeong/
+__pycache__/
+*.pyc
+*.npy
+*.mp4
+*.safetensors
+# logs: keep only eval results and the eval database
+logs/*
+!logs/eval_db.log
+!logs/eval_*.json
+!logs/abl_*.json
+!logs/demo_*.json
+!logs/demo_*.notes.txt
+!logs/notes_long_*.txt
