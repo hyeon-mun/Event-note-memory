@@ -295,13 +295,13 @@ RememberColor (object) & 3 / 5 / 9 & .18 / .16 / .06 & .74 / .68 / .28 \\
 RememberShape (object) & 3 / 5 / 9 & .08 / .06 / .06 & .38 / .26 / .16 \\
 ShapeAndColor (object) & 3x2 / 3x3 / 5x3 & .04 / .04 / .00 & .32 / .26 / .18 \\
 BunchOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 \\
-SeqOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / \tbd{} \\
-ChainOfColors (sequential) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / \tbd{} / \tbd{} \\
-ShellGame (tracking) & Touch / Lamp & .16 / .14 & \tbd{} / \tbd{} \\
-BlinkCount (temporal) & E / M / H & .02 / .00 / .04 & \tbd{} \\
-TimedTransfer (temporal) & E / M / H & .00 / .00 / .22 & \tbd{} \\
+SeqOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 \\
+ChainOfColors (sequential) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 \\
+ShellGame (tracking) & Touch / Lamp & .16 / .14 & .16 / .26 \\
+BlinkCount (temporal) & E / M / H & .02 / .00 / .04 & .06 / .04 / .00 \\
+TimedTransfer (temporal) & E / M / H & .00 / .00 / .22 & .00 / .00 / .00 \\
 \hline
-Mean (26 tasks) & & 0.048 & \tbd{} \\
+Mean (26 tasks) & & 0.048 & 0.145 \\
 \hline
 \end{tabular}}
 }
@@ -309,7 +309,7 @@ Mean (26 tasks) & & 0.048 & \tbd{} \\
 \end{table}
 Table~\ref{tab:long} reports one policy trained jointly on all 26 tasks with and without notes.
 Without memory, $\pi_{0.5}$ reaches 0.048 on average.
-Notes help all single-cue object tasks: colors, shapes, and their combinations \tbd{final numbers}.
+Notes help all nine single-cue object tasks: colors, shapes, and their combinations (mean 0.36 versus 0.08). On the other 17 tasks both policies stay near zero (0.03 each), and on TimedTransfer-H the notes hurt (0.22 to 0.00) \tbd{check at equal steps}.
 They do not help tasks that require several cues at once (BunchOfColors, SeqOfColors) or in order (ChainOfColors).
 For ChainOfColors3 we had verified separately that even the true color sequence in the instruction yields 0/50, so that family is limited by the multi-touch skill rather than by memory.
 In tracking tasks (ShellGame) the shuffle is a continuous motion of objects that remain visible, which our event trigger does not describe; in BlinkCount each blink produces a note but the window of eight notes truncates long sequences; and in TimedTransfer the frequent lamp and object changes produce about 97 events per episode, most of which are noise.
