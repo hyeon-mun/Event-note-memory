@@ -226,7 +226,7 @@ The policy without memory performs at chance (1/3, 1/5, 1/9 for an always-reachi
 The visual crop memory, which contains the same cue image, stays at the no-memory level: inspection of the online memory image confirmed that it was written correctly, so the policy ignores the additional camera input under our data and training budget.
 The note versions v2, v4, and v6 are statistically indistinguishable on RC9-L; we therefore analyze how the versions change the \emph{types} of errors rather than claiming that a later version is better.
 
-Since the delay before the decision is drawn per episode, we also binned the episodes by delay (50--183, 184--316, 317--450 steps). The success of the note policy does not depend on the delay within the trained range (RC9-L v6: 0.48, 0.42, 0.57; oracle: 0.86, 0.87, 0.87), as expected from a memory that is written once and kept. \tbd{Out-of-range delay of 1000 steps for all memory types (experiment B).}
+Since the delay before the decision is drawn per episode, we also binned the episodes by delay (50--183, 184--316, 317--450 steps). The success of the note policy does not depend on the delay within the trained range (RC9-L v6: 0.48, 0.42, 0.57; oracle: 0.86, 0.87, 0.87), as expected from a memory that is written once and kept. With a fixed delay of 1000 steps, more than twice the longest delay seen in training, the note policy keeps its success on RC5-L (0.68 to 0.76) while the policy without memory stays near chance (0.08); both at 45k steps on the 26-task mixture. \tbd{RC9-L and the other memory types.}
 
 \subsection{Selection}
 \begin{figure}[!t]
@@ -251,7 +251,7 @@ v4 & v3 (+ appeared content) & 0.30 & 17 / 9 / 24 \\
 v3 & v3 & 0.38 & 22 / 8 / 20 \\
 v3 & v4 (removes it) & 0.46 & 27 / 9 / 14 \\
 \hline
-v6 & no notes & \tbd{C1} & \tbd{} \\
+v6 & no notes & 0.08 & 8 / 2 / 40 \\
 v6 & wrong cue color$^\dagger$ & 0.34 & 19 / 14$^\ddagger$ / 17 \\
 v6 & true cue color & \tbd{C1} & \tbd{} \\
 \hline
@@ -277,7 +277,7 @@ In all 17 v6 episodes in which the policy approached a wrong cube, the cue note 
 Most of these errors are among blue, aqua, and teal, and in these episodes the scene note at $t=0$ describes the cue as ``a blue cube'' while the measured note says ``aqua'' or ``teal''.
 The policy thus receives two inconsistent descriptions of the same object. \tbd{v7 without the scene note (C4).}
 The oracle note, which names the cue exactly, reaches 0.87 on RC9-L; in its 50 standard episodes the policy still approached an unrelated cube seven times, and in two further episodes it approached the right cube without completing the touch.
-Together with the visual memory that is written correctly but ignored, these results indicate that, once the note is correct, the remaining bottleneck lies in grounding the remembered attribute to the current candidates. The content-swap control confirms that the policy reads the note. When the color word in every online \note{Gone:} note is replaced by the color of another candidate cube present in the scene, success drops from 0.96 / 0.94 / 0.48 to 0.44 / 0.64 / 0.34 on RC3 / RC5 / RC9-L, and the robot goes to the cube named by the wrong note: on RC3 and RC5 every episode that does not reach the right cube reaches the note's cube (22 of 22 and 15 of 15), and on RC9 14 of 31. The scene note at $t=0$ is left unchanged and still names the true cue, which explains why some episodes still reach the right cube. \tbd{empty and true-color rows}
+Together with the visual memory that is written correctly but ignored, these results indicate that, once the note is correct, the remaining bottleneck lies in grounding the remembered attribute to the current candidates. The content-swap control confirms that the policy reads the note. When the color word in every online \note{Gone:} note is replaced by the color of another candidate cube present in the scene, success drops from 0.96 / 0.94 / 0.48 to 0.44 / 0.64 / 0.34 on RC3 / RC5 / RC9-L, and the robot goes to the cube named by the wrong note: on RC3 and RC5 every episode that does not reach the right cube reaches the note's cube (22 of 22 and 15 of 15), and on RC9 14 of 31. The scene note at $t=0$ is left unchanged and still names the true cue, which explains why some episodes still reach the right cube. With the notes removed, the same policy falls to 0.26 / 0.10 / 0.08, close to the policy trained without notes (0.14 / 0.14 / 0.06). \tbd{true-color row}
 
 \subsection{Memory types across 26 long-horizon tasks}
 \begin{table}[!t]
