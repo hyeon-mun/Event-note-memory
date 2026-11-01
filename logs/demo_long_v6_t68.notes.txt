@@ -1,0 +1,4 @@
+RESET
+0 The table is empty.
+77 Gone: a orange.
+79 None

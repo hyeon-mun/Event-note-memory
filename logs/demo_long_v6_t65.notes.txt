@@ -3,3 +3,5 @@ RESET
 60 Gone: a maroon square.
 119 Gone: a yellow square.
 178 Gone: a blue square.
+460 Gone: a gray book.
+797 Gone: a black and white eye.

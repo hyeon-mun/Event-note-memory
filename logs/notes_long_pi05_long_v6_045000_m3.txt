@@ -1682,3 +1682,176 @@ RESET
 393 Gone: a gray and white dog.
 403 Gone: a silver face.
 503 Gone: a gray and white image.
+RESET
+0 a white ball, a red cube, a blue cube.
+34 Gone: a gray ball.
+216 Gone: a gray cup.
+324 Gone: a gray cup.
+427 Gone: a maroon face.
+503 None
+RESET
+0 The table is empty.
+63 Gone: a orange heart.
+231 None
+265 Gone: a gray and white animal.
+337 Gone: a silver cat.
+382 Gone: a silver object.
+392 Gone: a gray cat.
+444 Gone: a silver face.
+487 Gone: a gray and white object.
+502 None
+539 None
+577 Gone: a gray and white image.
+584 Gone: a silver dog.
+592 Gone: a silver and white cat.
+RESET
+0 white, green, red, blue.
+37 Gone: a orange star.
+280 Gone: silver.
+RESET
+0 a green ball, a red ball, a white ball.
+33 Gone: a gray wooden surface.
+RESET
+0 a green square, a red square, a white square.
+266 Gone: a gray wooden surface.
+RESET
+0 a red ball, a green ball, a blue ball.
+141 Gone: a white and white object.
+218 Gone: a gray wooden surface.
+RESET
+0 a green ball, a red ball, a white ball.
+62 Gone: a maroon wooden surface.
+152 Gone: a gray and black camera.
+187 None
+RESET
+0 a green ball, a red ball, a white ball.
+RESET
+0 a green ball, a red ball, a white ball.
+94 Gone: a silver ball.
+RESET
+0 a green ball, a red ball, a white ball.
+RESET
+0 a red ball, a green ball, a blue ball.
+226 Gone: a silver cube.
+RESET
+0 a green ball, a red ball, a white ball.
+247 Gone: a silver fox.
+RESET
+0 a red ball, a green ball, a blue ball.
+RESET
+0 green, red, white.
+RESET
+0 green, red, white.
+7 Gone: a silver apple.
+226 Gone: a black and white picture.
+RESET
+0 a green ball, a red ball, a white ball.
+107 None
+152 Gone: a gray.
+RESET
+0 green, red, white.
+92 None
+RESET
+0 a red ball, a green ball, a blue ball.
+RESET
+0 green, red, white.
+RESET
+0 a green ball, a red ball, a white ball.
+253 Gone: a gray and white dog.
+263 Gone: a silver cat.
+305 Gone: a silver dog.
+316 Gone: a maroon and white object.
+RESET
+0 a red ball, a green ball, a blue ball.
+37 Gone: a gray cat.
+RESET
+0 a green ball, a red ball, a white ball.
+7 Gone: a silver window.
+RESET
+0 a green ball, a red ball, a white ball.
+RESET
+0 a green cube, a red cube, a blue cube.
+RESET
+0 a green ball, a red ball, a white ball.
+RESET
+0 a green ball, a red ball, a white ball.
+RESET
+0 green, red, white.
+121 Gone: a gray and white cat.
+RESET
+0 green, red, white.
+RESET
+0 a green ball, a red ball, a white ball.
+RESET
+0 a red ball, a green ball, a white ball.
+RESET
+0 green, red, white.
+7 Gone: a silver table.
+RESET
+0 green car, red ball, white ball.
+RESET
+0 a green ball, a red ball, a white ball.
+RESET
+0 a green ball, a red ball, a blue ball.
+167 Gone: a gray person.
+272 Gone: a gray cow.
+RESET
+0 a red cube, a green cube, a white ball.
+RESET
+0 a green ball, a red ball, a blue ball.
+RESET
+0 a red ball, a green ball, a blue ball.
+RESET
+0 a green ball, a red ball, a white ball.
+RESET
+0 a green ball, a red ball, a white ball.
+RESET
+0 a red cube, a green cube, a blue cube.
+272 None
+RESET
+0 a red ball, a green ball, a blue ball.
+RESET
+0 a green ball, a red ball, a white ball.
+118 Gone: a gray and white cat.
+RESET
+0 a green cube, a red cube, a white cube.
+7 Gone: a gray square.
+RESET
+0 The table is empty.
+RESET
+0 a green ball, a red ball, a blue ball.
+RESET
+0 a green ball, a red ball, a white ball.
+7 Gone: a silver window.
+RESET
+0 a red ball, a green ball, a white ball.
+RESET
+0 green, red, white.
+RESET
+0 a red ball, a green ball, a blue ball.
+122 Gone: a gray pole.
+291 Gone: a white cat.
+RESET
+0 a green ball, a red ball, a white ball.
+RESET
+0 a red ball, a green ball, a blue ball.
+RESET
+0 a green ball, a red ball, a gray ball.
+148 Gone: a silver dog.
+184 Gone: a gray and black cat.
+207 Gone: a silver robot.
+268 Gone: a gray horse.
+298 Gone: a gray knife.
+RESET
+0 green, red, blue.
+RESET
+0 a green ball, a red ball, a white ball.
+373 Gone: a silver and black object.
+RESET
+0 a green square, a red square, a white square.
+7 Gone: a silver square.
+RESET
+0 a red ball, a green ball, a blue ball.
+197 Gone: a gray and white object.
+RESET
+0 a green ball, a red ball, a white ball.

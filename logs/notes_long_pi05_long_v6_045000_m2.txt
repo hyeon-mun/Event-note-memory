@@ -1550,3 +1550,176 @@ RESET
 35 Gone: a gray cube.
 42 Gone: a gray toy.
 202 Gone: a gray teapot.
+361 Gone: a gray teapot.
+RESET
+0 The table is empty.
+57 None
+RESET
+0 The table is empty.
+99 None
+373 Gone: a gray vacuum cleaner.
+508 Gone: a silver and black camera.
+RESET
+0 The table is empty.
+60 None
+203 Gone: a gray person.
+278 Gone: a gray machine.
+287 Gone: a maroon face.
+305 Gone: a silver bird.
+329 Gone: a gray knife.
+472 Gone: a gray object.
+535 Gone: a maroon light.
+RESET
+0 The table is empty.
+58 None
+506 Gone: a gray dog.
+585 Gone: a gray dog.
+RESET
+0 The table is empty.
+80 None
+366 Gone: a maroon mask.
+488 Gone: a silver and white cat.
+542 Gone: a gray dog.
+RESET
+0 red ball.
+39 Gone: a orange.
+46 Gone: a olive hat.
+203 Gone: a olive teapot.
+RESET
+0 The table is empty.
+70 None
+478 Gone: a gray cat.
+528 Gone: a silver face.
+RESET
+0 The table is empty.
+46 Gone: orange.
+RESET
+0 The table is empty.
+49 Gone: a orange dot.
+56 Gone: olive.
+145 Gone: a olive hat.
+584 Gone: a gray knife.
+594 Gone: a silver dog.
+RESET
+0 The table is empty.
+39 Gone: orange.
+557 Gone: a gray face.
+597 Gone: a gray computer monitor.
+RESET
+0 a red ball.
+46 Gone: a olive cube.
+237 Gone: a black and white pencil.
+397 Gone: a gray object.
+537 Gone: a gray and white object.
+RESET
+0 a red ball.
+35 Gone: a orange cube.
+RESET
+0 The table is empty.
+31 Gone: a orange.
+RESET
+0 The table is empty.
+58 None
+532 Gone: a silver television.
+567 None
+RESET
+0 The table is empty.
+82 Gone: a orange heart.
+RESET
+0 The table is empty.
+94 Gone: olive.
+188 Gone: two olive mugs.
+250 Gone: three olive mugs.
+374 Gone: three olive mugs.
+RESET
+0 The table is empty.
+20 Gone: orange.
+389 Gone: a gray and white dog.
+455 Gone: a silver and black toilet.
+513 Gone: a silver mask.
+RESET
+0 The table is empty.
+59 None
+165 Gone: three maroon balls.
+228 Gone: three maroon balls.
+448 Gone: a silver person.
+RESET
+0 The table is empty.
+30 Gone: a olive square.
+RESET
+0 The table is empty.
+34 Gone: the orange image contains a wooden surface.
+60 Gone: two maroon objects.
+135 Gone: two maroon objects.
+RESET
+0 The table is empty.
+62 Gone: a orange cube.
+159 Gone: a olive cube.
+530 None
+RESET
+0 The table is empty.
+102 None
+RESET
+0 a red ball.
+40 Gone: the gray image contains a wooden surface.
+119 Gone: a maroon hat.
+171 Gone: a maroon hat.
+301 Gone: a maroon hat.
+RESET
+0 The table is empty.
+92 Gone: a olive cube.
+408 None
+515 Gone: silver.
+RESET
+0 red.
+33 Gone: a gray block.
+40 Gone: a maroon object.
+RESET
+0 The table is empty.
+38 Gone: a orange.
+45 Gone: a gray teapot.
+78 Gone: three gray teapots.
+108 Gone: a olive teapot.
+232 Gone: a olive teapot.
+356 Gone: a olive teapot.
+477 Gone: a gray table.
+RESET
+0 The table is empty.
+51 Gone: a orange square.
+145 Gone: two olive cubes.
+RESET
+0 a red ball.
+40 Gone: a olive ball.
+223 Gone: a gray bird.
+RESET
+0 The table is empty.
+38 Gone: a orange.
+45 Gone: a gray mug.
+409 Gone: a silver person.
+497 Gone: a gray dog.
+513 Gone: a maroon face.
+521 Gone: a silver dog.
+RESET
+0 The table is empty.
+22 Gone: the gray image contains a wooden surface.
+107 Gone: two maroon objects.
+306 None
+462 Gone: a gray wooden surface.
+562 Gone: a gray dog.
+RESET
+0 The table is empty.
+24 Gone: a orange dot.
+31 Gone: two gray objects.
+128 Gone: a olive cube.
+256 Gone: a olive cube.
+497 Gone: a gray dog.
+528 Gone: a gray dog.
+549 None
+564 Gone: a gray wooden surface.
+RESET
+0 The table is empty.
+34 Gone: a olive.
+RESET
+0 The table is empty.
+57 Gone: a orange ball.
+61 None

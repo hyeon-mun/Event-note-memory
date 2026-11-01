@@ -1,0 +1,5 @@
+RESET
+0 a red ball, a gray ball, a gray cube, a gray cube.
+44 Gone: a gray person.
+47 Gone: a blue square.
+50 Gone: red.

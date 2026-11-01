@@ -1,0 +1,42 @@
+{
+ "args": {
+  "ckpt": "../runs/lr/pi05_long_base/checkpoints/045000/pretrained_model",
+  "tasks": "68",
+  "episodes": 1,
+  "start_seed": 4242424242,
+  "guidance": 1.0,
+  "exec": 4,
+  "flow_steps": 10,
+  "mem_off": false,
+  "ep_lo": 3,
+  "sim_backend": "cpu",
+  "video_dir": "../logs/demo_long_base_t68",
+  "note": null,
+  "out": "../logs/demo_long_base_t68.json"
+ },
+ "results": [
+  {
+   "tid": 68,
+   "mem_type": "Tracking",
+   "split": "medium",
+   "sr": 0.0,
+   "successes": [
+    false
+   ],
+   "lens": [
+    600
+   ],
+   "seeds": [
+    4242424245
+   ],
+   "progress": [],
+   "phases": [
+    [
+     76,
+     397
+    ]
+   ],
+   "sec": 139.1729097366333
+  }
+ ]
+}

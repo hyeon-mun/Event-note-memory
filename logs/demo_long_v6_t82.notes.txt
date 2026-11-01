@@ -1,0 +1,9 @@
+RESET
+0 a green ball, a red ball, a white ball.
+102 Gone: a silver block.
+108 Gone: a gray and white object.
+177 Gone: a silver and black cat.
+204 Gone: a silver wooden surface.
+215 None
+236 Gone: a silver dog.
+274 Gone: a silver dog.

@@ -56,20 +56,20 @@ Success additionally needs the touch condition, so success <= right.
 | BunchOfColors | Bunch7 | 0.00 | 0.00 |
 | SeqOfColors | Seq3 | 0.00 | 0.00 |
 | SeqOfColors | Seq5 | 0.00 | 0.00 |
-| SeqOfColors | Seq7 | 0.00 | – |
+| SeqOfColors | Seq7 | 0.00 | 0.00 |
 | ChainOfColors | Chain3 | 0.00 | 0.00 |
-| ChainOfColors | Chain5 | 0.00 | – |
+| ChainOfColors | Chain5 | 0.00 | 0.00 |
 | ChainOfColors | Chain7 | 0.00 | – |
 | ShellGame | ShellTouch | 0.16 | – |
-| ShellGame | ShellColorLamp | 0.14 | – |
+| ShellGame | ShellColorLamp | 0.14 | 0.26 |
 | BlinkCount | BlinkE | 0.02 | – |
 | BlinkCount | BlinkM | 0.00 | – |
 | BlinkCount | BlinkH | 0.04 | – |
-| TimedTransfer | TimedE | 0.00 | – |
+| TimedTransfer | TimedE | 0.00 | 0.00 |
 | TimedTransfer | TimedM | 0.00 | – |
 | TimedTransfer | TimedH | 0.22 | – |
-| **mean** | evaluated tasks | 0.048 (26/26) | 0.217 (15/26) |
-| **mean** | 15 tasks done by all | 0.045 | 0.217 |
+| **mean** | evaluated tasks | 0.048 (26/26) | 0.185 (19/26) |
+| **mean** | 19 tasks done by all | 0.043 | 0.185 |
 
 ## Other runs
 

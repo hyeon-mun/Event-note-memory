@@ -1,0 +1,57 @@
+{
+ "args": {
+  "ckpt": "../runs/lr/pi05_long_base/checkpoints/045000/pretrained_model",
+  "tasks": "59",
+  "episodes": 1,
+  "start_seed": 4242424242,
+  "guidance": 1.0,
+  "exec": 4,
+  "flow_steps": 10,
+  "mem_off": false,
+  "ep_lo": 0,
+  "sim_backend": "cpu",
+  "video_dir": "../logs/demo_long_base_t59",
+  "note": null,
+  "out": "../logs/demo_long_base_t59.json"
+ },
+ "results": [
+  {
+   "tid": 59,
+   "mem_type": "Capacity",
+   "split": "long",
+   "sr": 0.0,
+   "successes": [
+    false
+   ],
+   "lens": [
+    700
+   ],
+   "seeds": [
+    4242424242
+   ],
+   "progress": [
+    {
+     "mind": [
+      0.14282290637493134,
+      0.032727643847465515,
+      0.16986611485481262,
+      0.14009402692317963,
+      0.11628212779760361,
+      0.14180469512939453,
+      0.20897649228572845,
+      0.12668216228485107,
+      0.1761453002691269
+     ],
+     "true": 6
+    }
+   ],
+   "phases": [
+    [
+     59,
+     282
+    ]
+   ],
+   "sec": 169.96491694450378
+  }
+ ]
+}

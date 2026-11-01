@@ -181,6 +181,193 @@ table.nt.wide td:nth-child(3) { min-width: 220px; }
 </div>
   <p class="note-s">녹화는 결과 1의 평가와 같은 설정(C420 색 열화, CPU physics)으로 다시 실행한 것입니다. 정책이 확률적으로 행동을 뽑기 때문에, 같은 seed라도 결과 1 표의 해당 에피소드와 결과가 다를 수 있습니다. 노트 로그는 평가 중 서버가 실제로 쓴 기록을 그대로 사용했습니다.</p>
 </section>
+
+<section id="demo-long">
+  <h2>다른 메모리 유형 시연 · 26개 과제 모델</h2>
+  <p>Long 26개 과제를 함께 학습한 모델로 녹화했습니다. 노트 모델(v6)과 base 모두 <b>45k step</b>으로 학습량이 같고, 같은 seed입니다. Shape와 ShapeAndColor는 평가에서 노트 모델만 성공했던 에피소드를 다시 돌렸고, 나머지 과제는 0번 에피소드입니다. 정책이 확률적이라 평가 때와 결과가 다를 수 있으며, 녹화된 결과를 그대로 실었습니다.</p>
+  <div class="tablewrap"><table class="nt">
+    <thead><tr><th>과제</th><th>기억할 것</th><th>노트</th><th>노트 모델</th><th>base</th></tr></thead>
+    <tbody>
+      <tr><td>RememberShape 3 / 5</td><td>모양</td><td>단서를 적지만 모양 이름이 거침</td><td>실패 / 실패</td><td>실패 / 실패</td></tr>
+      <tr><td>ShapeAndColor 3×2 / 3×3</td><td>모양 + 색</td><td>단서를 적음</td><td><b>성공</b> / 실패</td><td>실패 / 실패</td></tr>
+      <tr><td>BunchOfColors3</td><td>동시에 보인 색 3개</td><td>사라질 때 못 적음 (장면 노트에는 있음)</td><td>실패</td><td>실패</td></tr>
+      <tr><td>Seq / ChainOfColors3</td><td>색 3개(+ 순서)</td><td><b>세 색을 순서대로 기록</b></td><td>실패 (동작)</td><td>실패</td></tr>
+      <tr><td>ShellGame Touch</td><td>섞이는 컵 추적</td><td>섞임은 기록 안 됨</td><td>실패</td><td>실패</td></tr>
+      <tr><td>BlinkCount Easy</td><td>깜빡인 횟수</td><td>깜빡임마다 기록</td><td><b>성공</b></td><td>실패</td></tr>
+      <tr><td>TimedTransfer Easy</td><td>경과 시간</td><td>잡음만</td><td>실패</td><td>실패</td></tr>
+    </tbody></table></div>
+  <p class="callout">정리하면 노트가 정보를 <b>담는지</b>와 정책이 <b>쓸 수 있는지</b>가 과제마다 다릅니다. 색·모양 단서와 적은 횟수는 노트로 전달되고 성공으로 이어집니다. 여러 색의 순서는 노트로 정확히 전달되지만 다단계 동작이 막힙니다. 동시에 사라지는 여러 물체, 연속적인 추적, 경과 시간은 현재 노트 규칙으로 담지 못합니다.</p>
+  <div class="demo">
+  <script type="application/json">{"instr": "Observe the object's shape, wait, then touch the object of the same shape.", "ours": {"n": 600, "notes": [[0, "blue."], [65, "Gone: a blue square."], [295, "Gone: the gray image contains a wooden surface."], [427, "Gone: a silver and white eye."]]}, "base": {"n": 600}}</script>
+  <h3>RememberShape3-Long <span class="tag">기억할 것: 단서 물체 하나의 모양</span></h3>
+  <div class="dctl"><button class="both" type="button">▶ 두 영상 함께 처음부터 재생</button>
+    <label>속도 <select class="rate"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+  <div class="vpair">
+    <figure class="vf"><div class="vh"><b>π0.5 + 노트 v6 (ours)</b><span class="stepno mono">step 0</span></div>
+      <video class="ours" src="demo/l53_v6.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res o pill no">실패</span></figure>
+    <figure class="vf"><div class="vh"><b>π0.5 노트 없음 (base)</b><span class="stepno mono">step 0</span></div>
+      <video class="base" src="demo/l53_base.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res b pill no">실패</span></figure>
+  </div>
+  <div class="tl"><span class="cur"></span></div>
+  <div class="prompt"><span class="t">ours 정책이 지금 이 step에 받는 지시문 (실시간)</span><code class="instr"></code></div>
+  <p class="note-s">단서는 파란 정육면체이고, 후보는 모두 파란색인 다른 모양들입니다. 노트는 "Gone: a blue square."로 단서를 적었지만, VLM이 3D 모양을 "square"처럼 거칠게만 부르기 때문에 후보를 구분하기에 정보가 약합니다. 두 모델 모두 실패했습니다. (평가 50 에피소드 기준 Shape3 성공률: 노트 0.38, base 0.08)</p>
+</div>
+<div class="demo">
+  <script type="application/json">{"instr": "Observe the object's shape, wait, then touch the object of the same shape.", "ours": {"n": 600, "notes": [[0, "The table is empty."], [93, "Gone: a blue plus sign."], [438, "Gone: the gray image contains a wooden surface."], [470, "Gone: a gray dog."], [532, "Gone: a gray dog."], [541, "Gone: a gray robot."]]}, "base": {"n": 600}}</script>
+  <h3>RememberShape5-Long <span class="tag">기억할 것: 단서 물체 하나의 모양 (후보 5개)</span></h3>
+  <div class="dctl"><button class="both" type="button">▶ 두 영상 함께 처음부터 재생</button>
+    <label>속도 <select class="rate"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+  <div class="vpair">
+    <figure class="vf"><div class="vh"><b>π0.5 + 노트 v6 (ours)</b><span class="stepno mono">step 0</span></div>
+      <video class="ours" src="demo/l54_v6.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res o pill no">실패</span></figure>
+    <figure class="vf"><div class="vh"><b>π0.5 노트 없음 (base)</b><span class="stepno mono">step 0</span></div>
+      <video class="base" src="demo/l54_base.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res b pill no">실패</span></figure>
+  </div>
+  <div class="tl"><span class="cur"></span></div>
+  <div class="prompt"><span class="t">ours 정책이 지금 이 step에 받는 지시문 (실시간)</span><code class="instr"></code></div>
+  <p class="note-s">단서는 십자 모양이고 노트는 "Gone: a blue plus sign."으로 정확합니다. 그런데 정책이 움직이기 시작한 뒤 팔 일부가 잘못 잡혀 "a gray dog" 같은 잡음 노트가 붙습니다. 이번 에피소드는 둘 다 실패했습니다. (Shape5: 노트 0.26, base 0.06)</p>
+</div>
+<div class="demo">
+  <script type="application/json">{"instr": "Observe the object's shape and color, wait, then touch the object of the same shape and color.", "ours": {"n": 600, "notes": [[0, "blue."], [19, "Gone: a blue and purple cube."]]}, "base": {"n": 600}}</script>
+  <h3>RememberShapeAndColor3×2-Long <span class="tag">기억할 것: 단서 물체의 모양과 색</span></h3>
+  <div class="dctl"><button class="both" type="button">▶ 두 영상 함께 처음부터 재생</button>
+    <label>속도 <select class="rate"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+  <div class="vpair">
+    <figure class="vf"><div class="vh"><b>π0.5 + 노트 v6 (ours)</b><span class="stepno mono">step 0</span></div>
+      <video class="ours" src="demo/l56_v6.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res o pill ok">성공</span></figure>
+    <figure class="vf"><div class="vh"><b>π0.5 노트 없음 (base)</b><span class="stepno mono">step 0</span></div>
+      <video class="base" src="demo/l56_base.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res b pill no">실패</span></figure>
+  </div>
+  <div class="tl"><span class="cur"></span></div>
+  <div class="prompt"><span class="t">ours 정책이 지금 이 step에 받는 지시문 (실시간)</span><code class="instr"></code></div>
+  <p class="note-s"><b>노트 모델만 성공.</b> 단서 노트 "Gone: a blue and purple cube."가 색과 모양을 함께 적었고, 정책이 같은 물체를 골라 터치했습니다. base는 다른 물체로 갔습니다. (SAC3×2: 노트 0.32, base 0.04)</p>
+</div>
+<div class="demo">
+  <script type="application/json">{"instr": "Observe the object's shape and color, wait, then touch the object of the same shape and color.", "ours": {"n": 600, "notes": [[0, "red."], [47, "Gone: a red cube."], [356, "Gone: a silver dog."], [394, "Gone: a gray block."], [470, "Gone: a silver dog."], [549, "Gone: a silver dog."], [597, "Gone: a blue cube."]]}, "base": {"n": 600}}</script>
+  <h3>RememberShapeAndColor3×3-Long <span class="tag">기억할 것: 단서 물체의 모양과 색 (후보 9개)</span></h3>
+  <div class="dctl"><button class="both" type="button">▶ 두 영상 함께 처음부터 재생</button>
+    <label>속도 <select class="rate"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+  <div class="vpair">
+    <figure class="vf"><div class="vh"><b>π0.5 + 노트 v6 (ours)</b><span class="stepno mono">step 0</span></div>
+      <video class="ours" src="demo/l57_v6.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res o pill no">실패</span></figure>
+    <figure class="vf"><div class="vh"><b>π0.5 노트 없음 (base)</b><span class="stepno mono">step 0</span></div>
+      <video class="base" src="demo/l57_base.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res b pill no">실패</span></figure>
+  </div>
+  <div class="tl"><span class="cur"></span></div>
+  <div class="prompt"><span class="t">ours 정책이 지금 이 step에 받는 지시문 (실시간)</span><code class="instr"></code></div>
+  <p class="note-s">단서 노트 "Gone: a red cube."는 맞지만, 후보가 9개(모양 3 × 색 3)라 정확한 물체를 고르지 못했습니다. 후보가 나타난 뒤 팔 crop 잡음("a silver dog")도 쌓입니다. (SAC3×3: 노트 0.26, base 0.04)</p>
+</div>
+<div class="demo">
+  <script type="application/json">{"instr": "Observe which colored cubes appear during the cue, wait, then touch all of them in any order and press the center button.", "ours": {"n": 700, "notes": [[0, "a red cube, a blue cube, a yellow cube."], [60, "Gone: a gray square."], [216, "Gone: a gray table."], [246, "Gone: a gray cabinet."], [342, "Gone: a gray book."], [562, "Gone: a silver and white eye."]]}, "base": {"n": 700}}</script>
+  <h3>BunchOfColors3-Long <span class="tag">기억할 것: 동시에 보인 여러 큐브의 색 집합</span></h3>
+  <div class="dctl"><button class="both" type="button">▶ 두 영상 함께 처음부터 재생</button>
+    <label>속도 <select class="rate"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+  <div class="vpair">
+    <figure class="vf"><div class="vh"><b>π0.5 + 노트 v6 (ours)</b><span class="stepno mono">step 0</span></div>
+      <video class="ours" src="demo/l59_v6.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res o pill no">실패</span></figure>
+    <figure class="vf"><div class="vh"><b>π0.5 노트 없음 (base)</b><span class="stepno mono">step 0</span></div>
+      <video class="base" src="demo/l59_base.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res b pill no">실패</span></figure>
+  </div>
+  <div class="tl"><span class="cur"></span></div>
+  <div class="prompt"><span class="t">ours 정책이 지금 이 step에 받는 지시문 (실시간)</span><code class="instr"></code></div>
+  <p class="note-s">단서 큐브 3개가 <b>동시에</b> 보였다가 사라집니다. t=0 장면 노트에는 "a red cube, a blue cube, a yellow cube"가 정확히 들어 있습니다. 하지만 사라질 때의 "Gone:" 노트는 "a gray square"처럼 받침대를 적었습니다. 가장 큰 변화 영역 하나만 보고 첫 물체만 남기는 규칙의 한계입니다. 두 모델 모두 실패했습니다.</p>
+</div>
+<div class="demo">
+  <script type="application/json">{"instr": "Observe which colored cubes appear during the cue, wait, then touch all of them in any order and press the center button.", "ours": {"n": 800, "notes": [[0, "The table is empty."], [60, "Gone: a maroon square."], [119, "Gone: a yellow square."], [178, "Gone: a blue square."], [460, "Gone: a gray book."]]}, "base": {"n": 800}}</script>
+  <h3>SeqOfColors3-Long <span class="tag">기억할 것: 차례로 보인 여러 큐브의 색 집합</span></h3>
+  <div class="dctl"><button class="both" type="button">▶ 두 영상 함께 처음부터 재생</button>
+    <label>속도 <select class="rate"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+  <div class="vpair">
+    <figure class="vf"><div class="vh"><b>π0.5 + 노트 v6 (ours)</b><span class="stepno mono">step 0</span></div>
+      <video class="ours" src="demo/l62_v6.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res o pill no">실패</span></figure>
+    <figure class="vf"><div class="vh"><b>π0.5 노트 없음 (base)</b><span class="stepno mono">step 0</span></div>
+      <video class="base" src="demo/l62_base.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res b pill no">실패</span></figure>
+  </div>
+  <div class="tl"><span class="cur"></span></div>
+  <div class="prompt"><span class="t">ours 정책이 지금 이 step에 받는 지시문 (실시간)</span><code class="instr"></code></div>
+  <p class="note-s">단서 큐브가 하나씩 차례로 나타났다 사라지고, 노트는 "Gone: a maroon square → a yellow square → a blue square"로 <b>세 색을 나타난 순서대로 기록</b>했습니다. 그런데 정책은 3개를 모두 터치하고 버튼을 누르는 동작을 완수하지 못합니다. 기억은 됐지만 다단계 동작이 병목입니다(같은 계열 Chain은 정답 노트를 줘도 0%).</p>
+</div>
+<div class="demo">
+  <script type="application/json">{"instr": "Observe which colored cubes appear during the cue, wait, then touch all of them in the same order as the cubes were shown and press the center button.", "ours": {"n": 800, "notes": [[0, "The table is empty."], [60, "Gone: a maroon square."], [119, "Gone: a yellow square."], [178, "Gone: a blue square."], [460, "Gone: a gray book."], [797, "Gone: a black and white eye."]]}, "base": {"n": 800}}</script>
+  <h3>ChainOfColors3-Long <span class="tag">기억할 것: 여러 큐브의 색과 순서</span></h3>
+  <div class="dctl"><button class="both" type="button">▶ 두 영상 함께 처음부터 재생</button>
+    <label>속도 <select class="rate"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+  <div class="vpair">
+    <figure class="vf"><div class="vh"><b>π0.5 + 노트 v6 (ours)</b><span class="stepno mono">step 0</span></div>
+      <video class="ours" src="demo/l65_v6.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res o pill no">실패</span></figure>
+    <figure class="vf"><div class="vh"><b>π0.5 노트 없음 (base)</b><span class="stepno mono">step 0</span></div>
+      <video class="base" src="demo/l65_base.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res b pill no">실패</span></figure>
+  </div>
+  <div class="tl"><span class="cur"></span></div>
+  <div class="prompt"><span class="t">ours 정책이 지금 이 step에 받는 지시문 (실시간)</span><code class="instr"></code></div>
+  <p class="note-s">SeqOfColors와 같은 장면이고 노트도 같습니다(세 색이 순서대로 기록됨). 순서까지 맞춰 3번 터치하고 버튼을 눌러야 하는데 정책이 이 동작을 하지 못합니다. 이 계열은 정답 노트를 줘도 0/50이었습니다.</p>
+</div>
+<div class="demo">
+  <script type="application/json">{"instr": "Observe which cup hides the ball, track the cups as they shuffle, then touch the correct cup.", "ours": {"n": 600, "notes": [[0, "The table is empty."], [77, "Gone: a orange."]]}, "base": {"n": 600}}</script>
+  <h3>ShellGameShuffleTouch-Long <span class="tag">기억할 것: 공이 든 컵의 위치를 섞이는 동안 추적</span></h3>
+  <div class="dctl"><button class="both" type="button">▶ 두 영상 함께 처음부터 재생</button>
+    <label>속도 <select class="rate"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+  <div class="vpair">
+    <figure class="vf"><div class="vh"><b>π0.5 + 노트 v6 (ours)</b><span class="stepno mono">step 0</span></div>
+      <video class="ours" src="demo/l68_v6.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res o pill no">실패</span></figure>
+    <figure class="vf"><div class="vh"><b>π0.5 노트 없음 (base)</b><span class="stepno mono">step 0</span></div>
+      <video class="base" src="demo/l68_base.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res b pill no">실패</span></figure>
+  </div>
+  <div class="tl"><span class="cur"></span></div>
+  <div class="prompt"><span class="t">ours 정책이 지금 이 step에 받는 지시문 (실시간)</span><code class="instr"></code></div>
+  <p class="note-s">공이 컵에 덮이는 순간 "Gone: a orange."가 기록됩니다(빨간 공을 orange로 측정). 그 뒤 컵이 섞이는 움직임은 물체가 계속 보이는 연속 운동이라 이벤트로 기록되지 않습니다. 추적형 기억은 이벤트 노트로 표현할 수 없는 유형입니다. 두 모델 모두 실패했습니다.</p>
+</div>
+<div class="demo">
+  <script type="application/json">{"instr": "Count how many times the blue lamp blinks, press the red button exactly that many times when the red lamp turns green, then press the black button to submit your answer.", "ours": {"n": 190, "notes": [[0, "a red ball, a gray ball, a gray cube, a gray cube."], [44, "Gone: a gray person."], [47, "Gone: a blue square."], [50, "Gone: red."]]}, "base": {"n": 96}}</script>
+  <h3>BlinkCountButtonPressEasy-Long <span class="tag">기억할 것: 램프가 깜빡인 횟수</span></h3>
+  <div class="dctl"><button class="both" type="button">▶ 두 영상 함께 처음부터 재생</button>
+    <label>속도 <select class="rate"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+  <div class="vpair">
+    <figure class="vf"><div class="vh"><b>π0.5 + 노트 v6 (ours)</b><span class="stepno mono">step 0</span></div>
+      <video class="ours" src="demo/l70_v6.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res o pill ok">성공</span></figure>
+    <figure class="vf"><div class="vh"><b>π0.5 노트 없음 (base)</b><span class="stepno mono">step 0</span></div>
+      <video class="base" src="demo/l70_base.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res b pill no">실패</span></figure>
+  </div>
+  <div class="tl"><span class="cur"></span></div>
+  <div class="prompt"><span class="t">ours 정책이 지금 이 step에 받는 지시문 (실시간)</span><code class="instr"></code></div>
+  <p class="note-s"><b>노트 모델만 성공.</b> 파란 램프가 한 번 깜빡일 때 "Gone: a blue square."가 기록되고, 정책이 버튼을 눌러 답을 제출했고 190 step에 성공으로 끝났습니다. base는 96 step에 실패로 끝났습니다. 깜빡임이 적은 Easy에서는 노트 수가 횟수 정보를 전달합니다. 많이 깜빡이면 최근 8개 창 때문에 잘릴 수 있습니다.</p>
+</div>
+<div class="demo">
+  <script type="application/json">{"instr": "When the white lamp turns green, start counting steps from that exact moment. Move the blue cube from the green disc to the red disc exactly on step 300 of that count.", "ours": {"n": 319, "notes": [[0, "a green ball, a red ball, a white ball."], [102, "Gone: a silver block."], [108, "Gone: a gray and white object."], [177, "Gone: a silver and black cat."], [204, "Gone: a silver wooden surface."], [236, "Gone: a silver dog."], [274, "Gone: a silver dog."]]}, "base": {"n": 319}}</script>
+  <h3>TimedTransferEasy-Long <span class="tag">기억할 것: 램프가 바뀐 뒤 지난 시간</span></h3>
+  <div class="dctl"><button class="both" type="button">▶ 두 영상 함께 처음부터 재생</button>
+    <label>속도 <select class="rate"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+  <div class="vpair">
+    <figure class="vf"><div class="vh"><b>π0.5 + 노트 v6 (ours)</b><span class="stepno mono">step 0</span></div>
+      <video class="ours" src="demo/l82_v6.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res o pill no">실패</span></figure>
+    <figure class="vf"><div class="vh"><b>π0.5 노트 없음 (base)</b><span class="stepno mono">step 0</span></div>
+      <video class="base" src="demo/l82_base.mp4" controls muted playsinline preload="metadata"></video>
+      <span class="res b pill no">실패</span></figure>
+  </div>
+  <div class="tl"><span class="cur"></span></div>
+  <div class="prompt"><span class="t">ours 정책이 지금 이 step에 받는 지시문 (실시간)</span><code class="instr"></code></div>
+  <p class="note-s">램프 색이 바뀐 순간부터 정확히 300 step 뒤에 큐브를 옮겨야 합니다. 노트는 "a silver dog" 같은 팔 crop 잡음뿐이고 경과 시간 정보는 담지 못합니다. 시간 측정은 이벤트 노트의 범위 밖입니다. 두 모델 모두 실패했습니다.</p>
+</div>
+</section>
 <script>
 (function(){
   const FPS = 20;

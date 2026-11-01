@@ -1491,3 +1491,173 @@ RESET
 0 a red cube.
 68 Gone: a maroon.
 135 Gone: a fuchsia block.
+202 Gone: a aqua cube.
+269 Gone: a red.
+336 Gone: a lime block.
+403 Gone: a teal cube.
+470 Gone: a orange block.
+672 Gone: a orange book.
+RESET
+0 a red button.
+13 Gone: a maroon.
+25 Gone: a lime block.
+37 Gone: a fuchsia block.
+49 Gone: a teal cube.
+62 Gone: a orange block.
+73 Gone: a aqua cube.
+85 Gone: a blue block.
+426 Gone: a gray book.
+RESET
+0 a red button.
+41 Gone: a maroon.
+81 Gone: a aqua cube.
+121 Gone: a teal cube.
+164 Gone: a orange block.
+201 Gone: a fuchsia object.
+242 Gone: a red.
+281 Gone: a lime block.
+546 Gone: a orange chair.
+RESET
+0 a yellow block.
+31 Gone: yellow.
+61 Gone: a aqua cube.
+91 Gone: a fuchsia block.
+121 Gone: a teal cube.
+151 Gone: orange.
+184 Gone: a red square.
+211 Gone: a blue square.
+317 Gone: a orange cube.
+RESET
+0 a blue square.
+67 Gone: a blue square.
+133 Gone: a lime square.
+199 Gone: a red square.
+265 Gone: a orange block.
+331 Gone: yellow.
+398 Gone: a maroon square.
+463 Gone: a fuchsia square.
+615 Gone: a gray picture.
+621 None
+RESET
+0 a blue button.
+60 Gone: a aqua cube.
+119 Gone: yellow.
+178 Gone: a fuchsia block.
+237 Gone: a lime square.
+296 Gone: a teal cube.
+355 Gone: red.
+414 Gone: orange.
+658 Gone: a silver and black object.
+739 Gone: a gray cube.
+RESET
+0 a red cube, a blue cube.
+89 Gone: a teal cube.
+177 Gone: a orange block.
+265 Gone: a aqua cube.
+353 Gone: a maroon.
+441 Gone: a fuchsia block.
+529 Gone: a red.
+617 Gone: a yellow block.
+1009 Gone: a gray book.
+RESET
+0 green block.
+51 Gone: a lime block.
+101 Gone: a blue block.
+157 Gone: a maroon.
+201 Gone: a aqua cube.
+253 Gone: a orange block.
+301 Gone: a teal cube.
+351 Gone: a yellow block.
+422 Gone: a orange block.
+432 Gone: a silver sink.
+RESET
+0 a red cube.
+56 Gone: a orange square.
+111 Gone: a lime square.
+166 Gone: a maroon square.
+169 Gone: a gray square.
+221 Gone: a blue cube.
+276 Gone: a aqua cube.
+331 Gone: a red square.
+386 Gone: a yellow block.
+773 Gone: a gray cube.
+RESET
+0 a blue block.
+82 Gone: a aqua cube.
+163 Gone: a red.
+244 Gone: a teal cube.
+326 Gone: a maroon.
+406 Gone: a blue square.
+493 Gone: a fuchsia block.
+568 Gone: a lime plant.
+765 Gone: a maroon toilet.
+960 Gone: a gray cube.
+RESET
+0 a blue button.
+19 Gone: a aqua cube.
+37 Gone: a teal cube.
+55 Gone: a orange block.
+73 Gone: a yellow block.
+91 Gone: a lime block.
+109 Gone: a fuchsia block.
+127 Gone: a maroon cloth.
+178 Gone: a gray book.
+RESET
+0 green block.
+99 Gone: a lime square.
+197 Gone: a aqua cube.
+297 Gone: a red cube.
+393 Gone: a blue shirt.
+492 Gone: a maroon cube.
+591 Gone: a fuchsia cloth.
+636 Gone: a gray toilet.
+687 Gone: a teal square.
+966 Gone: a gray block.
+RESET
+0 a red cube.
+36 Gone: a teal cube.
+71 Gone: a fuchsia square.
+106 Gone: a lime square.
+142 Gone: a aqua cube.
+182 Gone: yellow.
+211 Gone: a blue cube.
+246 Gone: a maroon square.
+471 Gone: a gray button.
+RESET
+0 green.
+30 Gone: a lime square.
+59 Gone: a aqua cube.
+88 Gone: a fuchsia block.
+117 Gone: a orange square.
+146 Gone: a red square.
+175 Gone: a teal cube.
+204 Gone: yellow.
+531 None
+RESET
+0 a red cube.
+96 Gone: a aqua cube.
+191 Gone: a maroon book.
+286 Gone: a orange block.
+381 Gone: a blue block.
+476 Gone: red.
+571 Gone: a teal cube.
+666 Gone: a fuchsia square.
+1065 Gone: a gray book.
+RESET
+0 a pink block.
+100 Gone: a fuchsia block.
+199 Gone: a lime square.
+298 Gone: a orange square.
+403 Gone: a maroon.
+496 Gone: a blue shirt.
+595 Gone: a teal cube.
+694 Gone: a red square.
+1018 Gone: a gray cube.
+1118 Gone: a silver and white object.
+RESET
+0 a red cube.
+81 Gone: a aqua cube.
+161 Gone: yellow.
+241 Gone: a red square.
+321 Gone: a orange square.
+326 Gone: a lime block.
