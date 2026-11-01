@@ -236,7 +236,7 @@ Since the delay before the decision is drawn per episode, we also binned the epi
 \label{fig:errors}
 \end{figure}
 \begin{table}[!t]
-\caption{Test-time note swaps on RC9-L (50 episodes): the policy is fixed and only the note writer changes. Right / pair / other as in Fig.~\ref{fig:errors}.}
+\caption{Test-time note swaps on RC9-L (50 episodes): the policy is fixed and only the note writer changes. Right / pair / other as in Fig.~\ref{fig:errors}. $^\dagger$Every online note names another candidate cube; $^\ddagger$episodes that reached the cube named by the wrong note.}
 \label{tab:swap}
 \begin{center}
 {\footnotesize
@@ -252,7 +252,7 @@ v3 & v3 & 0.38 & 22 / 8 / 20 \\
 v3 & v4 (removes it) & 0.46 & 27 / 9 / 14 \\
 \hline
 v6 & no notes & \tbd{C1} & \tbd{} \\
-v6 & wrong cue color$^\dagger$ & 0.34 & 19 / \multicolumn{1}{l}{14 to note color, 17 other} \\
+v6 & wrong cue color$^\dagger$ & 0.34 & 19 / 14$^\ddagger$ / 17 \\
 v6 & true cue color & \tbd{C1} & \tbd{} \\
 \hline
 \end{tabular}}
