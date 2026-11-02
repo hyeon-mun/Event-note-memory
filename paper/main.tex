@@ -58,7 +58,7 @@ Long-horizon manipulation, memory, partial observability, robot learning, vision
 Many manipulation tasks are partially observable in time: the information that determines the correct action is shown once and is no longer visible when the action must be taken.
 A robot that is shown a colored cube, waits while the cube is removed, and must later touch the cube of the same color among several candidates cannot solve the task from its current camera image alone.
 Vision-language-action (VLA) policies such as $\pi_{0.5}$~\cite{pi05} are trained to map the current observation and a language instruction to actions, and they have no mechanism to carry such information across hundreds of control steps.
-On the 26 long-horizon memory tasks we study, a $\pi_{0.5}$ policy fine-tuned without memory reaches a mean success rate of only 0.048.
+On the 26 long-horizon memory tasks we study, a $\pi_{0.5}$ policy fine-tuned without memory reaches a mean success rate of only 0.05.
 
 Recent work adds memory to VLA policies in several forms: latent memory banks~\cite{memoryvla,memoryvlapp}, recurrent memory tokens inside the backbone~\cite{muvla}, visual keyframes selected when the action plan changes~\cite{replanmem}, and histories of past frames~\cite{simplememvla}.
 These approaches change what the policy sees, but it remains difficult to tell \emph{why} a memory-augmented policy fails: because the relevant information was never written, because it was written in a form the policy cannot use, or because the policy does not act on correct information.
@@ -281,7 +281,7 @@ Together with the visual memory that is written correctly but ignored, these res
 
 \subsection{Memory types across 26 long-horizon tasks}
 \begin{table}[!t]
-\caption{Success on the 26 \texttt{-Long} tasks (one joint policy per method, 50 episodes per task). \tbd{Final columns at equal steps; the v6 column currently shows the 45k checkpoint against the 90k baseline.}}
+\caption{Success on the 26 \texttt{-Long} tasks (one joint policy per method, 50 episodes per task). Both policies at 45k steps of the same 90k schedule. \tbd{Add v7, periodic, keyframe columns; 90k rows.}}
 \label{tab:long}
 \begin{center}
 {\footnotesize
@@ -291,25 +291,25 @@ Together with the visual memory that is written correctly but ignored, these res
 \hline
 Family (memory type) & Variants & No memory & Notes v6 \\
 \hline
-RememberColor (object) & 3 / 5 / 9 & .18 / .16 / .06 & .74 / .68 / .28 \\
-RememberShape (object) & 3 / 5 / 9 & .08 / .06 / .06 & .38 / .26 / .16 \\
-ShapeAndColor (object) & 3x2 / 3x3 / 5x3 & .04 / .04 / .00 & .32 / .26 / .18 \\
+RememberColor (object) & 3 / 5 / 9 & .22 / .06 / .04 & .74 / .68 / .28 \\
+RememberShape (object) & 3 / 5 / 9 & .20 / .12 / .16 & .38 / .26 / .16 \\
+ShapeAndColor (object) & 3x2 / 3x3 / 5x3 & .08 / .06 / .12 & .32 / .26 / .18 \\
 BunchOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 \\
 SeqOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 \\
 ChainOfColors (sequential) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 \\
-ShellGame (tracking) & Touch / Lamp & .16 / .14 & .16 / .26 \\
-BlinkCount (temporal) & E / M / H & .02 / .00 / .04 & .06 / .04 / .00 \\
-TimedTransfer (temporal) & E / M / H & .00 / .00 / .22 & .00 / .00 / .00 \\
+ShellGame (tracking) & Touch / Lamp & .20 / .14 & .16 / .26 \\
+BlinkCount (temporal) & E / M / H & .02 / .00 / .00 & .06 / .04 / .00 \\
+TimedTransfer (temporal) & E / M / H & .00 / .04 / .06 & .00 / .00 / .00 \\
 \hline
-Mean (26 tasks) & & 0.048 & 0.145 \\
+Mean (26 tasks) & & 0.058 & 0.145 \\
 \hline
 \end{tabular}}
 }
 \end{center}
 \end{table}
 Table~\ref{tab:long} reports one policy trained jointly on all 26 tasks with and without notes.
-Without memory, $\pi_{0.5}$ reaches 0.048 on average.
-Notes help all nine single-cue object tasks: colors, shapes, and their combinations (mean 0.36 versus 0.08). On the other 17 tasks both policies stay near zero (0.03 each), and on TimedTransfer-H the notes hurt (0.22 to 0.00) \tbd{check at equal steps}.
+Without memory, $\pi_{0.5}$ reaches 0.058 on average (0.048 after the full 90k steps); with notes it reaches 0.145.
+Notes help all nine single-cue object tasks: colors, shapes, and their combinations (mean 0.36 versus 0.12 at equal steps; higher on eight of nine and equal on RememberShape9). On the other 17 tasks both policies stay near zero (0.03 each).
 They do not help tasks that require several cues at once (BunchOfColors, SeqOfColors) or in order (ChainOfColors).
 For ChainOfColors3 we had verified separately that even the true color sequence in the instruction yields 0/50, so that family is limited by the multi-touch skill rather than by memory.
 In tracking tasks (ShellGame) the shuffle is a continuous motion of objects that remain visible, which our event trigger does not describe; in BlinkCount each blink produces a note but the window of eight notes truncates long sequences; and in TimedTransfer the frequent lamp and object changes produce about 97 events per episode, most of which are noise.

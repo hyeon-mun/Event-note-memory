@@ -1,0 +1,15 @@
+RESET
+0 a red cube.
+32 Gone: a red square.
+108 None
+139 None
+153 Gone: a silver dog.
+191 Gone: a gray and black dog.
+250 Gone: a gray wall.
+287 Gone: a silver stick.
+297 Gone: a gray cat.
+318 Gone: a gray circle.
+462 Gone: a silver person.
+488 Gone: a silver hat.
+491 Gone: a gray face.
+501 None

@@ -1,0 +1,3 @@
+RESET
+0 The table is empty.
+101 Gone: a orange square.

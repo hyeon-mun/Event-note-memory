@@ -1,0 +1,3 @@
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
