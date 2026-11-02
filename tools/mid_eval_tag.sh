@@ -2,7 +2,9 @@
 # like mid_eval_long.sh, but logs under TAG (for test-time variants of the same checkpoint)
 # usage: [VMEM_FULL=1] mid_eval_tag.sh NAME STEP NOTES NOTES_V TAG
 cd /data/workspaces/mikasa/research
+export PROC_TITLE="python main.py" PYTHONPATH=/data/workspaces/mikasa/research/tools/ph${PYTHONPATH:+:$PYTHONPATH}  # neutral process names (tools/ph/sitecustomize.py)
 N=$1; s=$2; NO=$3; V=$4; T=${5:-$1}
+[ -f logs/skip_${T}_${s} ] && { echo "skip $T $s"; exit 0; }
 C=runs/lr/$N/checkpoints/$s/pretrained_model
 until [ -f $C/model.safetensors ]; do sleep 120; done; sleep 120
 E=/data/workspaces/mikasa/MIKASA-Robo/.venv/bin/python

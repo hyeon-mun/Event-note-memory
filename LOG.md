@@ -301,3 +301,10 @@ memory-critical step reweighting via ΔL = L_flow(no-mem) - L_flow(mem) (pointwi
 - New queue tools/evalq18.sh (after base 45k eval): v6 90k final -> v6tt7 45k -> visfull 45k -> v8 45k; tools/side_q.sh runs the lost single evals one at a time.
 - Update (user OK with a 1-day slip): v7 is retrained after all. tools/queue19.sh: visfull (running) -> v7 -> v8; tools/evalq19.sh adds the v7 45k eval before v8. The test-time variant (v6tt7) is kept as an extra row.
 - 11/2 22:00: the night batch (v7, v8, short RC v6) will run on another server (docs/RUN_ELSEWHERE.md, tools/night.sh with V7_GPUS/V8_GPUS/RC_GPU). Here GPU 7 keeps visfull training and the evalq19 queue.
+
+## 11/3 01:00 — 이 서버 GPU 0–6도 밤 동안 사용
+- 사용자: 오늘 밤 이 서버도 빔 → 여기서 실험, 다른 서버는 다른 실험.
+- 여기: `JOBS="v7 v8 vf" TT7=1 tools/night.sh` — v7 DDP 4장(GPU 0–3) → v7·v6tt7 26과제 평가(eval_spread.sh, 8그룹, GPU 0–3), v8 DDP 2장(GPU 4,5), visfull은 다음 체크포인트(30k)에서 GPU 7 학습을 멈추고 GPU 6에서 재개 → 45k 후 평가.
+- evalq19의 v6tt7, visfull, v7 단계는 `logs/skip_*` 표시로 건너뜀(mid_eval_tag.sh가 확인). v6 90k, v8 평가는 GPU 7에서 그대로.
+- 다른 서버: 짧은 RC v6 (`JOBS=rc`) + 지연 1000 확장(`tools/delay_more.sh`, t50/t53/t56, v6·base 45k). docs/RUN_ELSEWHERE.md 갱신.
+- 프로세스 이름: 사용자 요청으로 nvidia-smi/ps에 `python main.py`만 보이게 함(`tools/ph/sitecustomize.py` + setproctitle, 스크립트에서 PROC_TITLE·PYTHONPATH export). GPU 7에서 이미 돌던 v6 90k 평가는 끝날 때까지 기존 이름.

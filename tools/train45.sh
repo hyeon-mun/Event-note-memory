@@ -2,6 +2,7 @@
 # train on the 26 -Long tasks with the same 90k-step schedule as pi05_long_{base,v6} and stop at 45k
 # (same learning-rate schedule as their 45k checkpoints). usage: train45.sh NAME DATA_ROOT
 cd /data/workspaces/mikasa/research
+export PROC_TITLE="python main.py" PYTHONPATH=/data/workspaces/mikasa/research/tools/ph${PYTHONPATH:+:$PYTHONPATH}  # neutral process names (tools/ph/sitecustomize.py)
 N=$1; R=$2
 while pgrep -f "[l]erobot-train" -u $USER >/dev/null; do sleep 120; done
 until [ -f $R/meta/info.json ]; do sleep 120; done
