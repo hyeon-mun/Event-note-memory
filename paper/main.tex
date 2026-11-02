@@ -308,7 +308,7 @@ Mean (26 tasks) & & 0.058 & 0.145 \\
 \end{center}
 \end{table}
 Table~\ref{tab:long} reports one policy trained jointly on all 26 tasks with and without notes.
-Without memory, $\pi_{0.5}$ reaches 0.058 on average (0.048 after the full 90k steps); with notes it reaches 0.145.
+Without memory, $\pi_{0.5}$ reaches 0.058 on average; with notes it reaches 0.145. After the full 90k steps both policies are lower (0.048 and 0.116), but the gap remains (single-cue tasks: 0.076 vs.\ 0.298), so we compare all memory types at 45k.
 Notes help all nine single-cue object tasks: colors, shapes, and their combinations (mean 0.36 versus 0.12 at equal steps; higher on eight of nine and equal on RememberShape9). On the other 17 tasks both policies stay near zero (0.03 each).
 They do not help tasks that require several cues at once (BunchOfColors, SeqOfColors) or in order (ChainOfColors).
 For ChainOfColors3 we had verified separately that even the true color sequence in the instruction yields 0/50, so that family is limited by the multi-touch skill rather than by memory.
