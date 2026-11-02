@@ -299,3 +299,4 @@ memory-critical step reweighting via ΔL = L_flow(no-mem) - L_flow(mem) (pointwi
 - Lost: v6 90k final eval, v7 training (queue17 then moved on to visfull), C1 oracle t51/t52, delay-1000 t52 evals.
 - Decision: v7 is not retrained (would end after 11/5). Instead evaluate the v6 45k model with test-time v7 notes (no t=0 scene note), tag pi05_long_v6tt7.
 - New queue tools/evalq18.sh (after base 45k eval): v6 90k final -> v6tt7 45k -> visfull 45k -> v8 45k; tools/side_q.sh runs the lost single evals one at a time.
+- Update (user OK with a 1-day slip): v7 is retrained after all. tools/queue19.sh: visfull (running) -> v7 -> v8; tools/evalq19.sh adds the v7 45k eval before v8. The test-time variant (v6tt7) is kept as an extra row.
