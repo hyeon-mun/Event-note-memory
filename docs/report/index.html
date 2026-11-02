@@ -134,7 +134,7 @@ table.nt.wide td:nth-child(3) { min-width: 220px; }
     <div><h3>4. 메모리가 없는 π0.5는 Long 과제를 거의 풀지 못합니다</h3>
       <p>Long 26개 과제를 함께 학습한 base(90k step) 평균은 <b>0.048</b>입니다. MIKASA-Robo-VLA 논문의 π0.5 Long 평균은 0.017입니다.</p></div>
     <div><h3>5. 노트는 색 이외의 단일 단서 기억 과제에도 효과가 있습니다 (45k 중간 결과)</h3>
-      <p>Long 26개 평균 0.048 → 0.145. RememberShape 0.07→0.27, ShapeAndColor 0.03→0.25(계열 평균). 여러 단서·추적·횟수·시간 과제 17개는 둘 다 거의 0입니다(0.034 vs 0.031).</p></div>
+      <p>같은 45k step에서 Long 26개 평균 0.058 → 0.145, 단일 단서 9개 0.12 → 0.36. RememberShape 0.07→0.27, ShapeAndColor 0.03→0.25(계열 평균). 여러 단서·추적·횟수·시간 과제 17개는 둘 다 거의 0입니다(0.034 vs 0.031).</p></div>
   </div>
 </section>
 
@@ -610,22 +610,22 @@ table.nt.wide td:nth-child(3) { min-width: 220px; }
 
 <section>
   <h2>결과 4 · Long 26개 과제 전체 <span class="pill no" style="vertical-align:middle">45k 중간 결과 · 26/26 과제</span></h2>
-  <p>Long 변형 26개 과제(과제당 demo 250개)를 한 모델로 함께 학습했습니다. 노트 모델은 base와 데이터, step, 하이퍼파라미터가 모두 같습니다. 노트 모델은 아직 학습 중이며, 아래는 <b>45k step 중간 평가</b>입니다(base는 90k step이라 비교 조건은 노트 쪽에 불리합니다). 90k 최종 결과는 11/2 오전에 나옵니다. 최종 비교는 같은 step(90k)으로 합니다.</p>
+  <p>Long 변형 26개 과제(과제당 demo 250개)를 한 모델로 함께 학습했습니다. 노트 모델은 base와 데이터, step, 하이퍼파라미터가 모두 같습니다. 아래는 <b>같은 45k step끼리의 비교</b>입니다(base 90k도 함께 표시). 90k 최종 결과는 11/2 오전에 나옵니다. 최종 비교는 같은 step(90k)으로 합니다.</p>
   <div class="tablewrap"><table>
-    <thead><tr><th>과제 계열</th><th>변형</th><th>π0.5 base (90k)</th><th>π0.5 + 노트 v6 (45k)</th></tr></thead>
+    <thead><tr><th>과제 계열</th><th>변형</th><th>π0.5 base (45k)</th><th>π0.5 base (90k)</th><th>π0.5 + 노트 v6 (45k)</th></tr></thead>
     <tbody>
-      <tr><td>RememberColor</td><td>3 / 5 / 9</td><td class="num">0.18 / 0.16 / 0.06</td><td class="num hi">0.74 / 0.68 / 0.28</td></tr>
-      <tr><td>RememberShape</td><td>3 / 5 / 9</td><td class="num">0.08 / 0.06 / 0.06</td><td class="num hi">0.38 / 0.26 / 0.16</td></tr>
-      <tr><td>RememberShapeAndColor</td><td>3×2 / 3×3 / 5×3</td><td class="num">0.04 / 0.04 / 0.00</td><td class="num hi">0.32 / 0.26 / 0.18</td></tr>
-      <tr><td>BunchOfColors</td><td>3 / 5 / 7</td><td class="num">0.00 / 0.00 / 0.00</td><td class="num hi">0.00 / 0.00 / 0.00</td></tr>
-      <tr><td>SeqOfColors</td><td>3 / 5 / 7</td><td class="num">0.00 / 0.00 / 0.00</td><td class="num">0.00 / 0.00 / 0.00</td></tr>
-      <tr><td>ChainOfColors</td><td>3 / 5 / 7</td><td class="num">0.00 / 0.00 / 0.00</td><td class="num">0.00 / 0.00 / 0.00</td></tr>
-      <tr><td>ShellGame</td><td>Touch / ColorLamp</td><td class="num">0.16 / 0.14</td><td class="num">0.16 / 0.26</td></tr>
-      <tr><td>BlinkCount</td><td>Easy / Medium / Hard</td><td class="num">0.02 / 0.00 / 0.04</td><td class="num">0.06 / 0.04 / 0.00</td></tr>
-      <tr><td>TimedTransfer</td><td>Easy / Medium / Hard</td><td class="num">0.00 / 0.00 / 0.22</td><td class="num">0.00 / 0.00 / 0.00</td></tr>
-      <tr><td>단일 단서 9개 평균 (Color/Shape/ShapeAndColor)</td><td></td><td class="num">0.076</td><td class="num hi">0.362</td></tr>
-      <tr><td>나머지 17개 평균</td><td></td><td class="num">0.034</td><td class="num">0.031</td></tr>
-      <tr><td><b>평균 (26개)</b></td><td></td><td class="num"><b>0.048</b></td><td class="num hi"><b>0.145</b></td></tr>
+      <tr><td>RememberColor</td><td>3 / 5 / 9</td><td class="num">.22 / .06 / .04</td><td class="num">0.18 / 0.16 / 0.06</td><td class="num hi">0.74 / 0.68 / 0.28</td></tr>
+      <tr><td>RememberShape</td><td>3 / 5 / 9</td><td class="num">.20 / .12 / .16</td><td class="num">0.08 / 0.06 / 0.06</td><td class="num hi">0.38 / 0.26 / 0.16</td></tr>
+      <tr><td>RememberShapeAndColor</td><td>3×2 / 3×3 / 5×3</td><td class="num">.08 / .06 / .12</td><td class="num">0.04 / 0.04 / 0.00</td><td class="num hi">0.32 / 0.26 / 0.18</td></tr>
+      <tr><td>BunchOfColors</td><td>3 / 5 / 7</td><td class="num">0.00 / 0.00 / 0.00</td><td class="num">0.00 / 0.00 / 0.00</td><td class="num hi">0.00 / 0.00 / 0.00</td></tr>
+      <tr><td>SeqOfColors</td><td>3 / 5 / 7</td><td class="num">0.00 / 0.00 / 0.00</td><td class="num">0.00 / 0.00 / 0.00</td><td class="num">0.00 / 0.00 / 0.00</td></tr>
+      <tr><td>ChainOfColors</td><td>3 / 5 / 7</td><td class="num">0.00 / 0.00 / 0.00</td><td class="num">0.00 / 0.00 / 0.00</td><td class="num">0.00 / 0.00 / 0.00</td></tr>
+      <tr><td>ShellGame</td><td>Touch / ColorLamp</td><td class="num">.20 / .14</td><td class="num">0.16 / 0.14</td><td class="num">0.16 / 0.26</td></tr>
+      <tr><td>BlinkCount</td><td>Easy / Medium / Hard</td><td class="num">.02 / .00 / .00</td><td class="num">0.02 / 0.00 / 0.04</td><td class="num">0.06 / 0.04 / 0.00</td></tr>
+      <tr><td>TimedTransfer</td><td>Easy / Medium / Hard</td><td class="num">.00 / .04 / .06</td><td class="num">0.00 / 0.00 / 0.22</td><td class="num">0.00 / 0.00 / 0.00</td></tr>
+      <tr><td>단일 단서 9개 평균 (Color/Shape/ShapeAndColor)</td><td></td><td class="num">0.118</td><td class="num">0.076</td><td class="num hi">0.362</td></tr>
+      <tr><td>나머지 17개 평균</td><td></td><td class="num">0.027</td><td class="num">0.034</td><td class="num">0.031</td></tr>
+      <tr><td><b>평균 (26개)</b></td><td></td><td class="num"><b>0.058</b></td><td class="num"><b>0.048</b></td><td class="num hi"><b>0.145</b></td></tr>
     </tbody></table></div>
   <p class="note-s"><b>결과:</b> 효과는 단서가 한 번 보이고 사라지는 단일 단서 과제 9개에 몰려 있습니다(9개 모두 노트 &gt; base, 평균 0.08 → 0.36). 나머지 17개(여러 단서, 추적, 횟수, 시간)는 두 모델 모두 거의 0이고 평균도 같습니다. TimedTransfer Hard는 노트 쪽이 더 낮습니다(0.22 → 0.00). 이벤트가 너무 많아 노트가 잡음이 된 영향일 수 있으며, 같은 step 비교에서 다시 확인합니다. 이전 실험에서 ChainOfColors(t65)는 정답 노트를 줘도 0%여서, 그 계열은 기억보다 동작(9개 큐브 중 순서대로 터치)이 병목입니다.</p>
   <p class="note-s"><b>과제 구성 주의:</b> 이 26개는 이름에 "-Long"이 붙은 변형 전체(t50–72, t82–84)입니다. 벤치마크 공식 분류로는 14개가 long, 12개가 medium split이고, 공식 long split의 나머지 8개(BatteriesChecker, TraceShapeSeq, GatherAndRecall)는 포함되지 않습니다. 논문에서는 사용자 정의 과제 묶음으로 명시하고 환경 ID를 모두 적습니다.</p>
