@@ -253,7 +253,7 @@ v3 & v4 (removes it) & 0.46 & 27 / 9 / 14 \\
 \hline
 v6 & no notes & 0.08 & 8 / 2 / 40 \\
 v6 & wrong cue color$^\dagger$ & 0.34 & 19 / 14$^\ddagger$ / 17 \\
-v6 & true cue color & \tbd{C1} & \tbd{} \\
+v6 & true cue color & 0.60 & 34 / 7 / 9 \\
 \hline
 \end{tabular}}
 }
@@ -277,7 +277,7 @@ In all 17 v6 episodes in which the policy approached a wrong cube, the cue note 
 Most of these errors are among blue, aqua, and teal, and in these episodes the scene note at $t=0$ describes the cue as ``a blue cube'' while the measured note says ``aqua'' or ``teal''.
 The policy thus receives two inconsistent descriptions of the same object. \tbd{v7 without the scene note (C4).}
 The oracle note, which names the cue exactly, reaches 0.87 on RC9-L; in its 50 standard episodes the policy still approached an unrelated cube seven times, and in two further episodes it approached the right cube without completing the touch.
-Together with the visual memory that is written correctly but ignored, these results indicate that, once the note is correct, the remaining bottleneck lies in grounding the remembered attribute to the current candidates. The content-swap control confirms that the policy reads the note. When the color word in every online \note{Gone:} note is replaced by the color of another candidate cube present in the scene, success drops from 0.96 / 0.94 / 0.48 to 0.44 / 0.64 / 0.34 on RC3 / RC5 / RC9-L, and the robot goes to the cube named by the wrong note: on RC3 and RC5 every episode that does not reach the right cube reaches the note's cube (22 of 22 and 15 of 15), and on RC9 14 of 31. The scene note at $t=0$ is left unchanged and still names the true cue, which explains why some episodes still reach the right cube. With the notes removed, the same policy falls to 0.26 / 0.10 / 0.08, close to the policy trained without notes (0.14 / 0.14 / 0.06). \tbd{true-color row}
+Together with the visual memory that is written correctly but ignored, these results indicate that, once the note is correct, the remaining bottleneck lies in grounding the remembered attribute to the current candidates. The content-swap control confirms that the policy reads the note. When the color word in every online \note{Gone:} note is replaced by the color of another candidate cube present in the scene, success drops from 0.96 / 0.94 / 0.48 to 0.44 / 0.64 / 0.34 on RC3 / RC5 / RC9-L, and the robot goes to the cube named by the wrong note: on RC3 and RC5 every episode that does not reach the right cube reaches the note's cube (22 of 22 and 15 of 15), and on RC9 14 of 31. The scene note at $t=0$ is left unchanged and still names the true cue, which explains why some episodes still reach the right cube. With the notes removed, the same policy falls to 0.26 / 0.10 / 0.08, close to the policy trained without notes (0.14 / 0.14 / 0.06). Forcing the true color into the online notes raises success only from 0.48 to 0.60 on RC9-L (0.90 / 0.94 on RC3 / RC5), still below the oracle-trained policy (0.80): correcting color names closes about a third of the gap, and the rest is in how the trained policy uses the note.
 
 \subsection{Memory types across 26 long-horizon tasks}
 \begin{table}[!t]

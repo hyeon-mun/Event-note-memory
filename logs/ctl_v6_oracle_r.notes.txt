@@ -1,0 +1,613 @@
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+533 None
+RESET
+0 red cube.
+101 Gone: a red square.
+185 None
+392 None
+531 None
+RESET
+0 green.
+101 Gone: a lime square.
+514 None
+RESET
+0 yellow block.
+101 Gone: a yellow square.
+446 None
+494 Gone: a yellow dog.
+531 Gone: a yellow knife.
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+272 Gone: the fuchsia image contains a wooden surface.
+410 Gone: a fuchsia and white cat.
+526 Gone: a fuchsia zebra.
+RESET
+0 blue.
+101 Gone: a blue square.
+171 None
+208 None
+441 Gone: a blue circle.
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+540 None
+RESET
+0 yellow block.
+101 Gone: a yellow square.
+545 None
+RESET
+0 blue.
+101 Gone: a blue square.
+184 None
+383 Gone: a blue bottle.
+563 Gone: a blue wooden surface.
+RESET
+0 green.
+101 Gone: a lime square.
+184 Gone: the lime image contains a wooden surface.
+247 Gone: a lime leaf.
+372 Gone: a lime cat.
+443 Gone: a lime and white dog.
+502 Gone: a lime dog.
+527 Gone: a lime and white cat.
+546 None
+573 None
+RESET
+0 red cube.
+101 Gone: a red square.
+370 None
+532 Gone: a red and white cow.
+591 Gone: a red dog.
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+177 None
+437 Gone: a fuchsia block.
+587 Gone: a fuchsia knife.
+RESET
+0 green.
+101 Gone: a lime square.
+421 Gone: the lime image contains a wooden surface.
+498 Gone: a lime dog.
+524 Gone: a lime gun.
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+418 None
+477 Gone: a fuchsia and white cat.
+RESET
+0 red cube.
+101 Gone: a red square.
+250 None
+392 Gone: a red and white animal.
+476 Gone: a red and white animal.
+498 Gone: a red and white dog.
+RESET
+0 yellow block.
+101 Gone: a yellow square.
+232 None
+363 Gone: a yellow and white object.
+404 Gone: a yellow dog.
+595 Gone: a yellow elephant.
+RESET
+0 blue.
+101 Gone: a blue square.
+300 None
+404 Gone: a blue block.
+427 None
+462 Gone: a blue block.
+559 Gone: a blue cat.
+RESET
+0 blue.
+101 Gone: a blue square.
+484 None
+RESET
+0 red cube.
+101 Gone: a red square.
+328 None
+RESET
+0 green.
+101 Gone: a lime square.
+443 Gone: the lime image contains a wooden surface.
+507 Gone: a lime and white cat.
+RESET
+0 yellow block.
+101 Gone: a yellow square.
+373 Gone: the yellow image contains a wooden surface.
+481 Gone: a yellow camera.
+518 None
+RESET
+0 yellow block.
+101 Gone: a yellow square.
+203 None
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+313 None
+418 Gone: a fuchsia and white stick.
+RESET
+0 green.
+101 Gone: a lime square.
+415 None
+582 Gone: a lime knife.
+RESET
+0 green.
+101 Gone: a lime square.
+403 Gone: the lime image contains a wooden surface.
+526 Gone: a lime horse.
+562 Gone: a lime zebra.
+574 None
+RESET
+0 blue.
+101 Gone: a blue square.
+335 None
+341 Gone: a blue table.
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+221 None
+363 Gone: a fuchsia sword.
+463 Gone: a fuchsia dog.
+RESET
+0 red cube.
+101 Gone: a red square.
+328 None
+377 Gone: a red dog.
+408 Gone: a red ball.
+421 None
+573 Gone: a red cat.
+593 Gone: a red and white cow.
+RESET
+0 blue.
+101 Gone: a blue square.
+220 None
+362 Gone: a blue and white cat.
+586 Gone: a blue and white bird.
+RESET
+0 red cube.
+101 Gone: a red square.
+268 Gone: the red image contains a wooden surface.
+337 Gone: a red and white cow.
+408 Gone: a red and white dog.
+443 Gone: a red bird.
+509 Gone: a red ball.
+527 Gone: a red and white face.
+537 Gone: a red pixelated face.
+RESET
+0 blue.
+101 Gone: a blue square.
+192 None
+441 Gone: a blue and white object.
+492 Gone: a blue and white cat.
+578 Gone: a blue cow.
+RESET
+0 yellow block.
+101 Gone: a yellow square.
+489 None
+RESET
+0 The table is empty.
+101 Gone: a red square.
+274 Gone: a red face.
+452 None
+RESET
+0 blue.
+101 Gone: a blue square.
+217 None
+412 Gone: a blue dog.
+598 Gone: a blue bottle.
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+529 None
+593 Gone: a fuchsia person.
+RESET
+0 green.
+101 Gone: a lime square.
+282 None
+RESET
+0 blue.
+101 Gone: a blue square.
+435 None
+RESET
+0 The table is empty.
+101 Gone: a red square.
+439 None
+492 Gone: a red block.
+RESET
+0 The table is empty.
+101 Gone: a yellow square.
+193 None
+305 Gone: a yellow block.
+387 Gone: a yellow and white cat.
+418 Gone: a yellow and black face.
+RESET
+0 The table is empty.
+101 Gone: a red square.
+395 None
+524 None
+561 Gone: a red cat.
+RESET
+0 blue.
+101 Gone: a blue square.
+153 None
+267 Gone: a blue and white dog.
+387 None
+481 Gone: a blue wooden surface.
+506 Gone: a blue and grey image.
+RESET
+0 green.
+101 Gone: a lime square.
+375 None
+RESET
+0 blue.
+101 Gone: a blue square.
+165 None
+306 None
+447 Gone: a blue dog.
+467 Gone: a blue dog.
+582 Gone: a blue and white picture.
+598 Gone: a blue ball.
+RESET
+0 red cube.
+101 Gone: a red square.
+325 None
+386 Gone: a red dog.
+538 Gone: a red and white cat.
+568 Gone: a red dog.
+RESET
+0 green.
+101 Gone: a lime square.
+440 None
+522 Gone: lime.
+RESET
+0 green.
+101 Gone: a lime square.
+509 None
+561 Gone: a lime and white cat.
+591 Gone: a lime object.
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+395 Gone: the fuchsia image contains a wooden surface.
+494 Gone: a fuchsia wooden surface.
+508 Gone: a fuchsia bottle.
+572 Gone: a fuchsia circle.
+RESET
+0 green.
+101 Gone: a lime square.
+327 None
+397 Gone: a lime pole.
+414 None
+487 Gone: a lime gun.
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+365 None
+437 Gone: a fuchsia block.
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+423 Gone: the fuchsia image contains a wooden surface.
+431 None
+458 Gone: a fuchsia zebra.
+526 Gone: a fuchsia person.
+RESET
+0 The table is empty.
+101 Gone: a orange square.
+541 None
+596 Gone: a orange bottle.
+RESET
+0 a blue cube.
+101 Gone: a teal cube.
+509 None
+561 Gone: a teal wooden surface.
+RESET
+0 a red cube.
+101 Gone: a maroon square.
+520 None
+RESET
+0 The table is empty.
+101 Gone: a maroon square.
+275 None
+332 Gone: a maroon cube.
+343 Gone: a maroon cube.
+449 None
+517 Gone: a maroon person.
+542 Gone: a maroon person.
+557 Gone: a maroon camera.
+577 Gone: a maroon person.
+598 Gone: a maroon elephant.
+RESET
+0 yellow block.
+101 Gone: a yellow square.
+505 None
+511 None
+588 Gone: a yellow wooden surface.
+RESET
+0 blue.
+101 Gone: a blue square.
+434 None
+441 Gone: a blue wooden surface.
+RESET
+0 blue.
+101 Gone: a blue square.
+222 None
+342 Gone: a blue dog.
+398 None
+537 Gone: a blue shoe.
+RESET
+0 yellow block.
+101 Gone: a yellow square.
+487 None
+517 Gone: a yellow robot.
+RESET
+0 blue.
+101 Gone: a blue square.
+539 None
+RESET
+0 green.
+101 Gone: a lime square.
+430 Gone: a lime object.
+508 None
+RESET
+0 a blue cube.
+101 Gone: a teal cube.
+178 None
+221 None
+297 Gone: a teal and white object.
+471 Gone: a teal wooden surface.
+572 None
+RESET
+0 a red cube.
+101 Gone: a maroon square.
+295 None
+362 Gone: a maroon and white dog.
+467 Gone: a maroon face.
+507 Gone: a maroon tie.
+RESET
+0 green.
+101 Gone: a lime square.
+477 None
+536 Gone: a lime dog.
+RESET
+0 red cube.
+101 Gone: a red square.
+466 None
+592 Gone: red cup.
+RESET
+0 a blue cube.
+101 Gone: a teal cube.
+305 None
+RESET
+0 yellow.
+101 Gone: a orange square.
+367 Gone: a orange wall.
+517 None
+571 None
+588 Gone: a orange dog.
+RESET
+0 blue.
+101 Gone: a blue square.
+304 None
+412 Gone: a blue cow.
+592 None
+RESET
+0 yellow block.
+101 Gone: a yellow square.
+178 None
+257 Gone: a yellow dog.
+347 Gone: a yellow and white cat.
+366 None
+452 Gone: a yellow square.
+466 Gone: a yellow elephant.
+562 Gone: a yellow dog.
+RESET
+0 red cube.
+101 Gone: a red square.
+325 None
+403 Gone: a red disc.
+573 None
+RESET
+0 blue.
+101 Gone: a blue square.
+287 None
+522 Gone: a blue dog.
+RESET
+0 yellow block.
+101 Gone: a yellow square.
+200 None
+273 None
+313 Gone: a yellow shirt.
+386 Gone: a yellow block.
+418 Gone: yellow.
+568 None
+594 Gone: a yellow circle.
+RESET
+0 a blue cube.
+101 Gone: a aqua cube.
+373 None
+381 Gone: a aqua piano.
+462 Gone: a aqua cat.
+491 Gone: a aqua dog.
+578 Gone: a aqua and black object.
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+519 None
+RESET
+0 green.
+101 Gone: a lime square.
+334 None
+RESET
+0 a blue ball.
+101 Gone: a aqua cube.
+220 None
+226 Gone: aqua.
+290 Gone: aqua.
+308 None
+543 None
+556 None
+577 Gone: a aqua bottle.
+593 Gone: a aqua bottle.
+RESET
+0 a blue cube.
+101 Gone: a aqua cube.
+399 None
+462 Gone: a aqua cube.
+477 Gone: a aqua pixelated dog.
+RESET
+0 green.
+101 Gone: a lime square.
+347 None
+492 Gone: a lime person.
+497 Gone: a lime person.
+RESET
+0 red cube.
+101 Gone: a red square.
+375 None
+412 Gone: a red wall.
+415 Gone: a red dog.
+432 Gone: a red dog.
+528 Gone: a red person.
+572 None
+588 Gone: a red block.
+RESET
+0 The table is empty.
+101 Gone: a maroon square.
+353 None
+RESET
+0 a blue cube.
+101 Gone: a teal cube.
+259 Gone: a teal wall.
+325 None
+554 Gone: a teal circle.
+RESET
+0 yellow.
+101 Gone: a orange square.
+463 None
+491 Gone: a orange bird.
+562 Gone: a orange elephant.
+RESET
+0 green.
+101 Gone: a lime square.
+222 None
+252 Gone: a lime person.
+267 Gone: a lime block.
+306 None
+472 Gone: a lime object.
+557 Gone: a lime block.
+RESET
+0 The table is empty.
+101 Gone: a red square.
+165 None
+427 Gone: red.
+446 Gone: a red record.
+RESET
+0 blue.
+101 Gone: a blue square.
+284 None
+337 Gone: a blue dog.
+382 Gone: a blue microphone.
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+400 None
+457 Gone: a fuchsia block.
+583 Gone: a fuchsia cube.
+RESET
+0 a blue cube.
+101 Gone: a aqua cube.
+517 None
+592 Gone: a aqua horse.
+RESET
+0 blue.
+101 Gone: a blue square.
+168 None
+233 Gone: a blue zebra.
+341 Gone: a blue person.
+412 Gone: a blue and black object.
+596 None
+RESET
+0 The table is empty.
+101 Gone: a red square.
+485 None
+526 Gone: a red and white cat.
+562 Gone: red.
+593 Gone: a red block.
+RESET
+0 The table is empty.
+101 Gone: a yellow square.
+390 None
+396 None
+RESET
+0 yellow.
+101 Gone: a orange square.
+502 None
+562 Gone: a orange and black mask.
+RESET
+0 blue.
+101 Gone: a blue square.
+373 None
+382 None
+448 Gone: a blue dog.
+512 Gone: a blue dog.
+522 None
+566 None
+RESET
+0 green.
+101 Gone: a lime square.
+256 None
+307 Gone: a lime block.
+382 Gone: a lime dog.
+528 Gone: a lime person.
+RESET
+0 The table is empty.
+101 Gone: a orange square.
+391 None
+465 Gone: a orange cube.
+563 Gone: a orange and white animal.
+RESET
+0 a blue cube.
+101 Gone: a teal cube.
+190 None
+282 Gone: a teal bowl.
+348 Gone: a teal mask.
+468 Gone: a teal person.
+592 Gone: a teal person.
+RESET
+0 green.
+101 Gone: a lime square.
+463 None
+RESET
+0 green.
+101 Gone: a lime square.
+493 None
+557 None
+RESET
+0 a pink ball.
+101 Gone: a fuchsia square.
+292 None
+442 None
+516 Gone: a fuchsia cube.
+532 Gone: a fuchsia and white image.
+546 None
+562 None
+RESET
+0 green.
+101 Gone: a lime square.
+296 None
+426 Gone: a lime ball.
+581 None
+593 Gone: a lime and black object.
+RESET
+0 green.
+101 Gone: a lime square.
+548 None
+RESET
+0 The table is empty.
+101 Gone: a maroon square.
+517 None
+577 Gone: a maroon.
