@@ -57,3 +57,5 @@ python3 tools/make_tables.py
 ```
 
 평가 규약: 과제당 50 에피소드(seed 4242424242부터 고정), MP 수집 과제는 CPU physics, 마지막 checkpoint 보고(best checkpoint 선택 없음).
+
+- 다른 서버에서 v7/v8 학습과 짧은 RC 실험을 돌리는 방법: [docs/RUN_ELSEWHERE.md](docs/RUN_ELSEWHERE.md)
