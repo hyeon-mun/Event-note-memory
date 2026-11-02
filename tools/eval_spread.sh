@@ -4,6 +4,8 @@
 cd /data/workspaces/mikasa/research
 export PROC_TITLE="python main.py" PYTHONPATH=/data/workspaces/mikasa/research/tools/ph${PYTHONPATH:+:$PYTHONPATH}  # neutral process names (tools/ph/sitecustomize.py)
 N=$1; s=$2; NO=$3; V=$4; T=${5:-$1}; G=(${6//,/ }); NG=${7:-8}
+[ -f logs/noeval_${T}_${s} ] && { echo "no eval here: $T $s"; exit 0; }
+[ -f logs/ng_${T}_${s} ] && NG=$(cat logs/ng_${T}_${s})  # override set while the batch runs
 C=runs/lr/$N/checkpoints/$s/pretrained_model
 until [ -f $C/model.safetensors ]; do sleep 120; done; sleep 120
 E=/data/workspaces/mikasa/MIKASA-Robo/.venv/bin/python

@@ -308,3 +308,5 @@ memory-critical step reweighting via ΔL = L_flow(no-mem) - L_flow(mem) (pointwi
 - evalq19의 v6tt7, visfull, v7 단계는 `logs/skip_*` 표시로 건너뜀(mid_eval_tag.sh가 확인). v6 90k, v8 평가는 GPU 7에서 그대로.
 - 다른 서버: 짧은 RC v6 (`JOBS=rc`) + 지연 1000 확장(`tools/delay_more.sh`, t50/t53/t56, v6·base 45k). docs/RUN_ELSEWHERE.md 갱신.
 - 프로세스 이름: 사용자 요청으로 nvidia-smi/ps에 `python main.py`만 보이게 함(`tools/ph/sitecustomize.py` + setproctitle, 스크립트에서 PROC_TITLE·PYTHONPATH export). GPU 7에서 이미 돌던 v6 90k 평가는 끝날 때까지 기존 이름.
+- 사용 가능 시간: 11/3 10:00까지(사용자). 09:55에 `tools/stop_night.sh`가 GPU 0–6의 night 작업만 종료(evalq19, side_q 그룹 제외)하고, 잘린 평가에서 끝난 과제 결과를 eval_db.log로 옮김.
+- 10시 전에 끝내기 위해 v7 평가는 26그룹(과제 하나씩 동시, `logs/ng_*`), v6tt7은 여기서 하지 않고(`logs/noeval_*`) GPU 7 evalq19에서. 끝나지 않은 v7·visfull 과제는 10시 이후 GPU 7에서 재평가.
