@@ -293,3 +293,9 @@ memory-critical step reweighting via ΔL = L_flow(no-mem) - L_flow(mem) (pointwi
 - 코드: build_ds.py v7/v8, server.py NOTES_V=7/8, NOTE_SWAP(reset 메시지로 색 전달, "Gone:" 노트 색 교체), evaluate.py NOTE_SWAP=oracle|wrong.
 - 큐: tools/build_cmp.sh(v7 → visfull → [45k mid-eval 후] v8 데이터), tools/queue17.sh(train45.sh × 3), tools/evalq17.sh(base45k → v7 → visfull → v8, 각 4그룹), tools/controls.sh(t5x_v6 20k에 노트 비움/틀린 색/정답 색, RC 3과제).
 - GPU 예산: 학습 40 + long_v6 90k 평가 48 + VLM 빌드 ~8 + control 16. evalq17은 queue15 종료 후 시작.
+
+## 11/2 06:04 gpuguard kill (recovery)
+- Cause: queue17 started the v7 training as soon as the 90k v6 training process exited, while queue15's 4-group final eval, the C1 oracle control and two delay evals were running (free memory fell to 8.5 GB). gpuguard killed all GPU-7 jobs.
+- Lost: v6 90k final eval, v7 training (queue17 then moved on to visfull), C1 oracle t51/t52, delay-1000 t52 evals.
+- Decision: v7 is not retrained (would end after 11/5). Instead evaluate the v6 45k model with test-time v7 notes (no t=0 scene note), tag pi05_long_v6tt7.
+- New queue tools/evalq18.sh (after base 45k eval): v6 90k final -> v6tt7 45k -> visfull 45k -> v8 45k; tools/side_q.sh runs the lost single evals one at a time.
