@@ -8,11 +8,20 @@ TASK_CSV = "/data/workspaces/mikasa/MIKASA-Robo/mikasa_robo_vla_envs.csv"
 TEXT_FILE = "/data/workspaces/mikasa/data_mikasa_robo/text_emb.npz"
 
 
+# standard MIKASA-Robo (non-VLA) RememberColor tasks, for comparison with the memory papers that report on them.
+# No language in these envs: the -VLA instruction is used. Actions are pd_joint_delta_pos (8-d), see tools/conv_v0.py.
+V0_TASKS = {91 + i: dict(env_id=f"RememberColor{k}-v0", max_len=60, mem="Object", split="short", src="PPO",
+                         instr="Observe the cube's color, wait, then touch the cube of the same color.")
+            for i, k in enumerate((3, 5, 9))}
+
+
 def task_table():
     rows = list(csv.DictReader(open(TASK_CSV), delimiter=";"))
-    return {int(r["id"]): dict(env_id=r["Name"], max_len=int(r["Max Length"]), mem=r["Memory Type"],
-                               split=r["Horizon Split"].lower(), instr=r["language_instruction"],
-                               src=r["Data Source"]) for r in rows}
+    t = {int(r["id"]): dict(env_id=r["Name"], max_len=int(r["Max Length"]), mem=r["Memory Type"],
+                            split=r["Horizon Split"].lower(), instr=r["language_instruction"],
+                            src=r["Data Source"]) for r in rows}
+    t.update(V0_TASKS)
+    return t
 
 
 def pool_tokens(f, tokens):

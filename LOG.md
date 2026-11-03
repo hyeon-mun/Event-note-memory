@@ -322,3 +322,9 @@ memory-critical step reweighting via ΔL = L_flow(no-mem) - L_flow(mem) (pointwi
 ## 11/4 00:05 — 범위 축소 (사용자: 지금까지 한 것으로 기존 방법과 제대로 비교)
 - v8(주기적 캡션) 평가와 추가 지연 평가 6개는 하지 않음(v8 45k 체크포인트는 보관). evalq23의 S2–S4 종료.
 - keyframe(visfull, RePlanMem 방식 시각 메모리)은 단일 단서 9과제만 평가(나머지 17개는 base/v6/v7 모두 거의 0). `tools/evalq24.sh`: v7 t72/82/83 → visfull 3그룹. 짧은 RC v6(evalq23 S1)는 계속.
+
+## 11/4 00:40 — 원래 MIKASA-Robo RC3/5/9-v0 추가 (사용자 요청: -VLA-v0와 -v0 둘 다)
+- 데이터: HF avanturist/mikasa-robo의 RememberColor{3,5,9}-v0.zip (과제당 npz 1000개). 성공한 앞 250개를 첫 성공 step에서 자름. 과제 id 91/92/93. `tools/conv_v0.py`.
+- 행동은 데이터 그대로 `pd_joint_delta_pos`(8차원). 언어 지시가 없어 -VLA RememberColor 지시문을 붙임. 상태는 -VLA와 같은 7차원(xyz, rpy, 그리퍼).
+- 이벤트 감지는 에피소드당 t=0 한 번만 잡힘(t13도 같음) → 짧은 RC의 v6 노트는 t=0 장면 캡션 하나.
+- `tools/evalq25.sh`: PART=prep(노트 생성, 1 에피소드 동작 확인) → PART=train(pi05_t1y_v6 10k → 과제당 100 에피소드 평가, 이어서 pi05_t1y_base). prep 완료와 t1x_v6 학습 종료 후 자동 시작.

@@ -54,7 +54,7 @@ class PolicyRunner:
         self.guidance, self.exec_steps, self.flow_steps, self.mem_off = guidance, exec_steps, flow_steps, mem_off
         if a.get("mem_src") == "oracle":
             from cue_labels import cluster, color_clusters, cue_colors
-            t0 = ck["tids"][0]; self.centers = cluster(cue_colors(t0), {13: 3, 14: 5, 15: 9, 50: 3, 51: 5, 52: 9}[t0])[1]
+            t0 = ck["tids"][0]; self.centers = cluster(cue_colors(t0), {13: 3, 14: 5, 15: 9, 50: 3, 51: 5, 52: 9, 91: 3, 92: 5, 93: 9}[t0])[1]
 
     def reset(self, instruction, tid=None):
         self.tid = tid
@@ -136,7 +136,7 @@ class RemoteRunner:
         elif self.t == 0 and self.note == "oracle":
             from cue_labels import cluster, color_clusters, cue_colors
             from make_note_names import color_names
-            k = {13: 3, 14: 5, 15: 9, 50: 3, 51: 5, 52: 9}[self.tid]
+            k = {13: 3, 14: 5, 15: 9, 50: 3, 51: 5, 52: 9, 91: 3, 92: 5, 93: 9}[self.tid]
             C = color_clusters(self.tid, k)[1]
             px = rgb[64:88, 52:76, :3].reshape(-1, 3).astype(np.float32)
             c = px[np.argsort(-(px.max(1) - px.min(1)))[:4]].mean(0)
@@ -163,6 +163,11 @@ def run_task(runner, tid, n_eps, start_seed, log=None, ep_lo=0, sim_backend="gpu
         if not hasattr(B, "_make0"): B._make0 = B.gym.make
         B.gym.make = lambda i, **k: B._make0(i, max_episode_steps=int(os.environ["MAXSTEPS"]), **k)
     cfg = BenchmarkConfig(n_episodes=n_eps, start_seed=start_seed, sim_backend=sim_backend)
+    if not tt["env_id"].endswith("VLA-v0"):              # standard MIKASA-Robo task (ids 91-93): joint-delta control,
+        import mikasa_robo_suite.rl.memory_envs  # noqa: F401   same obs wrappers as the -VLA tasks (rgb + 7-d EEF proprio)
+        from mikasa_robo_suite.vla.utils.apply_wrappers import VLA_WRAPPER_CONFIGS, VLAWrapperConfig
+        VLA_WRAPPER_CONFIGS.setdefault(tt["env_id"], VLAWrapperConfig())
+        cfg.control_mode = "pd_joint_delta_pos"
     env = make_benchmark_env(tt["env_id"], cfg)
     succ, lens, prog, phases = [], [], [], []
     for i in range(ep_lo, ep_lo + n_eps):

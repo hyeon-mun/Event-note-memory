@@ -1,6 +1,6 @@
 """Policy server (runs in the LeRobot env). Protocol over multiprocessing.connection, numpy-version agnostic:
   ("reset", task_str) -> "ok"
-  ("act", {name: (bytes, shape, dtype_str)}, task_str) -> (bytes, shape, "float32")   one 7-d action
+  ("act", {name: (bytes, shape, dtype_str)}, task_str) -> (bytes, shape, "float32")   one 7-d (8-d for the joint-delta -v0 tasks) action
 usage: server.py CKPT_DIR PORT
 """
 import ctypes, os, signal, sys
@@ -19,6 +19,7 @@ cfg = PreTrainedConfig.from_pretrained(ckpt)
 cfg.device = "cuda"
 policy = get_policy_class(cfg.type).from_pretrained(ckpt, config=cfg).to("cuda").eval()
 pre, post = make_pre_post_processors(cfg, pretrained_path=ckpt)
+ADIM = cfg.output_features["action"].shape[0]                            # 7 (EEF delta, -VLA tasks) or 8 (joint delta, -v0)
 
 DEADBAND = float(os.environ.get("DEADBAND", 0))                           # zero tiny arm actions (|a| < DEADBAND)
 notes_v8 = os.environ.get("NOTES_V") == "8"                                 # v8: periodic baseline, full-frame scene caption every 50 steps
@@ -122,9 +123,9 @@ with Listener(("127.0.0.1", port), authkey=b"seqpol") as lst:
                         batch["observation.images.memory"] = torch.from_numpy(chroma420(vm.img) if C420 else vm.img.copy()).float().permute(2, 0, 1)[None] / 255.0
                     with torch.no_grad():
                         a = post(policy.select_action(pre(batch)))
-                    a = a.reshape(-1)[:7].float().cpu().numpy()
-                    if DEADBAND and np.abs(a[:6]).max() < DEADBAND:   # demos hold with exactly zero actions while waiting
-                        a[:6] = 0
+                    a = a.reshape(-1)[:ADIM].float().cpu().numpy()
+                    if DEADBAND and np.abs(a[:-1]).max() < DEADBAND:  # demos hold with exactly zero actions while waiting
+                        a[:-1] = 0
                     conn.send((a.tobytes(), a.shape, "float32"))
                 elif msg[0] == "close":
                     break
