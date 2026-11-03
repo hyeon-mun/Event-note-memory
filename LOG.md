@@ -318,3 +318,7 @@ memory-critical step reweighting via ΔL = L_flow(no-mem) - L_flow(mem) (pointwi
 - 11:08 다른 서버는 사용하지 않음(사용자). 남은 일을 모두 GPU 7 하나의 대기열 `tools/evalq23.sh`로: 짧은 RC v6(노트→10k 학습→평가), v8 평가, v7 t72/82/83, visfull 평가, 지연 1000 t50/53/56.
   - 시작은 공용 lock(`logs/.gpu7.lock`) 안에서 여유 메모리 확인 후 5분 대기 → 여러 대기열이 동시에 메모리를 잡아 gpuguard가 발동하는 경우 방지. evalq21(대기 부분)·evalq22는 종료, evalq19의 v8은 skip 표시로 넘김.
   - 학습(40 GB)이 들어갈 자리(여유 58 GB)가 생길 때까지 다른 평가는 시작하지 않음.
+
+## 11/4 00:05 — 범위 축소 (사용자: 지금까지 한 것으로 기존 방법과 제대로 비교)
+- v8(주기적 캡션) 평가와 추가 지연 평가 6개는 하지 않음(v8 45k 체크포인트는 보관). evalq23의 S2–S4 종료.
+- keyframe(visfull, RePlanMem 방식 시각 메모리)은 단일 단서 9과제만 평가(나머지 17개는 base/v6/v7 모두 거의 0). `tools/evalq24.sh`: v7 t72/82/83 → visfull 3그룹. 짧은 RC v6(evalq23 S1)는 계속.
