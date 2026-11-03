@@ -1,0 +1,3367 @@
+RESET
+0 None
+101 Gone: a fuchsia square.
+533 None
+591 Gone: a silver and white clock.
+595 Gone: a gray circle.
+RESET
+0 None
+101 Gone: a red square.
+185 Gone: the gray image contains a wooden surface.
+432 Gone: a gray sheep.
+441 Gone: a gray robot.
+530 Gone: a gray and black bottle.
+RESET
+0 None
+101 Gone: a lime square.
+230 Gone: a silver dog.
+514 None
+RESET
+0 None
+101 Gone: a yellow square.
+451 None
+RESET
+0 None
+101 Gone: a fuchsia square.
+272 Gone: the gray image contains a wooden surface.
+456 Gone: a gray dog.
+522 Gone: a silver dog.
+536 Gone: a silver gun.
+553 Gone: a silver sword.
+RESET
+0 None
+101 Gone: a blue square.
+171 None
+177 Gone: a gray and black object.
+211 Gone: a olive circle.
+264 Gone: a gray circle.
+270 Gone: a gray dog.
+302 Gone: a silver and black ball.
+305 Gone: a gray knife.
+316 Gone: a gray wall.
+413 Gone: a gray pan.
+462 Gone: a silver square.
+504 Gone: a navy block.
+514 Gone: a maroon ball.
+528 None
+RESET
+0 None
+101 Gone: a fuchsia square.
+540 None
+568 Gone: a silver pole.
+575 Gone: a gray dog.
+582 Gone: a silver and white cat.
+RESET
+0 None
+101 Gone: a yellow square.
+545 None
+RESET
+0 None
+101 Gone: a blue square.
+184 None
+252 Gone: a gray cow.
+273 None
+337 Gone: a gray panda.
+371 None
+467 Gone: a maroon knife.
+482 Gone: a gray person.
+492 Gone: a olive dog.
+RESET
+0 None
+101 Gone: a lime square.
+184 Gone: the orange image contains a wooden surface.
+396 Gone: a gray dog.
+520 Gone: a gray and black object.
+552 Gone: a silver dog.
+584 Gone: a gray and white dog.
+RESET
+0 None
+101 Gone: a red square.
+370 None
+407 Gone: a gray and white cat.
+441 Gone: a silver cat.
+458 Gone: a silver pipe.
+486 Gone: a gray and black animal.
+RESET
+0 None
+101 Gone: a fuchsia square.
+177 None
+325 None
+437 Gone: a gray and white cat.
+454 Gone: a gray wooden surface.
+468 None
+492 None
+RESET
+0 None
+101 Gone: a lime square.
+421 Gone: the orange image contains a wooden surface.
+536 Gone: a silver knife.
+573 Gone: a gray knife.
+RESET
+0 None
+101 Gone: a fuchsia square.
+418 None
+426 Gone: a silver square.
+499 Gone: a silver dog.
+577 Gone: a olive and black object.
+599 Gone: a gray and white circle.
+RESET
+0 None
+101 Gone: a red square.
+203 Gone: a white pixelated face.
+250 None
+302 Gone: a olive dog.
+327 Gone: a gray dog.
+394 Gone: a silver and white cat.
+427 Gone: a gray and white dog.
+560 Gone: a gray pole.
+RESET
+0 None
+101 Gone: a yellow square.
+232 None
+238 Gone: a silver face.
+272 Gone: a gray camera.
+403 Gone: a maroon circle.
+418 Gone: a olive circle.
+493 Gone: a gray and white t-shirt.
+553 Gone: a gray wooden surface.
+RESET
+0 None
+101 Gone: a blue square.
+300 None
+339 None
+409 Gone: a silver square.
+422 Gone: a gray cat.
+513 None
+575 Gone: silver.
+RESET
+0 None
+101 Gone: a blue square.
+352 Gone: a gray toilet.
+484 None
+552 Gone: a gray knife.
+RESET
+0 None
+101 Gone: a red square.
+328 None
+363 Gone: a gray and white cat.
+397 Gone: a gray dog.
+402 Gone: a gray rifle.
+489 None
+518 Gone: a gray dog.
+RESET
+0 None
+101 Gone: a lime square.
+443 Gone: the gray image contains a wooden surface.
+RESET
+0 None
+101 Gone: a yellow square.
+373 Gone: the gray image contains a wooden surface.
+480 Gone: a gray robot.
+497 Gone: a gray elephant.
+562 Gone: a gray bird.
+571 Gone: a gray circle.
+576 Gone: a gray and black camera.
+RESET
+0 None
+101 Gone: a yellow square.
+203 None
+237 Gone: a gray block.
+252 Gone: a gray knife.
+258 Gone: a gray and black object.
+363 None
+398 None
+404 Gone: a olive person.
+491 Gone: a gray block.
+501 Gone: a gray and black dog.
+511 Gone: a gray banana.
+528 Gone: a silver wooden surface.
+569 Gone: a gray dog.
+RESET
+0 None
+101 Gone: a fuchsia square.
+313 None
+358 Gone: a silver circle.
+384 Gone: gray.
+391 Gone: a olive and white camera.
+484 None
+511 Gone: a olive person.
+587 Gone: a white donkey.
+RESET
+0 None
+101 Gone: a lime square.
+415 None
+450 Gone: a silver cat.
+513 None
+RESET
+0 None
+101 Gone: a lime square.
+403 Gone: the gray image contains a wooden surface.
+465 Gone: a gray object.
+548 Gone: a olive knife.
+556 Gone: a gray person.
+RESET
+0 None
+101 Gone: a blue square.
+335 None
+383 None
+397 Gone: a gray.
+458 Gone: a gray and white cat.
+543 Gone: a silver horse.
+577 Gone: a gray and white dog.
+598 None
+RESET
+0 None
+101 Gone: a fuchsia square.
+225 None
+383 Gone: black.
+401 Gone: a gray panda.
+408 Gone: a silver dog.
+419 Gone: a white and white cat.
+455 Gone: a navy helmet.
+462 Gone: a gray and black object.
+RESET
+0 None
+101 Gone: a red square.
+328 None
+430 Gone: a gray pole.
+432 Gone: a olive and white cow.
+451 Gone: a gray pole.
+459 None
+RESET
+0 None
+101 Gone: a blue square.
+220 None
+288 None
+352 Gone: a silver light.
+374 Gone: a silver line.
+475 Gone: a silver line.
+482 Gone: a gray dog.
+567 Gone: a silver shirt.
+RESET
+0 None
+101 Gone: a red square.
+268 Gone: the gray image contains a wooden surface.
+319 Gone: a gray dog.
+332 Gone: a silver pole.
+340 Gone: a silver and white cat.
+346 Gone: a gray knife.
+360 None
+478 Gone: a gray dog.
+492 Gone: a gray and white mask.
+RESET
+0 None
+101 Gone: a blue square.
+192 None
+323 Gone: gray.
+326 Gone: a olive knife.
+330 Gone: a gray knife.
+500 Gone: a gray block.
+RESET
+0 None
+101 Gone: a yellow square.
+489 None
+542 Gone: a gray and white cat.
+573 Gone: a silver dog.
+RESET
+0 None
+101 Gone: a red square.
+452 None
+595 Gone: a silver bar.
+RESET
+0 None
+101 Gone: a blue square.
+217 None
+323 Gone: a gray and white dog.
+428 Gone: a gray pipe.
+463 Gone: a silver wall.
+497 Gone: gray.
+RESET
+0 None
+101 Gone: a fuchsia square.
+529 None
+587 Gone: a gray elephant.
+RESET
+0 None
+101 Gone: a lime square.
+282 None
+359 Gone: a silver person.
+362 Gone: a green dog.
+368 Gone: a silver and white camera.
+430 Gone: a gray ball.
+532 Gone: a gray robot.
+572 None
+RESET
+0 None
+101 Gone: a blue square.
+252 Gone: a silver printer.
+431 None
+462 None
+516 None
+535 None
+582 Gone: a gray dog.
+RESET
+0 None
+101 Gone: a red square.
+439 None
+497 Gone: a maroon dog.
+578 Gone: a gray dog.
+RESET
+0 None
+101 Gone: a yellow square.
+193 None
+317 Gone: a maroon brick.
+374 Gone: a gray pole.
+389 Gone: a gray pole.
+392 None
+406 None
+422 Gone: a gray person.
+463 Gone: a olive and black bird.
+519 Gone: gray.
+537 Gone: a gray vacuum.
+RESET
+0 None
+101 Gone: a red square.
+178 Gone: a gray toilet.
+395 None
+557 Gone: a gray couch.
+RESET
+0 None
+101 Gone: a blue square.
+153 None
+207 Gone: a maroon person.
+243 None
+327 Gone: a gray object.
+339 Gone: a gray dog.
+383 Gone: a gray dog.
+426 Gone: a gray person.
+447 Gone: a silver person.
+510 Gone: a gray dog.
+RESET
+0 None
+101 Gone: a lime square.
+371 None
+448 Gone: a white and white eye.
+498 Gone: a maroon object.
+524 Gone: a gray dog.
+562 Gone: a gray bird.
+RESET
+0 None
+101 Gone: a blue square.
+161 None
+218 Gone: a silver circle.
+289 Gone: a silver and white dog.
+307 None
+364 Gone: a gray bottle.
+507 None
+528 Gone: a silver key.
+532 Gone: a gray circle.
+567 Gone: a silver block.
+RESET
+0 None
+101 Gone: a red square.
+325 None
+370 Gone: a gray dog.
+538 Gone: a gray dog.
+554 Gone: a gray wooden surface.
+RESET
+0 None
+101 Gone: a lime square.
+440 None
+560 Gone: a gray wooden surface.
+577 Gone: a gray cat.
+RESET
+0 None
+101 Gone: a lime square.
+509 None
+583 Gone: a gray and white dog.
+RESET
+0 None
+101 Gone: a fuchsia square.
+391 Gone: the gray image contains a wooden surface.
+498 Gone: a maroon cow.
+503 Gone: a gray elephant.
+RESET
+0 None
+101 Gone: a lime square.
+327 None
+478 Gone: a silver and white object.
+488 Gone: a silver wooden surface.
+526 Gone: a gray and white cat.
+RESET
+0 None
+101 Gone: a fuchsia square.
+365 None
+403 Gone: a silver dog.
+443 Gone: a silver wooden surface.
+477 Gone: a silver shirt.
+492 Gone: a gray person.
+502 Gone: a gray and white cat.
+RESET
+0 None
+101 Gone: a fuchsia square.
+423 Gone: the gray image contains a wooden surface.
+477 Gone: a gray dog.
+503 Gone: a silver and white light.
+509 Gone: a gray and white bird.
+526 None
+537 Gone: a maroon and white cat.
+563 Gone: a gray and black animal.
+571 Gone: a gray dog.
+RESET
+0 None
+60 Gone: a blue plus sign.
+500 None
+525 None
+545 Gone: gray pole.
+550 Gone: a gray square.
+RESET
+0 None
+16 Gone: a blue cube.
+424 None
+462 None
+483 Gone: a gray cat.
+RESET
+0 None
+28 Gone: a blue cube.
+447 None
+RESET
+0 None
+92 Gone: a blue cube.
+270 None
+330 Gone: a gray dog.
+418 Gone: a silver and white dog.
+467 Gone: a silver dog.
+515 Gone: a gray dog.
+551 Gone: a gray.
+RESET
+0 None
+37 Gone: a blue plus sign.
+445 None
+RESET
+0 None
+73 Gone: a blue square.
+410 None
+439 Gone: a gray and white camera.
+447 Gone: a silver person.
+462 Gone: a gray dog.
+537 Gone: a gray wooden surface.
+585 Gone: a gray dog.
+RESET
+0 None
+68 Gone: a blue square.
+189 None
+288 Gone: a gray and white dog.
+298 Gone: a gray cow.
+444 Gone: gray.
+451 Gone: a gray pole.
+524 Gone: a gray and white cat.
+RESET
+0 None
+13 Gone: a blue plus sign.
+400 None
+466 Gone: a gray wooden surface.
+556 Gone: gray.
+565 Gone: gray.
+RESET
+0 None
+41 Gone: a blue square.
+479 None
+RESET
+0 None
+31 Gone: a blue and purple cube.
+360 None
+434 Gone: a gray toilet.
+513 Gone: a gray elephant.
+524 Gone: a gray object.
+528 Gone: a gray and white cow.
+560 Gone: a gray bird.
+RESET
+0 None
+67 Gone: a blue cube.
+144 None
+196 Gone: a olive dog.
+205 Gone: a gray dog.
+213 Gone: a gray dog.
+228 Gone: a navy dog.
+246 Gone: a gray dog.
+253 Gone: a olive gun.
+358 Gone: a gray dog.
+369 Gone: a gray dog.
+467 Gone: a olive dog.
+RESET
+0 None
+47 Gone: a blue cube.
+237 None
+278 Gone: a gray pole.
+287 Gone: a gray pole.
+308 None
+319 Gone: a silver dog.
+335 Gone: a olive dog.
+373 Gone: gray.
+383 Gone: a gray bar.
+390 Gone: a silver stick.
+502 Gone: a gray and white cat.
+RESET
+0 None
+89 Gone: a blue and purple cube.
+465 None
+553 None
+RESET
+0 None
+51 Gone: a blue square.
+420 None
+436 Gone: a silver dog.
+471 Gone: a gray shirt.
+482 Gone: a silver dog.
+498 Gone: a gray dog.
+553 Gone: a gray dog.
+569 None
+588 Gone: a gray dog.
+RESET
+0 None
+68 Gone: a blue cube.
+273 None
+278 Gone: a gray toilet.
+284 Gone: a silver gun.
+338 Gone: a silver dog.
+372 Gone: a gray dog.
+543 Gone: a silver dog.
+570 Gone: a gray dog.
+RESET
+0 None
+82 Gone: a blue plus sign.
+498 None
+574 Gone: a olive ball.
+RESET
+0 None
+19 Gone: a blue square.
+222 None
+274 Gone: a gray and black camera.
+419 Gone: a gray wooden surface.
+440 None
+471 Gone: a silver cup.
+RESET
+0 None
+68 Gone: a blue plus sign.
+145 None
+252 Gone: gray.
+317 Gone: a gray and white cow.
+325 Gone: a gray dog.
+335 None
+354 Gone: a olive cat.
+454 Gone: gray.
+468 Gone: gray.
+RESET
+0 None
+24 Gone: a blue square.
+248 None
+286 Gone: a gray record.
+379 Gone: a gray wall.
+420 Gone: a gray and white camera.
+487 None
+532 Gone: a gray and black object.
+556 Gone: a black and white image.
+RESET
+0 None
+30 Gone: a blue square.
+220 None
+437 Gone: a gray dog.
+441 Gone: a navy bird.
+460 Gone: a gray and white cow.
+526 Gone: a gray and white object.
+540 Gone: a gray object.
+RESET
+0 None
+96 Gone: a blue plus sign.
+195 None
+276 Gone: a silver.
+283 Gone: a gray pole.
+288 Gone: a gray face.
+339 Gone: gray.
+372 Gone: a gray and black object.
+405 Gone: a gray dog.
+RESET
+0 None
+21 Gone: a blue and purple object.
+293 None
+327 Gone: a gray cat.
+373 Gone: a gray pole.
+412 Gone: silver pole.
+418 Gone: a gray pole.
+443 Gone: a gray wooden surface.
+550 Gone: a gray dog.
+RESET
+0 None
+81 Gone: a blue and purple object.
+500 None
+RESET
+0 None
+15 Gone: a blue and purple cube.
+248 None
+294 Gone: a gray and white horse.
+322 None
+366 Gone: a silver skull.
+480 Gone: a navy cube.
+542 Gone: a navy cube.
+559 Gone: a navy cube.
+RESET
+0 None
+30 Gone: a blue and purple object.
+149 None
+213 Gone: a silver pole.
+360 None
+363 Gone: a gray and white cat.
+519 Gone: a gray robot.
+525 Gone: a silver dog.
+549 Gone: a gray.
+RESET
+0 None
+41 Gone: a blue and purple object.
+339 None
+370 Gone: a gray dog.
+417 Gone: a gray person.
+422 Gone: a silver person.
+432 Gone: a gray dog.
+434 Gone: a purple shoe.
+453 Gone: a gray and white ball.
+RESET
+0 None
+95 Gone: a blue and purple cube.
+341 None
+524 Gone: gray.
+581 Gone: a gray donkey.
+RESET
+0 None
+43 Gone: a blue square.
+317 None
+358 Gone: a gray wooden surface.
+448 Gone: a gray bird.
+492 None
+557 Gone: a gray dog.
+RESET
+0 None
+12 Gone: a blue cube.
+264 None
+439 Gone: a gray stick.
+514 Gone: a gray and white dog.
+RESET
+0 None
+91 Gone: a blue cube.
+311 None
+347 Gone: a black bird.
+364 Gone: a olive cat.
+403 Gone: a gray pot.
+418 Gone: a gray pole.
+457 Gone: a silver wooden surface.
+RESET
+0 None
+98 Gone: a blue plus sign.
+460 None
+535 Gone: a gray dog.
+538 Gone: a silver pole.
+552 Gone: a gray cat.
+RESET
+0 None
+57 Gone: a blue and purple cube.
+178 None
+308 Gone: silver.
+398 Gone: gray.
+504 Gone: silver.
+562 Gone: a gray face.
+598 Gone: a silver brick.
+RESET
+0 None
+37 Gone: a blue square.
+97 None
+186 Gone: a gray bird.
+233 Gone: gray.
+283 Gone: a silver bird.
+311 Gone: a gray shirt.
+327 Gone: a gray and white logo.
+418 Gone: a gray robot.
+431 Gone: a gray and white mask.
+RESET
+0 None
+91 Gone: a blue square.
+274 None
+281 Gone: a silver and white image.
+RESET
+0 None
+67 Gone: a blue and purple object.
+370 None
+432 None
+496 None
+503 None
+523 Gone: a gray dog.
+533 Gone: a silver face.
+598 Gone: a silver person.
+RESET
+0 None
+24 Gone: a blue and purple object.
+440 None
+495 Gone: a gray cat.
+541 Gone: silver.
+588 None
+594 Gone: a gray circle.
+RESET
+0 None
+95 Gone: a blue square.
+162 Gone: the orange image contains a wooden surface.
+171 Gone: a silver and black object.
+217 Gone: a silver knife.
+345 Gone: a navy and white dog.
+351 None
+386 Gone: a olive and white robot.
+411 Gone: a gray and white circle.
+429 Gone: a gray dog.
+514 Gone: a gray circle.
+558 Gone: a gray and white logo.
+582 Gone: a gray t-shirt.
+593 Gone: a olive bomb.
+RESET
+0 None
+59 Gone: a blue square.
+443 Gone: a gray object.
+RESET
+0 None
+15 Gone: a blue plus sign.
+304 None
+356 Gone: a gray and black camera.
+403 Gone: a olive dog.
+462 None
+537 Gone: a gray dog.
+552 Gone: a maroon circle.
+RESET
+0 None
+12 Gone: a blue plus sign.
+413 None
+531 Gone: a maroon and black camera.
+555 Gone: a gray dog.
+565 Gone: a silver face.
+577 Gone: a silver dog.
+RESET
+0 None
+27 Gone: a blue square.
+299 None
+333 Gone: a gray person.
+348 Gone: a silver dog.
+416 Gone: a gray person.
+427 Gone: a silver dog.
+502 Gone: a gray and black dog.
+595 Gone: a purple person.
+RESET
+0 None
+65 Gone: a blue and purple cube.
+220 None
+256 Gone: a black pole.
+288 Gone: a gray and white cat.
+336 None
+358 Gone: a gray pole.
+386 Gone: a gray object.
+512 Gone: gray.
+RESET
+0 None
+76 Gone: a blue plus sign.
+371 None
+411 Gone: a silver face.
+426 Gone: a gray knife.
+491 Gone: a silver face.
+533 Gone: a gray and black dog.
+578 Gone: a olive dog.
+RESET
+0 None
+46 Gone: a blue cube.
+135 None
+213 Gone: a gray dog.
+407 Gone: a navy wooden surface.
+455 Gone: a gray table.
+457 Gone: a silver and white image.
+463 Gone: a navy dog.
+467 Gone: gray.
+510 None
+528 Gone: gray.
+RESET
+0 None
+55 Gone: a blue and purple cube.
+417 None
+595 Gone: a silver and white object.
+RESET
+0 None
+68 Gone: a blue and purple cube.
+460 None
+467 Gone: a black and white pixel.
+554 Gone: a olive dog.
+595 Gone: a silver dog.
+RESET
+0 None
+14 Gone: a blue and purple object.
+205 None
+214 Gone: a silver table.
+413 Gone: a gray dog.
+501 Gone: a gray dog.
+582 Gone: a gray knife.
+588 Gone: a navy dog.
+RESET
+0 None
+22 Gone: a blue and purple cube.
+217 None
+252 None
+268 Gone: a gray dog.
+278 Gone: a silver dog.
+287 Gone: a gray person.
+343 Gone: a gray dog.
+348 Gone: a gray and black object.
+380 Gone: a olive dog.
+534 None
+593 Gone: a gray and white cow.
+RESET
+0 None
+23 Gone: a blue and purple cube.
+361 Gone: a gray and white object.
+383 Gone: a gray.
+397 Gone: a gray bird.
+412 Gone: a gray laptop.
+470 Gone: a gray machine.
+593 Gone: a gray screen.
+RESET
+0 None
+87 Gone: a blue cube.
+503 None
+551 Gone: a gray elephant.
+568 None
+RESET
+0 None
+60 Gone: a gray square.
+342 Gone: a gray book.
+657 Gone: a black and white image.
+RESET
+0 None
+16 Gone: a yellow square.
+298 Gone: a orange cube.
+308 Gone: a silver and white animal.
+RESET
+0 None
+28 Gone: a gray square.
+140 None
+RESET
+0 None
+92 Gone: a gray square.
+431 Gone: a orange picture.
+RESET
+0 None
+37 Gone: a aqua cube.
+141 None
+RESET
+0 None
+73 Gone: a fuchsia square.
+188 None
+197 None
+RESET
+0 None
+68 Gone: a gray cube.
+270 Gone: a orange book.
+RESET
+0 None
+13 Gone: a purple square.
+354 Gone: a gray book.
+RESET
+0 None
+41 Gone: a gray cube.
+306 Gone: a orange chair.
+RESET
+0 None
+31 Gone: a gray cube.
+137 Gone: a orange cube.
+RESET
+0 None
+67 Gone: a teal cube.
+219 Gone: a gray picture.
+RESET
+0 None
+60 Gone: a gray cube.
+385 Gone: a gray cube.
+664 Gone: a silver and white image.
+RESET
+0 None
+89 Gone: a orange cube.
+481 Gone: a gray book.
+487 None
+RESET
+0 None
+51 Gone: a teal square.
+122 Gone: a orange block.
+661 Gone: a silver dog.
+RESET
+0 None
+56 Gone: a orange cube.
+202 None
+443 None
+RESET
+0 None
+82 Gone: a aqua cube.
+238 Gone: silver.
+474 Gone: a gray cube.
+RESET
+0 None
+19 Gone: a orange cube.
+70 Gone: a gray book.
+78 Gone: a gray sheep.
+RESET
+0 None
+99 Gone: a olive cube.
+378 Gone: a gray square.
+656 Gone: a gray and white object.
+RESET
+0 None
+36 Gone: a fuchsia square.
+266 Gone: a gray button.
+677 Gone: a gray and white cat.
+RESET
+0 None
+30 Gone: a gray cube.
+357 None
+492 Gone: a gray eye.
+504 Gone: a gray and white pipe.
+RESET
+0 None
+96 Gone: a gray cube.
+491 Gone: a gray book.
+RESET
+0 None
+100 Gone: a fuchsia square.
+424 Gone: a gray cube.
+RESET
+0 None
+81 Gone: a gray cube.
+273 Gone: a gray block.
+472 Gone: a gray block.
+RESET
+0 None
+15 Gone: a gray cube.
+217 Gone: a gray book.
+RESET
+0 None
+16 Gone: a olive cube.
+394 Gone: a orange button.
+677 Gone: a silver dog.
+RESET
+0 None
+41 Gone: a fuchsia square.
+243 None
+RESET
+0 None
+95 Gone: a gray cube.
+152 Gone: a orange cube.
+571 Gone: a gray wall.
+587 None
+616 Gone: a gray dog.
+662 Gone: a gray dog.
+RESET
+0 None
+63 Gone: a aqua cube.
+190 Gone: a gray bed.
+RESET
+0 None
+12 Gone: a fuchsia square.
+87 None
+435 Gone: a silver ring.
+RESET
+0 None
+91 Gone: a gray cube.
+261 Gone: a gray book.
+RESET
+0 None
+77 Gone: a maroon cube.
+290 Gone: a gray block.
+631 Gone: a gray and black animal.
+RESET
+0 None
+49 Gone: a orange cube.
+336 None
+RESET
+0 None
+37 Gone: a orange cube.
+237 None
+611 Gone: a gray and white image.
+667 Gone: a gray knife.
+RESET
+0 None
+91 Gone: a gray cube.
+412 None
+421 Gone: a gray toilet.
+RESET
+0 None
+67 Gone: a yellow square.
+186 None
+RESET
+0 None
+24 Gone: a purple square.
+217 None
+RESET
+0 None
+95 Gone: a orange cube.
+495 Gone: a gray book.
+RESET
+0 None
+59 Gone: a orange cube.
+357 Gone: a gray square.
+RESET
+0 None
+15 Gone: a olive cube.
+252 None
+522 None
+RESET
+0 None
+65 Gone: a fuchsia square.
+390 Gone: a gray cube.
+RESET
+0 None
+27 Gone: a orange cube.
+208 None
+RESET
+0 None
+65 Gone: a aqua cube.
+384 Gone: a gray book.
+RESET
+0 None
+76 Gone: a gray cube.
+235 Gone: a gray cube.
+RESET
+0 None
+94 Gone: a purple square.
+479 Gone: a gray and a maroon cube.
+RESET
+0 None
+16 Gone: a orange cube.
+147 None
+RESET
+0 None
+68 Gone: a gray square.
+463 None
+RESET
+0 None
+31 Gone: a orange cube.
+363 Gone: a orange block.
+RESET
+0 None
+11 Gone: a orange cube.
+310 Gone: a gray cube.
+RESET
+0 None
+52 Gone: a fuchsia square.
+410 Gone: a orange button.
+RESET
+0 None
+87 Gone: a gray square.
+277 Gone: a gray book.
+RESET
+0 None
+60 Gone: a maroon square.
+119 Gone: a yellow square.
+178 Gone: a blue square.
+238 Gone: a red square.
+296 Gone: a aqua cube.
+578 Gone: a gray book.
+RESET
+0 None
+16 Gone: a lime square.
+31 Gone: yellow.
+46 Gone: a maroon square.
+61 Gone: a fuchsia block.
+76 Gone: a aqua cube.
+358 Gone: a orange cube.
+RESET
+0 None
+28 Gone: a yellow block.
+55 Gone: orange.
+82 Gone: a fuchsia block.
+109 Gone: a teal cube.
+136 Gone: a blue square.
+248 None
+RESET
+0 None
+92 Gone: a teal cube.
+183 Gone: yellow.
+274 Gone: a fuchsia square.
+365 Gone: orange.
+456 Gone: a lime block.
+663 None
+795 Gone: a orange picture.
+RESET
+0 None
+37 Gone: a aqua cube.
+73 Gone: a teal cube.
+110 Gone: a lime square.
+145 Gone: a blue square.
+181 Gone: a maroon book.
+285 None
+RESET
+0 None
+73 Gone: a fuchsia square.
+145 Gone: a red square.
+217 Gone: a orange square.
+289 Gone: a teal cube.
+361 Gone: a maroon square.
+480 None
+RESET
+0 None
+68 Gone: a maroon.
+135 Gone: a fuchsia block.
+202 Gone: a aqua cube.
+269 Gone: a red.
+336 Gone: a lime block.
+538 Gone: a orange book.
+RESET
+0 None
+13 Gone: a maroon.
+25 Gone: a lime block.
+37 Gone: a fuchsia block.
+49 Gone: a teal cube.
+61 Gone: a orange block.
+402 Gone: a gray book.
+882 Gone: a gray and black dog.
+RESET
+0 None
+41 Gone: a maroon.
+81 Gone: a aqua cube.
+121 Gone: a teal cube.
+164 Gone: a orange block.
+201 Gone: a fuchsia cube.
+360 Gone: a gray toilet.
+466 Gone: a orange block.
+RESET
+0 None
+31 Gone: yellow.
+61 Gone: a aqua cube.
+91 Gone: a fuchsia block.
+121 Gone: a teal cube.
+151 Gone: orange.
+257 Gone: a orange cube.
+RESET
+0 None
+67 Gone: a blue square.
+133 Gone: a lime square.
+199 Gone: a red square.
+265 Gone: a orange block.
+331 Gone: yellow.
+483 Gone: a gray picture.
+RESET
+0 None
+60 Gone: a aqua cube.
+119 Gone: yellow.
+178 Gone: a fuchsia block.
+237 Gone: a lime square.
+296 Gone: a teal cube.
+621 Gone: a gray cube.
+798 Gone: a silver eye.
+RESET
+0 None
+89 Gone: a teal cube.
+177 Gone: a orange block.
+265 Gone: a aqua cube.
+353 Gone: a maroon.
+441 Gone: a fuchsia block.
+790 Gone: a gray pixel.
+833 Gone: a gray book.
+RESET
+0 None
+51 Gone: a lime block.
+101 Gone: a blue block.
+157 Gone: a maroon.
+201 Gone: a aqua cube.
+251 Gone: orange.
+322 Gone: a orange block.
+RESET
+0 None
+56 Gone: a orange square.
+111 Gone: a lime square.
+168 Gone: a maroon square.
+221 Gone: a blue shirt.
+276 Gone: a aqua cube.
+663 Gone: a gray cube.
+672 Gone: a silver helmet.
+RESET
+0 None
+82 Gone: a aqua cube.
+163 Gone: a red.
+244 Gone: a teal cube.
+327 Gone: a maroon.
+406 Gone: a blue shirt.
+749 Gone: a silver toilet.
+798 Gone: a gray cube.
+RESET
+0 None
+19 Gone: a aqua cube.
+37 Gone: a teal cube.
+55 Gone: a orange block.
+74 Gone: yellow cube.
+91 Gone: a lime block.
+142 Gone: a gray book.
+RESET
+0 None
+99 Gone: a lime square.
+197 Gone: a aqua cube.
+297 Gone: a red cube.
+393 Gone: a blue shirt.
+491 Gone: a maroon cube.
+770 Gone: a gray square.
+RESET
+0 None
+36 Gone: a teal cube.
+71 Gone: a fuchsia block.
+106 Gone: a lime square.
+142 Gone: a aqua cube.
+176 Gone: yellow.
+401 Gone: a gray button.
+904 Gone: a gray knife.
+997 Gone: a gray and black object.
+RESET
+0 None
+30 Gone: a lime square.
+59 Gone: a aqua cube.
+88 Gone: a fuchsia block.
+117 Gone: a orange square.
+146 Gone: a red heart.
+473 None
+706 Gone: a silver and black robot.
+746 Gone: a gray and white cat.
+987 Gone: a gray.
+RESET
+0 None
+96 Gone: a aqua cube.
+191 Gone: a maroon book.
+286 Gone: a orange block.
+381 Gone: a blue block.
+476 Gone: red.
+871 Gone: a gray book.
+RESET
+0 None
+100 Gone: a fuchsia block.
+199 Gone: a lime square.
+298 Gone: a orange square.
+401 Gone: a maroon.
+496 Gone: a blue shirt.
+820 Gone: a gray cube.
+RESET
+0 None
+81 Gone: a aqua cube.
+161 Gone: yellow.
+241 Gone: a red square.
+327 Gone: a orange block.
+401 Gone: a lime plant.
+593 Gone: a gray block.
+RESET
+0 None
+15 Gone: a maroon.
+29 Gone: a teal cube.
+43 Gone: a aqua cube.
+57 Gone: a orange block.
+71 Gone: a blue block.
+273 Gone: a gray book.
+RESET
+0 None
+16 Gone: a lime square.
+31 Gone: a red square.
+46 Gone: a fuchsia block.
+61 Gone: a teal cube.
+76 Gone: a yellow block.
+454 Gone: a orange button.
+RESET
+0 None
+41 Gone: a fuchsia square.
+81 Gone: a red square.
+121 Gone: a teal cube.
+161 Gone: a orange block.
+201 Gone: yellow.
+403 None
+648 Gone: a silver robot.
+731 Gone: a olive horse.
+807 Gone: a gray and white image.
+RESET
+0 None
+95 Gone: yellow.
+189 Gone: a blue square.
+283 Gone: a fuchsia block.
+377 Gone: a maroon square.
+471 Gone: a orange square.
+528 Gone: a orange cube.
+536 Gone: a gray table.
+RESET
+0 None
+63 Gone: a orange square.
+125 Gone: a lime square.
+187 Gone: a aqua cube.
+249 Gone: a teal cube.
+311 Gone: a fuchsia square.
+438 Gone: a gray bed.
+RESET
+0 None
+12 Gone: a lime square.
+23 Gone: a orange square.
+34 Gone: a fuchsia block.
+45 Gone: a red square.
+56 Gone: yellow.
+135 None
+RESET
+0 None
+91 Gone: a maroon.
+181 Gone: a aqua cube.
+271 Gone: a yellow block.
+361 Gone: a fuchsia block.
+451 Gone: a orange block.
+625 Gone: a gray book.
+RESET
+0 None
+77 Gone: a lime square.
+153 Gone: a teal cube.
+230 Gone: a maroon square.
+308 Gone: a fuchsia square.
+381 Gone: a aqua cube.
+594 Gone: a gray block.
+RESET
+0 None
+49 Gone: a orange square.
+97 Gone: a teal cube.
+148 Gone: a maroon rectangle.
+193 Gone: a aqua cube.
+241 Gone: a red.
+528 None
+674 Gone: a gray and white bird.
+712 Gone: a silver and black whale.
+RESET
+0 None
+37 Gone: a orange block.
+73 Gone: a blue block.
+109 Gone: a teal cube.
+145 Gone: a maroon.
+181 Gone: a yellow block.
+381 None
+RESET
+0 None
+91 Gone: a fuchsia block.
+181 Gone: a aqua cube.
+277 Gone: yellow.
+361 Gone: a teal cube.
+451 Gone: a maroon star.
+772 None
+781 Gone: a olive table.
+RESET
+0 None
+67 Gone: a lime square.
+133 Gone: yellow.
+199 Gone: a teal cube.
+265 Gone: a orange square.
+331 Gone: a maroon heart.
+450 None
+RESET
+0 None
+24 Gone: a fuchsia square.
+47 Gone: a red cube.
+70 Gone: a maroon square.
+94 Gone: a yellow square.
+116 Gone: a teal cube.
+309 None
+847 None
+RESET
+0 None
+95 Gone: a orange block.
+189 Gone: a teal cube.
+284 Gone: a yellow block.
+377 Gone: a aqua cube.
+471 Gone: a fuchsia block.
+871 Gone: a gray book.
+RESET
+0 None
+59 Gone: a lime block.
+117 Gone: a orange block.
+175 Gone: a teal cube.
+177 Gone: a maroon cloth.
+233 Gone: a maroon cube.
+291 Gone: a fuchsia block.
+589 Gone: a gray cube.
+947 Gone: a gray person.
+RESET
+0 None
+15 Gone: a maroon square.
+29 Gone: a lime square.
+43 Gone: a red square.
+58 Gone: a teal cube.
+71 Gone: a fuchsia block.
+308 None
+RESET
+0 None
+65 Gone: a fuchsia square.
+129 Gone: a teal cube.
+194 Gone: a lime square.
+257 Gone: a blue cube.
+321 Gone: a maroon square.
+650 Gone: a gray cube.
+RESET
+0 None
+27 Gone: a aqua cube.
+53 Gone: orange.
+79 Gone: a teal cube.
+106 Gone: a maroon square.
+131 Gone: a lime plant.
+312 None
+743 None
+RESET
+0 None
+65 Gone: a aqua cube.
+129 Gone: a red.
+193 Gone: a orange block.
+257 Gone: a yellow block.
+321 Gone: a blue block.
+640 Gone: a gray book.
+RESET
+0 None
+76 Gone: a aqua cube.
+151 Gone: a maroon square.
+226 Gone: a teal cube.
+301 Gone: a fuchsia square.
+376 Gone: yellow.
+535 Gone: a gray cube.
+RESET
+0 None
+94 Gone: a red.
+187 Gone: a fuchsia block.
+280 Gone: a blue square.
+373 Gone: a maroon heart.
+466 Gone: a aqua cube.
+855 Gone: a gray and a maroon cube.
+RESET
+0 None
+16 Gone: orange.
+31 Gone: a teal cube.
+46 Gone: a aqua cube.
+65 Gone: a fuchsia square.
+76 Gone: a blue cube.
+97 Gone: a gray face.
+207 None
+RESET
+0 None
+68 Gone: a teal cube.
+135 Gone: a blue block.
+202 Gone: a yellow block.
+269 Gone: a aqua cube.
+336 Gone: a red cloth.
+731 None
+RESET
+0 None
+31 Gone: a maroon square.
+61 Gone: a orange square.
+91 Gone: a blue square.
+121 Gone: a yellow block.
+151 Gone: a lime square.
+483 Gone: a orange block.
+RESET
+0 None
+11 Gone: a red square.
+21 Gone: orange.
+31 Gone: a maroon square.
+42 Gone: a teal cube.
+51 Gone: a blue shirt.
+350 Gone: a gray cube.
+RESET
+0 None
+52 Gone: orange.
+103 Gone: a fuchsia block.
+154 Gone: a red square.
+205 Gone: a aqua cube.
+256 Gone: a teal cube.
+614 Gone: a orange button.
+RESET
+0 None
+87 Gone: a aqua cube.
+173 Gone: a teal cube.
+259 Gone: a yellow block.
+345 Gone: a orange block.
+431 Gone: a lime block.
+621 Gone: a gray book.
+RESET
+0 None
+60 Gone: a maroon square.
+119 Gone: a yellow square.
+178 Gone: a blue square.
+238 Gone: a red square.
+296 Gone: a aqua cube.
+355 Gone: a lime square.
+414 Gone: a fuchsia block.
+696 Gone: a gray book.
+RESET
+0 None
+16 Gone: a lime square.
+31 Gone: yellow.
+46 Gone: a maroon square.
+61 Gone: a fuchsia block.
+76 Gone: a aqua cube.
+81 Gone: a orange square.
+91 Gone: a orange cube.
+106 Gone: a blue square.
+388 Gone: a orange cube.
+RESET
+0 None
+28 Gone: a yellow block.
+55 Gone: orange.
+82 Gone: a fuchsia block.
+109 Gone: a teal cube.
+137 Gone: a blue square.
+163 Gone: a red square.
+190 Gone: a lime square.
+302 None
+415 Gone: a silver dog.
+RESET
+0 None
+92 Gone: a teal cube.
+183 Gone: yellow.
+274 Gone: a fuchsia square.
+365 Gone: orange.
+456 Gone: a lime square.
+551 Gone: a red square.
+638 Gone: a blue cube.
+977 Gone: a orange picture.
+RESET
+0 None
+37 Gone: a aqua cube.
+73 Gone: a teal cube.
+110 Gone: a lime square.
+145 Gone: a blue square.
+181 Gone: a maroon book.
+217 Gone: a orange block.
+253 Gone: a red book.
+357 None
+RESET
+0 None
+73 Gone: a fuchsia square.
+145 Gone: a red square.
+217 Gone: a orange square.
+289 Gone: a teal cube.
+366 Gone: a maroon square.
+434 Gone: a aqua cube.
+505 Gone: a lime square.
+620 None
+RESET
+0 None
+68 Gone: a maroon.
+135 Gone: a fuchsia block.
+202 Gone: a aqua cube.
+269 Gone: a red.
+336 Gone: a lime block.
+403 Gone: a teal cube.
+470 Gone: a orange block.
+672 Gone: a orange book.
+RESET
+0 None
+13 Gone: a maroon.
+25 Gone: a lime block.
+37 Gone: a fuchsia block.
+49 Gone: a teal cube.
+62 Gone: a orange block.
+73 Gone: a aqua cube.
+85 Gone: a blue block.
+430 Gone: a gray book.
+RESET
+0 None
+41 Gone: a maroon.
+81 Gone: a aqua cube.
+121 Gone: a teal cube.
+163 Gone: a orange block.
+201 Gone: a fuchsia block.
+203 Gone: a maroon block.
+241 Gone: a red.
+281 Gone: a lime block.
+546 Gone: a orange chair.
+RESET
+0 None
+31 Gone: yellow.
+61 Gone: a aqua cube.
+91 Gone: a fuchsia block.
+121 Gone: a teal cube.
+151 Gone: orange.
+183 Gone: a red square.
+211 Gone: a blue cube.
+317 Gone: a orange cube.
+RESET
+0 None
+67 Gone: a blue square.
+133 Gone: a lime square.
+199 Gone: a red square.
+265 Gone: a orange block.
+331 Gone: yellow.
+398 Gone: a maroon square.
+463 Gone: a fuchsia heart.
+615 Gone: a gray picture.
+987 Gone: a gray and black face.
+RESET
+0 None
+60 Gone: a aqua cube.
+119 Gone: yellow.
+178 Gone: a fuchsia block.
+237 Gone: a lime square.
+296 Gone: a teal cube.
+355 Gone: red.
+414 Gone: orange.
+739 Gone: a gray cube.
+RESET
+0 None
+89 Gone: a teal cube.
+177 Gone: a orange block.
+265 Gone: a aqua cube.
+353 Gone: a maroon.
+443 Gone: a fuchsia block.
+529 Gone: a red heart.
+617 Gone: a yellow block.
+992 Gone: a silver toilet.
+1009 Gone: a gray book.
+RESET
+0 None
+51 Gone: a lime block.
+101 Gone: a blue block.
+157 Gone: a maroon.
+201 Gone: a aqua cube.
+253 Gone: a orange block.
+301 Gone: a teal cube.
+351 Gone: a yellow block.
+422 Gone: a orange block.
+432 Gone: a silver line.
+RESET
+0 None
+56 Gone: a orange square.
+111 Gone: a lime square.
+168 Gone: a maroon square.
+221 Gone: a blue shirt.
+276 Gone: a aqua cube.
+331 Gone: a red square.
+386 Gone: a yellow block.
+773 Gone: a gray cube.
+RESET
+0 None
+82 Gone: a aqua cube.
+163 Gone: a red.
+244 Gone: a teal cube.
+327 Gone: a maroon.
+406 Gone: blue pants.
+488 Gone: a fuchsia block.
+568 Gone: a lime block.
+960 Gone: a gray cube.
+RESET
+0 None
+19 Gone: a aqua cube.
+37 Gone: a teal cube.
+55 Gone: a orange block.
+73 Gone: a yellow block.
+91 Gone: a lime block.
+109 Gone: a fuchsia block.
+127 Gone: a maroon cloth.
+178 Gone: a gray book.
+RESET
+0 None
+99 Gone: a lime square.
+197 Gone: a aqua cube.
+297 Gone: a red cube.
+393 Gone: a blue shirt.
+492 Gone: a maroon cube.
+593 Gone: a fuchsia cloth.
+687 Gone: a teal square.
+966 Gone: a gray square.
+RESET
+0 None
+36 Gone: a teal cube.
+71 Gone: a fuchsia square.
+106 Gone: a lime square.
+142 Gone: a aqua cube.
+182 Gone: yellow.
+211 Gone: a blue cube.
+229 Gone: a gray block.
+246 Gone: a maroon square.
+475 Gone: a gray button.
+RESET
+0 None
+30 Gone: a lime square.
+59 Gone: a aqua cube.
+88 Gone: a fuchsia block.
+117 Gone: a orange square.
+119 Gone: a red block.
+146 Gone: a red square.
+175 Gone: a teal cube.
+204 Gone: yellow.
+531 None
+RESET
+0 None
+96 Gone: a aqua cube.
+191 Gone: a maroon book.
+286 Gone: a orange block.
+381 Gone: a blue block.
+476 Gone: red.
+572 Gone: a teal cube.
+666 Gone: a fuchsia square.
+1061 Gone: a gray book.
+RESET
+0 None
+100 Gone: a fuchsia block.
+199 Gone: a lime square.
+298 Gone: a orange square.
+402 Gone: a maroon.
+498 Gone: a blue square.
+596 Gone: a teal cube.
+694 Gone: a red cube.
+1018 Gone: a gray cube.
+RESET
+0 None
+81 Gone: a aqua cube.
+161 Gone: yellow.
+241 Gone: a red square.
+321 Gone: a orange square.
+401 Gone: a lime square.
+482 Gone: a blue square.
+561 Gone: a maroon heart.
+753 Gone: a gray block.
+RESET
+0 None
+15 Gone: a maroon.
+29 Gone: a teal cube.
+43 Gone: a aqua cube.
+57 Gone: a orange block.
+71 Gone: a blue block.
+85 Gone: a yellow block.
+99 Gone: a fuchsia block.
+301 Gone: a gray book.
+311 Gone: a silver chair.
+RESET
+0 None
+16 Gone: a lime square.
+31 Gone: a red square.
+46 Gone: a fuchsia block.
+61 Gone: a teal cube.
+76 Gone: a yellow block.
+91 Gone: a blue square.
+106 Gone: a orange light.
+484 Gone: a orange button.
+492 Gone: a silver and grey machine.
+RESET
+0 None
+41 Gone: a fuchsia square.
+81 Gone: a red square.
+121 Gone: a teal cube.
+161 Gone: a orange block.
+201 Gone: yellow.
+241 Gone: a lime square.
+281 Gone: a blue square.
+483 None
+RESET
+0 None
+95 Gone: yellow.
+189 Gone: a blue square.
+283 Gone: a fuchsia block.
+377 Gone: a maroon square.
+472 Gone: a orange square.
+571 Gone: a teal cube.
+659 Gone: a red square.
+721 Gone: a orange cube.
+RESET
+0 None
+63 Gone: a orange square.
+125 Gone: a lime square.
+187 Gone: a aqua cube.
+249 Gone: a teal cube.
+311 Gone: a fuchsia square.
+379 Gone: a yellow square.
+435 Gone: a blue square.
+562 Gone: a gray bed.
+RESET
+0 None
+12 Gone: a lime square.
+23 Gone: a orange square.
+34 Gone: a fuchsia block.
+45 Gone: a red square.
+57 Gone: yellow.
+67 Gone: a aqua cube.
+78 Gone: a blue square.
+153 None
+392 Gone: a gray knife.
+1177 Gone: a silver face.
+RESET
+0 None
+91 Gone: a maroon.
+181 Gone: a aqua cube.
+271 Gone: a yellow block.
+361 Gone: a fuchsia block.
+454 Gone: a orange block.
+541 Gone: a blue cube.
+631 Gone: a red.
+801 Gone: a gray book.
+RESET
+0 None
+77 Gone: a lime square.
+153 Gone: a teal cube.
+230 Gone: a maroon square.
+308 Gone: a fuchsia square.
+381 Gone: a aqua cube.
+457 Gone: a red cross.
+460 Gone: a olive block.
+533 Gone: yellow.
+746 Gone: a gray block.
+RESET
+0 None
+49 Gone: a orange square.
+97 Gone: a teal cube.
+148 Gone: a maroon.
+193 Gone: a aqua cube.
+241 Gone: a red.
+289 Gone: a yellow block.
+337 Gone: a fuchsia heart.
+624 None
+632 Gone: a silver chair.
+RESET
+0 None
+37 Gone: a orange block.
+73 Gone: a blue block.
+109 Gone: a teal cube.
+145 Gone: a maroon.
+182 Gone: a yellow block.
+218 Gone: a fuchsia block.
+253 Gone: a lime block.
+453 None
+RESET
+0 None
+91 Gone: a fuchsia block.
+181 Gone: a aqua cube.
+277 Gone: yellow.
+361 Gone: a teal cube.
+395 Gone: a gray cube.
+451 Gone: a maroon cube.
+541 Gone: red.
+543 Gone: a orange square.
+555 Gone: a olive star.
+631 Gone: a orange star.
+952 None
+RESET
+0 None
+67 Gone: a lime square.
+133 Gone: yellow.
+199 Gone: a teal cube.
+265 Gone: a orange square.
+331 Gone: a maroon heart.
+398 Gone: a red star.
+463 Gone: a aqua cube.
+549 None
+582 Gone: a gray knife.
+RESET
+0 None
+24 Gone: a fuchsia square.
+47 Gone: a red cube.
+70 Gone: a maroon square.
+95 Gone: a yellow square.
+116 Gone: a teal cube.
+139 Gone: a blue square.
+162 Gone: a orange star.
+355 None
+1013 Gone: a silver dog.
+RESET
+0 None
+95 Gone: a orange block.
+189 Gone: a teal cube.
+284 Gone: a yellow block.
+377 Gone: a aqua cube.
+471 Gone: a fuchsia block.
+565 Gone: a lime block.
+659 Gone: a maroon.
+1059 Gone: a gray book.
+RESET
+0 None
+59 Gone: a lime block.
+117 Gone: a orange block.
+175 Gone: a teal cube.
+177 Gone: a maroon cloth.
+233 Gone: a maroon cube.
+292 Gone: a fuchsia block.
+349 Gone: a yellow block.
+407 Gone: a aqua cube.
+705 Gone: a gray cube.
+RESET
+0 None
+15 Gone: a maroon square.
+29 Gone: a lime square.
+43 Gone: a red square.
+58 Gone: a teal cube.
+71 Gone: a fuchsia cloth.
+85 Gone: a orange square.
+99 Gone: a blue square.
+340 None
+RESET
+0 None
+65 Gone: a fuchsia square.
+129 Gone: a teal cube.
+194 Gone: a lime square.
+257 Gone: a blue cube.
+321 Gone: a maroon square.
+385 Gone: a aqua cube.
+449 Gone: yellow.
+774 Gone: a gray cube.
+781 Gone: a gray toilet.
+RESET
+0 None
+27 Gone: a aqua cube.
+53 Gone: orange.
+79 Gone: a teal cube.
+105 Gone: a maroon square.
+132 Gone: a lime square.
+157 Gone: a fuchsia heart.
+183 Gone: yellow.
+364 None
+RESET
+0 None
+65 Gone: a aqua cube.
+129 Gone: a red.
+193 Gone: a orange block.
+257 Gone: a yellow block.
+321 Gone: a blue block.
+385 Gone: a fuchsia block.
+449 Gone: a maroon.
+768 Gone: a gray book.
+RESET
+0 None
+76 Gone: a aqua cube.
+151 Gone: a maroon square.
+226 Gone: a teal cube.
+301 Gone: a fuchsia square.
+376 Gone: yellow.
+453 Gone: lime.
+526 Gone: a red heart.
+685 Gone: a gray cube.
+RESET
+0 None
+94 Gone: a red.
+187 Gone: a fuchsia block.
+280 Gone: a blue square.
+373 Gone: a maroon heart.
+466 Gone: a aqua cube.
+560 Gone: a orange block.
+652 Gone: a yellow block.
+1037 Gone: a gray and a maroon cube.
+RESET
+0 None
+16 Gone: orange.
+31 Gone: a teal cube.
+46 Gone: a aqua cube.
+63 Gone: a fuchsia square.
+76 Gone: a blue cube.
+91 Gone: yellow.
+106 Gone: a maroon star.
+237 None
+RESET
+0 None
+68 Gone: a teal cube.
+135 Gone: a blue block.
+202 Gone: a yellow block.
+269 Gone: a aqua cube.
+336 Gone: a red.
+403 Gone: a maroon cube.
+470 Gone: a orange block.
+865 None
+RESET
+0 None
+31 Gone: a maroon square.
+61 Gone: a orange square.
+91 Gone: a blue square.
+122 Gone: a yellow block.
+151 Gone: a lime block.
+181 Gone: a red square.
+211 Gone: a aqua cube.
+543 Gone: a orange block.
+RESET
+0 None
+11 Gone: a red square.
+21 Gone: orange.
+31 Gone: a maroon square.
+42 Gone: a teal cube.
+51 Gone: a blue shirt.
+61 Gone: yellow.
+71 Gone: a aqua cube.
+370 Gone: a gray cube.
+862 None
+1103 Gone: a gray dog.
+RESET
+0 None
+52 Gone: orange.
+103 Gone: a fuchsia block.
+154 Gone: a red square.
+205 Gone: a aqua cube.
+257 Gone: a teal cube.
+307 Gone: a blue cube.
+358 Gone: yellow.
+716 Gone: a orange mouse.
+722 Gone: a gray feather.
+1132 Gone: a gray cube.
+RESET
+0 None
+87 Gone: a aqua cube.
+173 Gone: a teal cube.
+259 Gone: a yellow block.
+345 Gone: a orange block.
+431 Gone: a lime block.
+517 Gone: a blue block.
+603 Gone: a red.
+793 Gone: a gray book.
+RESET
+0 None
+RESET
+0 None
+42 Gone: a gray paper.
+45 Gone: a blue cube.
+50 Gone: a gray paper.
+53 Gone: a blue cube.
+58 Gone: a gray paper.
+61 Gone: a blue cube.
+64 Gone: a gray paper.
+67 Gone: a blue cube.
+71 Gone: a gray paper.
+74 Gone: a blue cube.
+77 Gone: a gray paper.
+80 Gone: a blue cube.
+RESET
+0 None
+11 Gone: a gray light.
+14 Gone: a blue square.
+17 Gone: a gray light.
+20 Gone: a blue square.
+24 Gone: a gray light.
+27 Gone: a blue square.
+30 Gone: a gray light.
+33 Gone: a blue square.
+36 Gone: a gray light.
+39 Gone: a blue square.
+44 Gone: a gray light.
+47 Gone: a blue square.
+51 Gone: a gray light.
+54 Gone: a blue square.
+58 Gone: a gray light.
+61 Gone: a blue square.
+68 None
+RESET
+0 None
+31 Gone: a silver square.
+34 Gone: a blue circle.
+38 Gone: a silver square.
+41 Gone: a blue circle.
+46 Gone: a silver square.
+49 Gone: a blue circle.
+52 Gone: a silver square.
+55 Gone: a blue circle.
+59 Gone: a silver square.
+62 Gone: a blue circle.
+65 Gone: a silver square.
+68 Gone: a blue circle.
+73 Gone: a silver square.
+76 Gone: a blue circle.
+81 Gone: a silver square.
+84 Gone: a blue circle.
+88 Gone: a silver square.
+91 Gone: a blue circle.
+95 Gone: a silver square.
+98 Gone: a blue circle.
+101 Gone: a silver square.
+104 Gone: a blue circle.
+108 Gone: a silver square.
+111 Gone: a blue circle.
+116 Gone: a silver square.
+119 Gone: a blue circle.
+122 Gone: a silver square.
+125 Gone: a blue circle.
+129 Gone: a silver square.
+132 Gone: a blue circle.
+137 Gone: a silver square.
+140 Gone: a blue circle.
+144 Gone: a silver square.
+147 Gone: a blue circle.
+152 Gone: red.
+RESET
+0 None
+31 Gone: a gray light.
+34 Gone: a blue cube.
+39 Gone: a gray light.
+42 Gone: a blue cube.
+47 Gone: a gray light.
+50 Gone: a blue cube.
+53 Gone: a gray light.
+56 Gone: a blue cube.
+60 Gone: a gray light.
+63 Gone: a blue cube.
+67 Gone: a gray light.
+70 Gone: a blue cube.
+74 Gone: a gray light.
+77 Gone: a blue cube.
+80 Gone: a gray light.
+83 Gone: a blue cube.
+86 Gone: a gray light.
+89 Gone: a blue cube.
+93 Gone: a gray light.
+96 Gone: a blue cube.
+100 Gone: a gray light.
+103 Gone: a blue cube.
+107 Gone: red.
+RESET
+0 None
+26 Gone: a silver square.
+29 Gone: a blue square.
+34 Gone: a silver square.
+37 Gone: a blue square.
+41 Gone: a silver square.
+44 Gone: a blue square.
+49 Gone: a silver square.
+52 Gone: a blue square.
+55 Gone: a silver square.
+58 Gone: a blue square.
+67 None
+RESET
+0 None
+42 Gone: a silver square.
+45 Gone: a blue square.
+49 Gone: a silver square.
+52 Gone: a blue square.
+56 Gone: a silver square.
+59 Gone: a blue square.
+64 Gone: a silver square.
+67 Gone: a blue square.
+72 Gone: a silver square.
+75 Gone: a blue square.
+80 Gone: a silver square.
+83 Gone: a blue square.
+87 Gone: a silver square.
+90 Gone: a blue square.
+94 Gone: a silver square.
+97 Gone: a blue square.
+102 Gone: a silver square.
+105 Gone: a blue square.
+110 Gone: a silver square.
+113 Gone: a blue square.
+117 Gone: a silver square.
+120 Gone: a blue square.
+RESET
+0 None
+46 Gone: a gray paper.
+49 Gone: a blue cross.
+53 Gone: a gray paper.
+56 Gone: a blue cross.
+61 Gone: a gray paper.
+64 Gone: a blue cross.
+68 Gone: a gray paper.
+71 Gone: a blue cross.
+76 Gone: a gray paper.
+79 Gone: a blue cross.
+84 Gone: a gray paper.
+87 Gone: a blue cross.
+90 Gone: a gray paper.
+93 Gone: a blue cross.
+97 Gone: a gray paper.
+100 Gone: a blue cross.
+104 Gone: a gray paper.
+107 Gone: a blue cross.
+111 Gone: a gray paper.
+114 Gone: a blue cross.
+119 Gone: red.
+RESET
+0 None
+45 Gone: a gray apple.
+48 Gone: a blue square.
+52 Gone: a gray apple.
+55 Gone: a blue square.
+60 Gone: a gray object.
+63 Gone: a blue square.
+67 Gone: a gray apple.
+70 Gone: a blue square.
+74 Gone: a gray apple.
+77 Gone: a blue square.
+81 Gone: a gray apple.
+84 Gone: a blue square.
+89 Gone: a gray apple.
+92 Gone: a blue square.
+95 Gone: a gray apple.
+98 Gone: a blue square.
+RESET
+0 None
+23 None
+26 Gone: a blue square.
+31 None
+34 Gone: a blue square.
+37 None
+40 Gone: a blue square.
+43 None
+46 Gone: a blue square.
+51 None
+54 Gone: a blue square.
+59 None
+62 Gone: a blue square.
+65 None
+68 Gone: a blue square.
+72 None
+75 Gone: a blue square.
+78 None
+81 Gone: a blue square.
+85 None
+88 Gone: a blue square.
+93 None
+96 Gone: a blue square.
+100 None
+103 Gone: a blue square.
+106 None
+109 Gone: a blue square.
+114 Gone: red.
+RESET
+0 None
+42 Gone: a silver window.
+45 Gone: a blue square.
+50 Gone: a silver window.
+53 Gone: a blue square.
+56 Gone: a silver window.
+59 Gone: a blue square.
+62 Gone: a silver window.
+65 Gone: a blue square.
+69 Gone: a silver window.
+72 Gone: a blue square.
+76 Gone: a silver window.
+79 Gone: a blue square.
+83 Gone: a silver window.
+86 Gone: a blue square.
+89 Gone: a silver window.
+92 Gone: a blue square.
+97 Gone: a silver window.
+100 Gone: a blue square.
+105 Gone: a silver window.
+108 Gone: a blue square.
+112 Gone: a silver window.
+115 Gone: a blue square.
+120 Gone: a silver window.
+123 Gone: a blue square.
+126 Gone: red.
+RESET
+0 None
+8 Gone: a gray object.
+11 Gone: a blue square.
+16 Gone: a gray object.
+19 Gone: a blue square.
+24 Gone: a gray object.
+27 Gone: a blue square.
+30 Gone: a gray object.
+33 Gone: a blue square.
+38 Gone: a gray object.
+41 Gone: a blue square.
+46 Gone: a gray object.
+49 Gone: a blue square.
+52 Gone: a gray object.
+55 Gone: a blue square.
+59 Gone: a gray object.
+62 Gone: a blue square.
+67 Gone: a gray object.
+70 Gone: a blue square.
+75 Gone: a gray object.
+78 Gone: a blue square.
+83 Gone: a gray object.
+86 Gone: a blue square.
+91 Gone: a gray object.
+94 Gone: a blue square.
+99 Gone: a gray object.
+102 Gone: a blue square.
+107 Gone: a gray object.
+110 Gone: a blue square.
+114 Gone: a gray object.
+117 Gone: a blue square.
+120 Gone: red.
+RESET
+0 None
+20 Gone: a gray window.
+23 Gone: a blue cube.
+26 Gone: a gray window.
+29 Gone: a blue cube.
+33 Gone: a gray window.
+36 Gone: a blue cube.
+40 Gone: a gray window.
+43 Gone: a blue cube.
+47 Gone: a gray window.
+RESET
+0 None
+14 Gone: a silver square.
+17 Gone: a blue square.
+22 Gone: a silver square.
+25 Gone: a blue square.
+28 Gone: a silver square.
+31 Gone: a blue square.
+36 Gone: a silver square.
+39 Gone: a blue square.
+44 Gone: a silver square.
+47 Gone: a blue square.
+52 Gone: a silver square.
+55 Gone: a blue square.
+58 Gone: a silver square.
+61 Gone: a blue square.
+64 Gone: a silver square.
+67 Gone: a blue square.
+70 Gone: a silver square.
+73 Gone: a blue square.
+78 Gone: a silver square.
+81 Gone: a blue square.
+84 Gone: a silver square.
+87 Gone: a blue square.
+92 Gone: red.
+RESET
+0 None
+36 Gone: a silver paper.
+39 Gone: a blue cube.
+42 Gone: a silver paper.
+45 Gone: a blue cube.
+49 Gone: a silver paper.
+52 Gone: a blue cube.
+57 Gone: a silver paper.
+60 Gone: a blue cube.
+64 Gone: a silver paper.
+67 Gone: a blue cube.
+71 Gone: a silver paper.
+74 Gone: a blue cube.
+78 Gone: a silver paper.
+81 Gone: a blue cube.
+86 Gone: a silver paper.
+89 Gone: a blue cube.
+93 Gone: a silver paper.
+96 Gone: a blue cube.
+100 Gone: a silver paper.
+103 Gone: a blue cube.
+107 Gone: red.
+RESET
+0 None
+48 Gone: a silver person.
+51 Gone: a blue cube.
+56 Gone: a silver person.
+59 Gone: a blue cube.
+64 Gone: a silver person.
+67 Gone: a blue cube.
+70 Gone: a silver person.
+73 Gone: a blue cube.
+77 Gone: a silver person.
+80 Gone: a blue cube.
+83 Gone: a silver person.
+86 Gone: a blue cube.
+90 Gone: a silver person.
+93 Gone: a blue cube.
+96 Gone: a silver person.
+99 Gone: a blue cube.
+103 Gone: a silver person.
+106 Gone: a blue cube.
+111 Gone: a silver person.
+114 Gone: a blue cube.
+117 Gone: a silver person.
+120 Gone: a blue cube.
+125 Gone: red.
+RESET
+0 None
+10 Gone: a gray paper.
+13 Gone: a blue square.
+16 Gone: a gray paper.
+19 Gone: a blue square.
+23 Gone: a gray paper.
+26 Gone: a blue square.
+31 Gone: a gray paper.
+34 Gone: a blue square.
+39 Gone: a gray paper.
+42 Gone: a blue square.
+45 Gone: a gray paper.
+48 Gone: a blue square.
+51 Gone: a gray paper.
+54 Gone: a blue square.
+57 Gone: a gray paper.
+60 Gone: a blue square.
+63 Gone: a gray paper.
+66 Gone: a blue square.
+70 Gone: a gray paper.
+73 Gone: a blue square.
+77 Gone: red.
+87 Gone: a silver toilet.
+RESET
+0 None
+14 Gone: a silver person.
+17 Gone: a blue cube.
+22 Gone: a silver person.
+25 Gone: a blue cube.
+30 Gone: a silver person.
+33 Gone: a blue cube.
+38 Gone: a silver person.
+41 Gone: a blue cube.
+46 Gone: a silver person.
+49 Gone: a blue cube.
+52 Gone: a silver person.
+57 Gone: a blue cube.
+65 Gone: a silver person.
+68 Gone: a blue cube.
+71 Gone: a silver person.
+74 Gone: a blue cube.
+77 Gone: a silver person.
+80 Gone: a blue cube.
+85 Gone: a silver person.
+88 Gone: a blue cube.
+93 Gone: a silver person.
+96 Gone: a blue cube.
+100 Gone: a silver person.
+103 Gone: a blue cube.
+108 Gone: a silver person.
+111 Gone: a blue cube.
+114 Gone: a silver person.
+117 Gone: a blue cube.
+122 Gone: red.
+RESET
+0 None
+9 Gone: a silver ball.
+12 Gone: a blue cross.
+17 Gone: a silver ball.
+20 Gone: a blue cross.
+23 Gone: a silver ball.
+26 Gone: a blue cross.
+31 Gone: a silver ball.
+34 Gone: a blue cross.
+39 Gone: a silver ball.
+42 Gone: a blue cross.
+47 Gone: a silver ball.
+50 Gone: a blue cross.
+54 Gone: a silver ball.
+57 Gone: a blue cross.
+60 Gone: a silver ball.
+63 Gone: a blue cross.
+66 Gone: a silver ball.
+69 Gone: a blue cross.
+73 Gone: a silver ball.
+76 Gone: a blue cross.
+80 Gone: a silver ball.
+83 Gone: a blue cross.
+87 Gone: red.
+RESET
+0 None
+19 Gone: a silver paper.
+22 Gone: a blue cube.
+27 Gone: a silver paper.
+30 Gone: a blue cube.
+33 Gone: a silver paper.
+36 Gone: a blue cube.
+40 Gone: a silver paper.
+43 Gone: a blue cube.
+47 Gone: a silver paper.
+50 Gone: a blue cube.
+54 Gone: a silver paper.
+57 Gone: a blue cube.
+61 Gone: a silver paper.
+64 Gone: a blue cube.
+67 Gone: a silver paper.
+70 Gone: a blue cube.
+74 Gone: a silver paper.
+77 Gone: a blue cube.
+80 Gone: a silver paper.
+83 Gone: a blue cube.
+87 Gone: a silver paper.
+RESET
+0 None
+9 Gone: a gray paper.
+12 Gone: a blue square.
+16 Gone: a gray paper.
+19 Gone: a blue square.
+23 Gone: a gray paper.
+26 Gone: a blue square.
+31 Gone: a gray paper.
+34 Gone: a blue square.
+38 Gone: a gray paper.
+41 Gone: a blue square.
+46 Gone: a gray paper.
+49 Gone: a blue square.
+52 Gone: a gray paper.
+55 Gone: a blue square.
+59 Gone: a gray paper.
+62 Gone: a blue square.
+65 Gone: a gray paper.
+68 Gone: a blue square.
+72 Gone: a gray paper.
+75 Gone: a blue square.
+78 Gone: a gray paper.
+81 Gone: a blue square.
+85 Gone: a gray paper.
+88 Gone: a blue square.
+92 Gone: a gray paper.
+95 Gone: a blue square.
+98 Gone: a gray paper.
+101 Gone: a blue square.
+104 Gone: a gray paper.
+107 Gone: a blue square.
+111 Gone: a gray paper.
+114 Gone: a blue square.
+118 Gone: a gray paper.
+121 Gone: a blue square.
+126 Gone: a gray paper.
+129 Gone: a blue square.
+132 Gone: red.
+201 Gone: a silver dog.
+RESET
+0 None
+46 Gone: a silver square.
+49 Gone: a blue square.
+53 Gone: a silver square.
+56 Gone: a blue square.
+59 Gone: a silver square.
+62 Gone: a blue square.
+67 Gone: a silver square.
+70 Gone: a blue square.
+73 Gone: a silver square.
+76 Gone: a blue square.
+80 Gone: a silver square.
+83 Gone: a blue square.
+86 Gone: a silver square.
+89 Gone: a blue square.
+93 Gone: a silver square.
+96 Gone: a blue square.
+99 Gone: a silver square.
+102 Gone: a blue square.
+105 Gone: a silver square.
+108 Gone: a blue square.
+111 Gone: a silver square.
+114 Gone: a blue square.
+117 Gone: a silver square.
+120 Gone: a blue square.
+123 Gone: a silver square.
+126 Gone: a blue square.
+129 Gone: a silver square.
+132 Gone: a blue square.
+136 Gone: a silver square.
+139 Gone: a blue square.
+142 Gone: a silver square.
+145 Gone: a blue square.
+149 Gone: a silver square.
+152 Gone: a blue square.
+156 Gone: a silver square.
+159 Gone: a blue square.
+163 Gone: a silver square.
+166 Gone: a blue square.
+171 Gone: a silver square.
+174 Gone: a blue square.
+178 Gone: a red.
+RESET
+0 None
+11 Gone: a gray object.
+14 Gone: a blue cube.
+19 Gone: a gray object.
+22 Gone: a blue cube.
+26 Gone: a gray object.
+29 Gone: a blue cube.
+33 Gone: a gray object.
+36 Gone: a blue cube.
+40 Gone: a gray object.
+43 Gone: a blue cube.
+48 Gone: a gray object.
+51 Gone: a blue cube.
+56 Gone: a gray object.
+59 Gone: a blue cube.
+62 Gone: a gray object.
+65 Gone: a blue cube.
+70 Gone: a gray object.
+73 Gone: a blue cube.
+77 Gone: a gray object.
+80 Gone: a blue cube.
+84 Gone: a gray object.
+87 Gone: a blue cube.
+91 Gone: a gray object.
+94 Gone: a blue cube.
+97 Gone: a gray object.
+100 Gone: a blue cube.
+105 Gone: red.
+RESET
+0 None
+22 Gone: a silver paper.
+25 Gone: a blue cube.
+29 Gone: a silver paper.
+32 Gone: a blue cube.
+35 Gone: a silver paper.
+38 Gone: a blue cube.
+43 Gone: a silver paper.
+46 Gone: a blue cube.
+51 Gone: a silver paper.
+54 Gone: a blue cube.
+59 Gone: a silver paper.
+62 Gone: a blue cube.
+66 Gone: a silver paper.
+69 Gone: a blue cube.
+72 Gone: a silver paper.
+75 Gone: a blue cube.
+79 Gone: a silver paper.
+82 Gone: a blue cube.
+85 Gone: a silver paper.
+88 Gone: a blue cube.
+92 Gone: a silver paper.
+95 Gone: a blue cube.
+98 Gone: a silver paper.
+101 Gone: a blue cube.
+106 Gone: a silver paper.
+109 Gone: a blue cube.
+113 Gone: a silver paper.
+116 Gone: a blue cube.
+119 Gone: a silver paper.
+122 Gone: a blue cube.
+125 Gone: a silver paper.
+128 Gone: a blue cube.
+132 Gone: a silver paper.
+135 Gone: a blue cube.
+139 Gone: a silver paper.
+142 Gone: a blue cube.
+147 Gone: a silver paper.
+150 Gone: a blue cube.
+153 Gone: a silver paper.
+156 Gone: a blue cube.
+159 Gone: red.
+RESET
+0 None
+49 Gone: a silver window.
+52 Gone: a blue square.
+56 Gone: a silver window.
+59 Gone: a blue square.
+62 Gone: a silver window.
+65 Gone: a blue square.
+69 Gone: a silver window.
+72 Gone: a blue square.
+76 Gone: a silver window.
+79 Gone: a blue square.
+83 Gone: a silver window.
+86 Gone: a blue square.
+91 Gone: a silver window.
+94 Gone: a blue square.
+97 Gone: a silver window.
+100 Gone: a blue square.
+104 Gone: a silver window.
+107 Gone: a blue square.
+111 Gone: a silver window.
+114 Gone: a blue square.
+119 Gone: a silver window.
+122 Gone: a blue square.
+126 Gone: a silver window.
+129 Gone: a blue square.
+133 Gone: a silver window.
+136 Gone: a blue square.
+140 Gone: a silver window.
+143 Gone: a blue square.
+147 Gone: red.
+RESET
+0 None
+20 Gone: a silver square.
+23 Gone: a blue square.
+27 Gone: a silver square.
+30 Gone: a blue square.
+34 Gone: a silver square.
+37 Gone: a blue square.
+42 Gone: a silver square.
+45 Gone: a blue square.
+49 Gone: a silver square.
+52 Gone: a blue square.
+56 Gone: a silver square.
+59 Gone: a blue square.
+64 Gone: a silver square.
+67 Gone: a blue square.
+70 Gone: a silver square.
+73 Gone: a blue square.
+78 Gone: a silver square.
+81 Gone: a blue square.
+86 Gone: a silver square.
+89 Gone: a blue square.
+94 Gone: red.
+RESET
+0 None
+40 Gone: a silver window.
+43 Gone: a blue square.
+47 Gone: a silver window.
+50 Gone: a blue square.
+53 Gone: a silver window.
+56 Gone: a blue square.
+61 Gone: a silver window.
+64 Gone: a blue square.
+69 Gone: a silver window.
+72 Gone: a blue square.
+75 Gone: a silver window.
+78 Gone: a blue square.
+83 Gone: a silver window.
+86 Gone: a blue square.
+90 Gone: a silver window.
+93 Gone: a blue square.
+98 Gone: a silver window.
+101 Gone: a blue square.
+104 Gone: a silver window.
+107 Gone: a blue square.
+110 Gone: a silver window.
+113 Gone: a blue square.
+117 Gone: a silver window.
+120 Gone: a blue square.
+125 Gone: a silver window.
+128 Gone: a blue square.
+132 Gone: a silver window.
+135 Gone: a blue square.
+140 Gone: a silver window.
+143 Gone: a blue square.
+148 Gone: a silver window.
+151 Gone: a blue square.
+158 None
+166 Gone: a silver window.
+169 Gone: a blue square.
+172 Gone: a silver window.
+175 Gone: a blue square.
+180 Gone: red.
+RESET
+0 None
+15 Gone: a gray object.
+18 Gone: a blue cross.
+23 Gone: a gray object.
+26 Gone: a blue cross.
+30 Gone: a gray object.
+33 Gone: a blue cross.
+38 Gone: a gray object.
+41 Gone: a blue cross.
+46 Gone: a gray object.
+49 Gone: a blue cross.
+52 Gone: a gray object.
+55 Gone: a blue cross.
+58 Gone: a gray object.
+61 Gone: a blue cross.
+64 Gone: a gray object.
+67 Gone: a blue cross.
+71 Gone: a gray object.
+74 Gone: a blue cross.
+77 Gone: a gray object.
+80 Gone: a blue cross.
+84 Gone: a gray object.
+87 Gone: a blue cross.
+92 Gone: a gray object.
+95 Gone: a blue cross.
+98 Gone: a gray object.
+101 Gone: a blue cross.
+105 Gone: a gray object.
+108 Gone: a blue cross.
+111 Gone: a gray object.
+114 Gone: a blue cross.
+117 Gone: a gray object.
+120 Gone: a blue cross.
+123 Gone: a gray object.
+126 Gone: a blue cross.
+130 Gone: red.
+RESET
+0 None
+50 Gone: a silver cup.
+53 Gone: a blue square.
+57 Gone: a silver cup.
+60 Gone: a blue square.
+65 Gone: a silver cup.
+68 Gone: a blue square.
+73 Gone: a silver cup.
+76 Gone: a blue square.
+80 Gone: a silver cup.
+83 Gone: a blue square.
+87 Gone: a silver cup.
+90 Gone: a blue square.
+94 Gone: a silver cup.
+97 Gone: a blue square.
+102 Gone: a silver cup.
+105 Gone: a blue square.
+108 Gone: a silver cup.
+111 Gone: a blue square.
+116 Gone: a silver cup.
+119 Gone: a blue square.
+123 Gone: a silver cup.
+126 Gone: a blue square.
+129 Gone: a silver cup.
+132 Gone: a blue square.
+136 Gone: a silver cup.
+139 Gone: a blue square.
+143 Gone: a silver cup.
+146 Gone: a blue square.
+150 Gone: a silver cup.
+153 Gone: a blue square.
+157 Gone: a silver cup.
+160 Gone: a blue square.
+165 Gone: a silver cup.
+168 Gone: a blue square.
+171 Gone: a silver cup.
+174 Gone: a blue square.
+178 Gone: a red square.
+RESET
+0 None
+22 Gone: a gray person.
+25 Gone: a blue cube.
+30 Gone: a gray person.
+33 Gone: a blue cube.
+36 Gone: a gray person.
+39 Gone: a blue cube.
+44 Gone: a gray person.
+47 Gone: a blue cube.
+52 Gone: a gray person.
+55 Gone: a blue cube.
+60 Gone: a gray person.
+63 Gone: a blue cube.
+68 Gone: a gray person.
+71 Gone: a blue cube.
+75 Gone: a gray person.
+78 Gone: a blue cube.
+83 Gone: a gray person.
+86 Gone: a blue cube.
+91 Gone: a gray person.
+94 Gone: a blue cube.
+99 Gone: a gray person.
+102 Gone: a blue cube.
+107 Gone: a gray person.
+110 Gone: a blue cube.
+114 Gone: a gray person.
+117 Gone: a blue cube.
+121 Gone: a gray person.
+124 Gone: a blue cube.
+127 Gone: a gray person.
+130 Gone: a blue cube.
+134 Gone: a gray person.
+137 Gone: a blue cube.
+140 Gone: a gray person.
+143 Gone: a blue cube.
+148 Gone: a gray person.
+151 Gone: a blue cube.
+154 Gone: red.
+RESET
+0 None
+30 Gone: a silver person.
+33 Gone: a blue square.
+36 Gone: a silver person.
+39 Gone: a blue square.
+44 Gone: a silver person.
+47 Gone: a blue square.
+50 Gone: a silver person.
+53 Gone: a blue square.
+57 Gone: a silver person.
+60 Gone: a blue square.
+63 Gone: a silver person.
+66 Gone: a blue square.
+71 Gone: a silver person.
+74 Gone: a blue square.
+77 Gone: a silver person.
+80 Gone: a blue square.
+85 Gone: a silver person.
+88 Gone: a blue square.
+92 Gone: a silver person.
+95 Gone: a blue square.
+100 Gone: a silver person.
+103 Gone: a blue square.
+108 Gone: a silver person.
+111 Gone: a blue square.
+116 Gone: a silver person.
+119 Gone: a blue square.
+124 Gone: a silver person.
+127 Gone: a blue square.
+130 Gone: a silver person.
+133 Gone: a blue square.
+136 Gone: a silver person.
+139 Gone: a blue square.
+142 Gone: a silver person.
+145 Gone: a blue square.
+148 Gone: a silver person.
+151 Gone: a blue square.
+156 Gone: a silver person.
+159 Gone: a blue square.
+162 Gone: a silver person.
+165 Gone: a blue square.
+168 Gone: red.
+RESET
+0 None
+9 Gone: a silver object.
+12 Gone: a blue square.
+15 Gone: a silver object.
+18 Gone: a blue square.
+21 Gone: a silver object.
+24 Gone: a blue square.
+28 Gone: a silver object.
+31 Gone: a blue square.
+36 Gone: a silver object.
+39 Gone: a blue square.
+44 Gone: a silver object.
+47 Gone: a blue square.
+50 Gone: a silver object.
+53 Gone: a blue square.
+58 Gone: a silver object.
+61 Gone: a blue square.
+66 Gone: a silver object.
+69 Gone: a blue square.
+72 Gone: a silver object.
+75 Gone: a blue square.
+80 Gone: red.
+RESET
+0 None
+41 Gone: a silver window.
+44 Gone: a blue cube.
+49 Gone: a silver window.
+52 Gone: a blue cube.
+55 Gone: a silver window.
+58 Gone: a blue cube.
+63 Gone: a silver window.
+66 Gone: a blue cube.
+69 Gone: a silver window.
+72 Gone: a blue cube.
+77 Gone: a silver window.
+80 Gone: a blue cube.
+85 Gone: a silver window.
+88 Gone: a blue cube.
+91 Gone: a silver window.
+94 Gone: a blue cube.
+98 Gone: a silver window.
+101 Gone: a blue cube.
+106 Gone: a silver window.
+109 Gone: a blue cube.
+112 Gone: red.
+RESET
+0 None
+43 Gone: a gray window.
+46 Gone: a blue cube.
+51 Gone: a gray window.
+54 Gone: a blue cube.
+57 Gone: a gray window.
+60 Gone: a blue cube.
+64 Gone: a gray window.
+67 Gone: a blue cube.
+70 Gone: a gray window.
+73 Gone: a blue cube.
+78 Gone: a gray window.
+81 Gone: a blue cube.
+84 Gone: a gray window.
+87 Gone: a blue cube.
+92 Gone: a gray window.
+95 Gone: a blue cube.
+100 Gone: a gray window.
+103 Gone: a blue cube.
+106 Gone: a gray window.
+109 Gone: a blue cube.
+114 Gone: a gray window.
+117 Gone: a blue cube.
+120 Gone: a gray window.
+123 Gone: a blue cube.
+127 Gone: a gray window.
+130 Gone: a blue cube.
+134 Gone: a gray window.
+137 Gone: a blue cube.
+142 Gone: a gray window.
+145 Gone: a blue cube.
+148 Gone: a gray window.
+151 Gone: a blue cube.
+154 Gone: a gray window.
+157 Gone: a blue cube.
+162 Gone: a gray window.
+165 Gone: a blue cube.
+168 Gone: a gray window.
+171 Gone: a blue cube.
+175 Gone: a gray window.
+178 Gone: a blue cube.
+182 Gone: a red snail.
+RESET
+0 None
+7 Gone: a gray light.
+10 Gone: a blue cube.
+15 Gone: a gray light.
+18 Gone: a blue cube.
+22 Gone: a gray light.
+25 Gone: a blue cube.
+29 Gone: a gray light.
+32 Gone: a blue cube.
+36 Gone: a gray light.
+39 Gone: a blue cube.
+44 Gone: a gray light.
+47 Gone: a blue cube.
+52 Gone: a gray light.
+55 Gone: a blue cube.
+58 Gone: a gray light.
+61 Gone: a blue cube.
+64 Gone: a gray light.
+67 Gone: a blue cube.
+70 Gone: a gray light.
+73 Gone: a blue cube.
+78 Gone: a gray light.
+81 Gone: a blue cube.
+85 Gone: a gray light.
+88 Gone: a blue cube.
+93 Gone: a gray light.
+96 Gone: a blue cube.
+101 Gone: a gray light.
+104 Gone: a blue cube.
+107 Gone: red.
+310 Gone: a gray robot.
+343 Gone: a gray dog.
+RESET
+0 None
+39 Gone: a silver shirt.
+42 Gone: a blue circle.
+47 Gone: a silver shirt.
+50 Gone: a blue circle.
+54 Gone: a silver shirt.
+57 Gone: a blue circle.
+61 Gone: a silver shirt.
+64 Gone: a blue circle.
+67 Gone: a silver shirt.
+70 Gone: a blue circle.
+74 Gone: a silver shirt.
+77 Gone: a blue square.
+81 Gone: a silver shirt.
+84 Gone: a blue square.
+89 Gone: a silver shirt.
+92 Gone: a blue square.
+95 Gone: a silver shirt.
+98 Gone: a blue circle.
+102 Gone: a silver shirt.
+105 Gone: a blue square.
+108 Gone: a silver shirt.
+111 Gone: a blue square.
+114 Gone: a silver shirt.
+117 Gone: a blue circle.
+120 Gone: a silver shirt.
+123 Gone: a blue square.
+128 Gone: a silver shirt.
+131 Gone: a blue circle.
+136 Gone: a silver shirt.
+139 Gone: a blue circle.
+144 Gone: a silver shirt.
+147 Gone: a blue square.
+150 Gone: a silver shirt.
+153 Gone: a blue square.
+157 Gone: red.
+RESET
+0 None
+50 Gone: a gray object.
+53 Gone: a blue cube.
+56 Gone: a gray object.
+59 Gone: a blue cube.
+62 Gone: a gray object.
+65 Gone: a blue cube.
+70 Gone: a gray object.
+73 Gone: a blue cube.
+77 Gone: a gray object.
+80 Gone: a blue cube.
+83 Gone: a gray object.
+86 Gone: a blue cube.
+91 Gone: a gray object.
+94 Gone: a blue cube.
+97 Gone: a gray object.
+100 Gone: a blue cube.
+103 Gone: a gray object.
+106 Gone: a blue cube.
+110 Gone: a gray object.
+113 Gone: a blue cube.
+116 Gone: a gray object.
+119 Gone: a blue cube.
+123 Gone: red.
+RESET
+0 None
+7 Gone: a gray paper.
+10 Gone: blue.
+14 Gone: a gray paper.
+17 Gone: blue.
+22 Gone: a gray paper.
+25 Gone: blue.
+29 Gone: a gray paper.
+32 Gone: blue.
+37 Gone: a gray paper.
+40 Gone: blue.
+44 Gone: a gray paper.
+47 Gone: blue.
+51 Gone: a gray paper.
+54 Gone: blue.
+57 Gone: a gray paper.
+60 Gone: blue.
+65 Gone: a gray paper.
+68 Gone: blue.
+73 Gone: a gray paper.
+76 Gone: blue.
+79 Gone: a gray paper.
+82 Gone: blue.
+86 Gone: a gray paper.
+89 Gone: blue.
+94 Gone: a gray paper.
+97 Gone: blue.
+102 Gone: a gray paper.
+105 Gone: blue.
+108 Gone: a gray paper.
+111 Gone: blue.
+115 Gone: red.
+RESET
+0 None
+7 Gone: a silver square.
+10 Gone: a blue square.
+14 Gone: a silver square.
+17 Gone: a blue square.
+21 Gone: a silver square.
+24 Gone: a blue square.
+28 Gone: a silver square.
+31 Gone: a blue square.
+34 Gone: a silver square.
+37 Gone: a blue square.
+42 Gone: a silver square.
+45 Gone: a blue square.
+48 Gone: a silver square.
+51 Gone: a blue square.
+55 Gone: a silver square.
+58 Gone: a blue square.
+62 Gone: a silver square.
+65 Gone: a blue square.
+70 Gone: a silver square.
+73 Gone: a blue square.
+76 Gone: a silver square.
+79 Gone: a blue square.
+84 Gone: a red cube.
+RESET
+0 None
+18 Gone: a gray paper.
+21 Gone: a blue square.
+26 Gone: a gray paper.
+29 Gone: a blue square.
+34 Gone: a gray paper.
+37 Gone: a blue square.
+40 Gone: a gray paper.
+43 Gone: a blue square.
+52 None
+RESET
+0 None
+33 Gone: a gray window.
+36 Gone: a blue object.
+40 Gone: a gray window.
+43 Gone: a blue object.
+48 Gone: a gray window.
+51 Gone: a blue object.
+56 Gone: a gray window.
+59 Gone: a blue object.
+64 Gone: a gray window.
+67 Gone: a blue object.
+70 Gone: a gray window.
+73 Gone: a blue object.
+77 Gone: a gray window.
+80 Gone: a blue object.
+85 Gone: a gray window.
+88 Gone: a blue object.
+RESET
+0 None
+12 Gone: a gray object.
+15 Gone: a blue cube.
+20 Gone: a gray object.
+23 Gone: a blue cube.
+28 Gone: a gray object.
+31 Gone: a blue cube.
+34 Gone: a gray object.
+37 Gone: a blue cube.
+41 Gone: a gray object.
+44 Gone: a blue cube.
+49 Gone: a gray object.
+52 Gone: a blue cube.
+55 Gone: a gray object.
+58 Gone: a blue cube.
+62 Gone: a gray object.
+65 Gone: a blue cube.
+68 Gone: a gray object.
+71 Gone: a blue cube.
+75 Gone: a gray object.
+78 Gone: a blue cube.
+83 Gone: a gray object.
+86 Gone: a blue cube.
+90 Gone: a gray object.
+93 Gone: a blue cube.
+98 Gone: a gray object.
+101 Gone: a blue cube.
+105 Gone: a gray object.
+108 Gone: a blue cube.
+112 Gone: a gray object.
+115 Gone: a blue cube.
+118 Gone: red shirt.
+147 Gone: a silver wall.
+174 Gone: a silver object.
+197 None
+RESET
+0 None
+14 Gone: a gray window.
+17 Gone: a blue square.
+21 Gone: a gray window.
+24 Gone: a blue square.
+27 Gone: a gray window.
+30 Gone: a blue square.
+33 Gone: a gray window.
+36 Gone: a blue square.
+39 Gone: a gray window.
+42 Gone: a blue square.
+46 Gone: a gray window.
+49 Gone: a blue square.
+52 Gone: a gray window.
+55 Gone: a blue square.
+60 Gone: a gray window.
+63 Gone: a blue square.
+67 Gone: a gray window.
+70 Gone: a blue square.
+75 Gone: a gray window.
+78 Gone: a blue square.
+82 Gone: a gray window.
+85 Gone: a blue square.
+89 Gone: a gray window.
+92 Gone: a blue square.
+95 Gone: a gray window.
+98 Gone: a blue square.
+101 Gone: a gray window.
+104 Gone: a blue square.
+109 Gone: a gray window.
+112 Gone: a blue square.
+115 Gone: a gray window.
+118 Gone: a blue square.
+121 Gone: a gray window.
+124 Gone: a blue square.
+127 Gone: a gray window.
+130 Gone: a blue square.
+133 Gone: red.
+RESET
+0 None
+15 Gone: a gray paper.
+18 Gone: a blue square.
+21 Gone: a gray paper.
+24 Gone: a blue square.
+27 Gone: a gray paper.
+30 Gone: a blue square.
+35 Gone: a gray paper.
+38 Gone: a blue square.
+42 Gone: a gray paper.
+45 Gone: a blue square.
+48 Gone: a gray paper.
+51 Gone: a blue square.
+54 Gone: a gray paper.
+57 Gone: a blue square.
+61 Gone: a gray paper.
+64 Gone: a blue square.
+67 Gone: a gray paper.
+70 Gone: a blue square.
+73 Gone: a gray paper.
+76 Gone: a blue square.
+81 Gone: a gray paper.
+84 Gone: a blue square.
+88 Gone: a gray paper.
+91 Gone: a blue square.
+94 Gone: a gray paper.
+97 Gone: a blue square.
+102 Gone: a gray paper.
+105 Gone: a blue square.
+109 Gone: a gray paper.
+112 Gone: a blue square.
+115 Gone: red.
+RESET
+0 None
+24 Gone: a silver square.
+27 Gone: a blue square.
+30 Gone: a silver square.
+33 Gone: a blue square.
+37 Gone: a silver square.
+40 Gone: a blue square.
+45 Gone: a silver square.
+48 Gone: a blue square.
+52 Gone: a silver square.
+55 Gone: a blue square.
+58 Gone: a silver square.
+61 Gone: a blue square.
+64 Gone: a silver square.
+67 Gone: a blue square.
+71 Gone: a silver square.
+74 Gone: a blue square.
+79 Gone: a silver square.
+82 Gone: a blue square.
+87 Gone: a silver square.
+90 Gone: a blue square.
+95 Gone: a silver square.
+98 Gone: a blue square.
+101 Gone: a silver square.
+104 Gone: a blue square.
+109 Gone: a silver square.
+112 Gone: a blue square.
+115 Gone: a silver square.
+118 Gone: a blue square.
+121 Gone: a silver square.
+124 Gone: a blue square.
+127 Gone: a silver square.
+130 Gone: a blue square.
+134 Gone: red.
+RESET
+0 None
+51 Gone: a gray mouse.
+54 Gone: a blue square.
+58 Gone: a gray mouse.
+61 Gone: a blue square.
+66 Gone: a gray mouse.
+69 Gone: a blue square.
+73 Gone: a gray mouse.
+76 Gone: a blue square.
+80 Gone: a gray mouse.
+83 Gone: a blue square.
+88 Gone: a gray mouse.
+91 Gone: a blue square.
+95 Gone: a gray mouse.
+98 Gone: a blue square.
+102 Gone: a gray mouse.
+105 Gone: a blue square.
+109 Gone: a gray mouse.
+112 Gone: a blue square.
+115 Gone: a gray mouse.
+118 Gone: a blue square.
+123 Gone: a gray mouse.
+126 Gone: a blue square.
+130 Gone: a gray mouse.
+133 Gone: a blue square.
+137 Gone: a gray mouse.
+140 Gone: a blue square.
+143 Gone: red.
+RESET
+0 None
+RESET
+0 None
+49 Gone: a silver object.
+52 Gone: a blue cube.
+56 Gone: a silver object.
+59 Gone: a blue cube.
+62 Gone: a silver object.
+65 Gone: a blue cube.
+70 Gone: a silver object.
+73 Gone: a blue cube.
+77 Gone: a silver object.
+80 Gone: a blue cube.
+85 Gone: a silver object.
+88 Gone: a blue cube.
+RESET
+0 None
+15 Gone: a gray square.
+18 Gone: a blue cube.
+22 Gone: a gray square.
+25 Gone: a blue cube.
+30 Gone: a gray square.
+33 Gone: a blue cube.
+37 Gone: a gray square.
+40 Gone: a blue cube.
+43 Gone: a gray square.
+46 Gone: a blue cube.
+50 Gone: a gray square.
+53 Gone: a blue cube.
+56 Gone: a gray square.
+59 Gone: a blue cube.
+64 Gone: a gray square.
+67 Gone: a blue cube.
+71 Gone: a gray square.
+74 Gone: a blue cube.
+79 Gone: a gray square.
+82 Gone: a blue cube.
+87 Gone: a gray square.
+90 Gone: a blue cube.
+95 Gone: a gray square.
+98 Gone: a blue cube.
+102 Gone: red.
+RESET
+0 None
+16 Gone: a gray object.
+19 Gone: a blue square.
+22 Gone: a gray object.
+25 Gone: a blue square.
+29 Gone: a gray object.
+32 Gone: a blue square.
+35 Gone: a gray object.
+38 Gone: a blue square.
+45 None
+421 Gone: a silver knife.
+572 Gone: a olive dog.
+602 Gone: a gray dog.
+747 Gone: a gray and black object.
+863 Gone: a gray and black object.
+924 Gone: a maroon dog.

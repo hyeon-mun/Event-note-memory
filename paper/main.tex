@@ -188,7 +188,6 @@ All methods share data, training steps, and evaluation; only the memory differs.
 \item \textbf{No memory}: the original instruction.
 \item \textbf{Notes v2--v6}: successive versions of our pipeline (Table~\ref{tab:rc}). v2 captions the full frame with SmolVLM2-500M at each event; v3 captions zoomed before/after crops as \note{Change: X -> Y.}; v4 keeps only the removed side (selection); v5 and v6 add measured color names with a fine (148) and a coarse (17) vocabulary (representation).
 \item \textbf{v7}: v6 without the scene note at $t=0$.
-\item \textbf{Periodic captions}: a full-frame scene caption every 50 steps with the same captioner, without event detection or selection.
 \item \textbf{Visual memory}: the zoomed crops (\emph{crop}) or full frames (\emph{keyframe}, as in RePlanMem-VLA~\cite{replanmem}) written at our events are tiled into an additional camera image.
 \item \textbf{Oracle note}: the true cue color name appended to the instruction (upper bound for text memory).
 \end{itemize}
@@ -264,7 +263,6 @@ v3 notes record both sides of every change. When the candidates appear, the note
 Removing this appeared content (v4) reduces approaches to unrelated cubes from 20 to 4 of 50 (Fig.~\ref{fig:errors}).
 The effect is causal for a fixed policy (Table~\ref{tab:swap}): adding the appeared content at test time to the v4 policy lowers its success from 0.54 to 0.30, and removing it from the v3 policy raises its success from 0.38 to 0.46.
 Since v3 and v4 also differ in sentence form, the swap measures the joint effect of content and format.
-\tbd{Periodic captions on the 26 tasks (C2): effect of event-triggered writing versus writing at fixed intervals.}
 
 \subsection{Representation}
 With v4, 13 of 50 episodes end at the cube that forms a similar-color pair with the cue; both captioners call maroon ``red'' and orange ``yellow'', so the note cannot separate them.
@@ -276,33 +274,33 @@ A representation must therefore be both discriminative for the task and stable b
 v6 reduces pair confusions but not the total error.
 In all 17 v6 episodes in which the policy approached a wrong cube, the cue note named the correct color.
 Most of these errors are among blue, aqua, and teal, and in these episodes the scene note at $t=0$ describes the cue as ``a blue cube'' while the measured note says ``aqua'' or ``teal''.
-The policy thus receives two inconsistent descriptions of the same object. \tbd{v7 without the scene note (C4).}
+The policy thus receives two inconsistent descriptions of the same object. Removing the scene note at test time only, with the 26-task v6 policy at 45k, does not resolve this: RC3-L rises from 0.74 to 0.80 and RC9-L from 0.28 to 0.30, but RC5-L falls from 0.68 to 0.54, and the single-cue mean drops slightly from 0.362 to 0.338 (Table~\ref{tab:long}). \tbd{v7 trained without the scene note (C4).}
 The oracle note, which names the cue exactly, reaches 0.87 on RC9-L; in its 50 standard episodes the policy still approached an unrelated cube seven times, and in two further episodes it approached the right cube without completing the touch.
 Together with the visual memory that is written correctly but ignored, these results indicate that, once the note is correct, the remaining bottleneck lies in grounding the remembered attribute to the current candidates. The content-swap control confirms that the policy reads the note. When the color word in every online \note{Gone:} note is replaced by the color of another candidate cube present in the scene, success drops from 0.96 / 0.94 / 0.48 to 0.44 / 0.64 / 0.34 on RC3 / RC5 / RC9-L, and the robot goes to the cube named by the wrong note: on RC3 and RC5 every episode that does not reach the right cube reaches the note's cube (22 of 22 and 15 of 15), and on RC9 14 of 31. The scene note at $t=0$ is left unchanged and still names the true cue, which explains why some episodes still reach the right cube. With the notes removed, the same policy falls to 0.26 / 0.10 / 0.08, close to the policy trained without notes (0.14 / 0.14 / 0.06). Forcing the true color into the online notes raises success only from 0.48 to 0.60 on RC9-L (0.90 / 0.94 on RC3 / RC5), still below the oracle-trained policy (0.80): correcting color names closes about a third of the gap, and the rest is in how the trained policy uses the note.
 
 \subsection{Memory types across 26 long-horizon tasks}
 \begin{table}[!t]
-\caption{Success on the 26 \texttt{-Long} tasks (one joint policy per method, 50 episodes per task). Both policies at 45k steps of the same 90k schedule. \tbd{Add v7, periodic, keyframe columns; 90k rows.}}
+\caption{Success on the 26 \texttt{-Long} tasks (one joint policy per method, 50 episodes per task). All at 45k steps of the same 90k schedule. $^\dagger$The v6 policy evaluated with v7 notes (scene note at $t{=}0$ removed at test time only). \tbd{Add v7 and keyframe columns.}}
 \label{tab:long}
 \begin{center}
 {\footnotesize
 \setlength{\tabcolsep}{3pt}
 \resizebox{\columnwidth}{!}{%
-\begin{tabular}{llcc}
+\begin{tabular}{llccc}
 \hline
-Family (memory type) & Variants & No memory & Notes v6 \\
+Family (memory type) & Variants & No memory & Notes v6 & v6, no scene note$^\dagger$ \\
 \hline
-RememberColor (object) & 3 / 5 / 9 & .22 / .06 / .04 & .74 / .68 / .28 \\
-RememberShape (object) & 3 / 5 / 9 & .20 / .12 / .16 & .38 / .26 / .16 \\
-ShapeAndColor (object) & 3x2 / 3x3 / 5x3 & .08 / .06 / .12 & .32 / .26 / .18 \\
-BunchOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 \\
-SeqOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 \\
-ChainOfColors (sequential) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 \\
-ShellGame (tracking) & Touch / Lamp & .20 / .14 & .16 / .26 \\
-BlinkCount (temporal) & E / M / H & .02 / .00 / .00 & .06 / .04 / .00 \\
-TimedTransfer (temporal) & E / M / H & .00 / .04 / .06 & .00 / .00 / .00 \\
+RememberColor (object) & 3 / 5 / 9 & .22 / .06 / .04 & .74 / .68 / .28 & .80 / .54 / .30 \\
+RememberShape (object) & 3 / 5 / 9 & .20 / .12 / .16 & .38 / .26 / .16 & .32 / .18 / .12 \\
+ShapeAndColor (object) & 3x2 / 3x3 / 5x3 & .08 / .06 / .12 & .32 / .26 / .18 & .32 / .32 / .14 \\
+BunchOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 \\
+SeqOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 \\
+ChainOfColors (sequential) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 \\
+ShellGame (tracking) & Touch / Lamp & .20 / .14 & .16 / .26 & .12 / .28 \\
+BlinkCount (temporal) & E / M / H & .02 / .00 / .00 & .06 / .04 / .00 & .02 / .02 / .00 \\
+TimedTransfer (temporal) & E / M / H & .00 / .04 / .06 & .00 / .00 / .00 & .00 / .00 / .00 \\
 \hline
-Mean (26 tasks) & & 0.058 & 0.145 \\
+Mean (26 tasks) & & 0.058 & 0.145 & 0.134 \\
 \hline
 \end{tabular}}
 }
@@ -314,7 +312,7 @@ Notes help all nine single-cue object tasks: colors, shapes, and their combinati
 They do not help tasks that require several cues at once (BunchOfColors, SeqOfColors) or in order (ChainOfColors).
 For ChainOfColors3 we had verified separately that even the true color sequence in the instruction yields 0/50, so that family is limited by the multi-touch skill rather than by memory.
 In tracking tasks (ShellGame) the shuffle is a continuous motion of objects that remain visible, which our event trigger does not describe; in BlinkCount each blink produces a note but the window of eight notes truncates long sequences; and in TimedTransfer the frequent lamp and object changes produce about 97 events per episode, most of which are noise.
-\tbd{Comparison of the five memory types (no memory, v6, v7, periodic captions, keyframes) at 45k steps on all 26 tasks.}
+\tbd{Comparison of the memory types (no memory, v6, v7, keyframes) at 45k steps on all 26 tasks.}
 
 \subsection{Comparison on short RememberColor}
 \begin{table}[!t]
