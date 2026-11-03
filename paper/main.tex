@@ -229,6 +229,7 @@ The note versions v2, v4, and v6 are statistically indistinguishable on RC9-L; w
 Since the delay before the decision is drawn per episode, we also binned the episodes by delay (50--183, 184--316, 317--450 steps). The success of the note policy does not depend on the delay within the trained range (RC9-L v6: 0.48, 0.42, 0.57; oracle: 0.86, 0.87, 0.87), as expected from a memory that is written once and kept. With a fixed delay of 1000 steps, more than twice the longest delay seen in training, the note policy keeps its success on RC5-L (0.68 to 0.76) and RC9-L (0.28 to 0.32), while the policy without memory stays near chance (0.08 and 0.04); both at 45k steps on the 26-task mixture. \tbd{Other memory types.}
 
 \subsection{Selection}
+\label{sec:sel}
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\columnwidth]{figs/fig_errors.pdf}
@@ -314,6 +315,34 @@ They do not help tasks that require several cues at once (BunchOfColors, SeqOfCo
 For ChainOfColors3 we had verified separately that even the true color sequence in the instruction yields 0/50, so that family is limited by the multi-touch skill rather than by memory.
 In tracking tasks (ShellGame) the shuffle is a continuous motion of objects that remain visible, which our event trigger does not describe; in BlinkCount each blink produces a note but the window of eight notes truncates long sequences; and in TimedTransfer the frequent lamp and object changes produce about 97 events per episode, most of which are noise.
 \tbd{Comparison of the five memory types (no memory, v6, v7, periodic captions, keyframes) at 45k steps on all 26 tasks.}
+
+\subsection{Comparison on short RememberColor}
+\begin{table}[!t]
+\caption{Success on the short RememberColor3/5/9-VLA tasks. Ours: one joint policy per row, 10k steps, 50 episodes per task, GPU physics. $\mu$VLA rows are taken from~\cite{muvla} (OpenVLA-OFT backbone, 100 episodes, trained on a five-task mixture that contains RC5 only, so RC3 and RC9 are held out); the MIKASA-Robo-VLA reference reports RC5 only~\cite{mikasavla}.}
+\label{tab:short}
+\begin{center}
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llccc}
+\hline
+Method & Memory & RC3 & RC5 & RC9 \\
+\hline
+$\pi_{0.5}$~\cite{mikasavla} & none & -- & 0.25 & -- \\
+$\pi_{0.5}$~\cite{muvla} & none & 0.07 & 0.12 & 0.05 \\
+OpenVLA-OFT~\cite{muvla} & none & 0.00 & 0.04 & 0.03 \\
+$\mu$VLA ($m{=}64$, $K{=}2$)~\cite{muvla} & recurrent tokens & 0.92 & 0.93 & 0.41 \\
+OpenVLA-OFT + 1st frame~\cite{muvla} & first frame & 0.91 & 0.96 & 0.47 \\
+\hline
+$\pi_{0.5}$ (ours) & none & 0.30 & 0.18 & 0.10 \\
+$\pi_{0.5}$ + event notes v6 (ours) & text & 0.66 & 0.64 & 0.32 \\
+$\pi_{0.5}$ + oracle note (ours) & text & 0.68 & 0.64 & 0.64 \\
+\hline
+\end{tabular}
+}
+\end{center}
+\end{table}
+On the short tasks the cue is visible in the first frame and the decision follows within the same short episode. Here our detector fires exactly once, at $t{=}0$, so the v6 memory reduces to the scene note of the first frame; there is no disappearance event to select. Table~\ref{tab:short} shows that this note brings the policy to the oracle-note level on RC3 and RC5 (0.66 and 0.64 versus 0.68 and 0.64) and raises RC9 from 0.10 to 0.32, where the oracle reaches 0.64, which is consistent with the color-naming errors among nine colors analyzed in Section~\ref{sec:sel}. On these short episodes the absolute success is bounded by the manipulation skill learned in 10k steps (the oracle note reaches only 0.64--0.68), whereas $\mu$VLA and the first-frame reference reach 0.91--0.96 on RC3/5. Both of those receive the cue frame (or a recurrent summary of it) directly, which is sufficient when the cue is visible in the first observation; the Long tasks, in which the cue is followed by hundreds of steps and by other scene changes, are where an explicit memory of what disappeared is needed. The backbones, training mixtures, and episode counts differ, so we use these external numbers as a reference rather than as a ranking.
+\tbd{Standard MIKASA-Robo RememberColor3/5/9-v0 (no language, joint-delta control): v6 and no-memory, compared with MemoryVLA, MemoryVLA++, GMP, SimpleMemVLA, Chameleon.}
 
 \subsection{Discussion and limitations}
 Event notes are effective when a single attribute of a single object must be carried across a long delay, and they make the failure modes of a memory-augmented policy observable.

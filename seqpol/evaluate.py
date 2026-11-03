@@ -5,7 +5,7 @@ as the official runner; the only difference is an explicit policy.reset() per ep
 runner has no reset hook, which a stateful policy needs). Memory is updated on EVERY env step; a new
 action chunk is sampled every --exec steps.
 """
-import argparse, json, os, sys, time, warnings
+import argparse, dataclasses, json, os, sys, time, warnings
 warnings.filterwarnings("ignore")
 import numpy as np
 import torch
@@ -167,7 +167,7 @@ def run_task(runner, tid, n_eps, start_seed, log=None, ep_lo=0, sim_backend="gpu
         import mikasa_robo_suite.rl.memory_envs  # noqa: F401   same obs wrappers as the -VLA tasks (rgb + 7-d EEF proprio)
         from mikasa_robo_suite.vla.utils.apply_wrappers import VLA_WRAPPER_CONFIGS, VLAWrapperConfig
         VLA_WRAPPER_CONFIGS.setdefault(tt["env_id"], VLAWrapperConfig())
-        cfg.control_mode = "pd_joint_delta_pos"
+        cfg = dataclasses.replace(cfg, control_mode="pd_joint_delta_pos")
     env = make_benchmark_env(tt["env_id"], cfg)
     succ, lens, prog, phases = [], [], [], []
     for i in range(ep_lo, ep_lo + n_eps):

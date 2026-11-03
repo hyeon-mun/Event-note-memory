@@ -38,7 +38,7 @@
 *On Recurrent Memory for Partially Observable Manipulation in VLA Models.*
 
 - OpenVLA-OFT backbone 안에 recurrent memory token을 둡니다.
-- MIKASA-Robo 일부 과제 결과가 있습니다(RC5-VLA 0.93은 부분 확인. 전체 수치는 원문 확인 필요).
+- MIKASA-Robo-VLA 23개 과제 결과(Table 1, 100 ep): RC3/5/9 = 0.92/0.93/0.41 (m=64, K=2). 학습은 RC5 포함 5과제 혼합, RC3·RC9는 held-out. 같은 표의 π0.5는 0.07/0.12/0.05 (11/4 원문 확인).
 - 우리와 달리 메모리가 잠재 공간에 있습니다. 우리 메모리는 사람이 읽을 수 있는 텍스트라서 노트 교체나 oracle 대체로 단계별 오류를 분리할 수 있습니다.
 
 ## 2. 메모리 기반 정책 (표준 MIKASA-Robo RememberColor 3/5/9, %)
