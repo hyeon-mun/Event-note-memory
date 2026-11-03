@@ -313,3 +313,5 @@ memory-critical step reweighting via ΔL = L_flow(no-mem) - L_flow(mem) (pointwi
 - 08:15 v7 학습 45k 완료(DDP 4장), visfull 45k 07:15 완료. 평가 34개 동시 실행으로 CPU load 1500 → 10시까지 거의 못 끝남. 빠른 v7 과제 5개(t70,71,72,82,83)만 GPU 0–3에 남기고 나머지 종료. 남은 v7 21과제와 visfull 26과제는 `tools/evalq21.sh`(GPU 7, 여유 35 GB 이상일 때 그룹 시작).
 - 교훈: CPU physics 평가는 CPU가 병목. 동시 평가 수는 GPU가 아니라 CPU(128코어, 평가당 약 7코어)로 정해야 함 → 약 12–16개 이하.
 - 지연 1000 RC9-L: v6 0.32, base 0.04.
+- 09:55 stop_night: GPU 0–6 비움. 이후 GPU 7만 사용(사용자). v8 45k 체크포인트 저장됨. v7 t70 0.02, t71 0.00 완료, t72/82/83은 잘려 `tools/evalq22.sh`로 GPU 7에서 재평가.
+- v6tt7(시험 때만 v7 노트) 8과제 중간: t50 .80, t51 .54, t52 .30, t53 .32, t54 .18, t55 .12, t56 .32, t57 .32 (v6 45k: .74 .68 .28 .38 .26 .16 .32 .26).
