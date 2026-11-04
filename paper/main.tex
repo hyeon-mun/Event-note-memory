@@ -280,27 +280,28 @@ Together with the visual memory that is written correctly but ignored, these res
 
 \subsection{Memory types across 26 long-horizon tasks}
 \begin{table}[!t]
-\caption{Success on the 26 \texttt{-Long} tasks (one joint policy per method, 50 episodes per task). All at 45k steps of the same 90k schedule. $^\dagger$The v6 policy evaluated with v7 notes (scene note at $t{=}0$ removed at test time only). v7: trained and evaluated without the scene note. \tbd{Add keyframe column.}}
+\caption{Success on the 26 \texttt{-Long} tasks (one joint policy per method, 50 episodes per task). All at 45k steps of the same 90k schedule. $^\dagger$The v6 policy evaluated with v7 notes (scene note at $t{=}0$ removed at test time only). v7: trained and evaluated without the scene note. $^\ddagger$Full frames at our events tiled into an extra image (RePlanMem-style); evaluated on the nine single-cue tasks only.}
 \label{tab:long}
 \begin{center}
 {\footnotesize
 \setlength{\tabcolsep}{3pt}
 \resizebox{\columnwidth}{!}{%
-\begin{tabular}{llcccc}
+\begin{tabular}{llccccc}
 \hline
-Family (memory type) & Variants & No memory & Notes v6 & v6, no scene note$^\dagger$ & Notes v7 \\
+Family (memory type) & Variants & No memory & Notes v6 & v6, no scene note$^\dagger$ & Notes v7 & Keyframes$^\ddagger$ \\
 \hline
-RememberColor (object) & 3 / 5 / 9 & .22 / .06 / .04 & .74 / .68 / .28 & .80 / .54 / .30 & .58 / .50 / .38 \\
-RememberShape (object) & 3 / 5 / 9 & .20 / .12 / .16 & .38 / .26 / .16 & .32 / .18 / .12 & .18 / .08 / .08 \\
-ShapeAndColor (object) & 3x2 / 3x3 / 5x3 & .08 / .06 / .12 & .32 / .26 / .18 & .32 / .32 / .14 & .20 / .20 / .04 \\
-BunchOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 \\
-SeqOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 \\
-ChainOfColors (sequential) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 \\
-ShellGame (tracking) & Touch / Lamp & .20 / .14 & .16 / .26 & .12 / .28 & .08 / .16 \\
-BlinkCount (temporal) & E / M / H & .02 / .00 / .00 & .06 / .04 / .00 & .02 / .02 / .00 & .02 / .00 / .00 \\
-TimedTransfer (temporal) & E / M / H & .00 / .04 / .06 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .02 \\
+RememberColor (object) & 3 / 5 / 9 & .22 / .06 / .04 & .74 / .68 / .28 & .80 / .54 / .30 & .58 / .50 / .38 & .10 / .06 / .06 \\
+RememberShape (object) & 3 / 5 / 9 & .20 / .12 / .16 & .38 / .26 / .16 & .32 / .18 / .12 & .18 / .08 / .08 & .14 / .12 / .08 \\
+ShapeAndColor (object) & 3x2 / 3x3 / 5x3 & .08 / .06 / .12 & .32 / .26 / .18 & .32 / .32 / .14 & .20 / .20 / .04 & .04 / .06 / .04 \\
+BunchOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 & -- \\
+SeqOfColors (capacity) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 & -- \\
+ChainOfColors (sequential) & 3 / 5 / 7 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .00 & -- \\
+ShellGame (tracking) & Touch / Lamp & .20 / .14 & .16 / .26 & .12 / .28 & .08 / .16 & -- \\
+BlinkCount (temporal) & E / M / H & .02 / .00 / .00 & .06 / .04 / .00 & .02 / .02 / .00 & .02 / .00 / .00 & -- \\
+TimedTransfer (temporal) & E / M / H & .00 / .04 / .06 & .00 / .00 / .00 & .00 / .00 / .00 & .00 / .00 / .02 & -- \\
 \hline
-Mean (26 tasks) & & 0.058 & 0.145 & 0.134 & 0.097 \\
+Mean (26 tasks) & & 0.058 & 0.145 & 0.134 & 0.097 & -- \\
+Mean (9 single-cue tasks) & & 0.118 & 0.362 & 0.338 & 0.249 & 0.078 \\
 \hline
 \end{tabular}}
 }
@@ -312,7 +313,7 @@ Notes help all nine single-cue object tasks: colors, shapes, and their combinati
 They do not help tasks that require several cues at once (BunchOfColors, SeqOfColors) or in order (ChainOfColors).
 For ChainOfColors3 we had verified separately that even the true color sequence in the instruction yields 0/50, so that family is limited by the multi-touch skill rather than by memory.
 In tracking tasks (ShellGame) the shuffle is a continuous motion of objects that remain visible, which our event trigger does not describe; in BlinkCount each blink produces a note but the window of eight notes truncates long sequences; and in TimedTransfer the frequent lamp and object changes produce about 97 events per episode, most of which are noise.
-\tbd{Comparison of the memory types (no memory, v6, v7, keyframes) at 45k steps on all 26 tasks.}
+Across memory types at the same 45k steps, only text notes help: on the nine single-cue tasks the no-memory policy reaches 0.118, keyframes 0.078, v7 notes 0.249, and v6 notes 0.362. The keyframe memory receives the cue frame, written at the same events as the notes, yet stays at or below the no-memory level on eight of the nine tasks (RC9-L: 0.06 versus 0.04), which extends the RC-Long observation (Table~\ref{tab:rc}) that the policy does not use an additional memory image under our data and training budget.
 
 \subsection{Comparison on short RememberColor}
 \begin{table}[!t]
