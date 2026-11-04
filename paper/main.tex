@@ -359,14 +359,14 @@ SimpleMemVLA~\cite{simplememvla} & visual history & 0.71 & 0.58 & 0.59 \\
 GMP~\cite{gmp} & gated in-context & 0.80 & 0.61 & 0.17 \\
 Chameleon~\cite{chameleon} & prospective memory & 0.94 & 0.72 & 0.53 \\
 \hline
-$\pi_{0.5}$ (ours) & none & \tbd{} & \tbd{} & \tbd{} \\
+$\pi_{0.5}$ (ours) & none & 0.19 & 0.14 & 0.14 \\
 $\pi_{0.5}$ + event notes v6 (ours) & text & 0.65 & 0.84 & 0.51 \\
 \hline
 \end{tabular}}
 }
 \end{center}
 \end{table}
-Table~\ref{tab:v0} places the same pipeline on the standard RememberColor-v0 tasks used by recent memory-augmented policies. With event notes, $\pi_{0.5}$ reaches 0.65 / 0.84 / 0.51 on RC3 / RC5 / RC9. On RC5 this is the highest reported value, on RC9 it is close to SimpleMemVLA and Chameleon, and on RC3 it lies between MemoryVLA++ and SimpleMemVLA. As on the short -VLA tasks, the note is a single scene caption written at $t{=}0$. GMP trains one policy per task and Chameleon a small (about 60M-parameter) non-VLA policy evaluated with 30 episodes over three seeds, MemoryVLA, MemoryVLA++, and GMP report the best checkpoint, and the action spaces differ from our joint-delta actions, so the comparison indicates that a text note on an unmodified VLA is competitive with architectural memory on these tasks rather than establishing a ranking. \tbd{No-memory row.}
+Table~\ref{tab:v0} places the same pipeline on the standard RememberColor-v0 tasks used by recent memory-augmented policies. Without memory, $\pi_{0.5}$ stays below chance level (0.19 / 0.14 / 0.14); with event notes it reaches 0.65 / 0.84 / 0.51 on RC3 / RC5 / RC9. On RC5 this is the highest reported value, on RC9 it is close to SimpleMemVLA and Chameleon, and on RC3 it lies between MemoryVLA++ and SimpleMemVLA. As on the short -VLA tasks, the note is a single scene caption written at $t{=}0$. GMP trains one policy per task and Chameleon a small (about 60M-parameter) non-VLA policy evaluated with 30 episodes over three seeds, MemoryVLA, MemoryVLA++, and GMP report the best checkpoint, and the action spaces differ from our joint-delta actions, so the comparison indicates that a text note on an unmodified VLA is competitive with architectural memory on these tasks rather than establishing a ranking.
 
 \subsection{Discussion and limitations}
 Event notes are effective when a single attribute of a single object must be carried across a long delay, and they make the failure modes of a memory-augmented policy observable.
