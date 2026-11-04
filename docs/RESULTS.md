@@ -153,13 +153,15 @@
 
 | 방법 | RC3 | RC5 | RC9 | 비고 |
 |---|---|---|---|---|
-| π0.5 + v6 노트 (ours) | 진행 중 | | | `pi05_t1y_v6`, 11/4 밤 |
-| π0.5 base (ours) | 진행 중 | | | `pi05_t1y_base`, 11/5 |
+| π0.5 + v6 노트 (ours) | **0.65** | **0.84** | **0.51** | `pi05_t1y_v6` 10k, 100 ep, 11/4 |
+| π0.5 base (ours) | 진행 중 | | | `pi05_t1y_base`, 11/4 오후 |
 | MemoryVLA | 0.44 | 0.30 | 0.20 | 논문 수치, 조건 다름 |
 | MemoryVLA++ | 0.50 | 0.19 | 0.16 | 논문 수치, 조건 다름 |
 | GMP | 0.80 | 0.61 | 0.17 | 과제별 학습, VLA 아님 |
 | SimpleMemVLA | 0.71 | 0.58 | 0.59 | Qwen3.5-4B |
 | Chameleon | 0.944 | 0.722 | 0.533 | 30×3 seed, VLA 아님 |
+
+- v6 노트: RC5 0.84는 표의 최고값, RC9 0.51은 SimpleMemVLA(0.59)·Chameleon(0.53)에 가깝고, RC3 0.65는 MemoryVLA++(0.50)와 SimpleMemVLA(0.71) 사이입니다.
 
 외부 수치의 출처와 프로토콜 차이는 [RELATED_WORK.md](RELATED_WORK.md)에 있습니다. 우리는 데모의 관절 단위 행동(pd_joint_delta_pos)을 쓰고 -VLA 지시문을 붙였습니다.
 

@@ -342,7 +342,31 @@ $\pi_{0.5}$ + oracle note (ours) & text & 0.68 & 0.64 & 0.64 \\
 \end{center}
 \end{table}
 On the short tasks the cue is visible in the first frame and the decision follows within the same short episode. Here our detector fires exactly once, at $t{=}0$, so the v6 memory reduces to the scene note of the first frame; there is no disappearance event to select. Table~\ref{tab:short} shows that this note brings the policy to the oracle-note level on RC3 and RC5 (0.66 and 0.64 versus 0.68 and 0.64) and raises RC9 from 0.10 to 0.32, where the oracle reaches 0.64, which is consistent with the color-naming errors among nine colors analyzed in Section~\ref{sec:sel}. On these short episodes the absolute success is bounded by the manipulation skill learned in 10k steps (the oracle note reaches only 0.64--0.68), whereas $\mu$VLA and the first-frame reference reach 0.91--0.96 on RC3/5. Both of those receive the cue frame (or a recurrent summary of it) directly, which is sufficient when the cue is visible in the first observation; the Long tasks, in which the cue is followed by hundreds of steps and by other scene changes, are where an explicit memory of what disappeared is needed. The backbones, training mixtures, and episode counts differ, so we use these external numbers as a reference rather than as a ranking.
-\tbd{Standard MIKASA-Robo RememberColor3/5/9-v0 (no language, joint-delta control): v6 and no-memory, compared with MemoryVLA, MemoryVLA++, GMP, SimpleMemVLA, Chameleon.}
+\begin{table}[!t]
+\caption{Success on the standard MIKASA-Robo RememberColor3/5/9-v0 tasks~\cite{mikasa} (250 demonstrations per task; ours with 100 evaluation episodes per task). External numbers are taken from the cited papers; their action spaces, backbones, and checkpoint selection differ (see text). Ours: one joint policy per row, fixed 10k-step checkpoint, joint-delta actions, the -VLA instruction text added.}
+\label{tab:v0}
+\begin{center}
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llccc}
+\hline
+Method & Memory & RC3 & RC5 & RC9 \\
+\hline
+MemoryVLA~\cite{memoryvla} & perceptual-cognitive bank & 0.44 & 0.30 & 0.20 \\
+MemoryVLA++~\cite{memoryvlapp} & memory + imagination & 0.50 & 0.19 & 0.16 \\
+SimpleMemVLA~\cite{simplememvla} & visual history & 0.71 & 0.58 & 0.59 \\
+GMP~\cite{gmp} & gated in-context & 0.80 & 0.61 & 0.17 \\
+Chameleon~\cite{chameleon} & prospective memory & 0.94 & 0.72 & 0.53 \\
+\hline
+$\pi_{0.5}$ (ours) & none & \tbd{} & \tbd{} & \tbd{} \\
+$\pi_{0.5}$ + event notes v6 (ours) & text & 0.65 & 0.84 & 0.51 \\
+\hline
+\end{tabular}}
+}
+\end{center}
+\end{table}
+Table~\ref{tab:v0} places the same pipeline on the standard RememberColor-v0 tasks used by recent memory-augmented policies. With event notes, $\pi_{0.5}$ reaches 0.65 / 0.84 / 0.51 on RC3 / RC5 / RC9. On RC5 this is the highest reported value, on RC9 it is close to SimpleMemVLA and Chameleon, and on RC3 it lies between MemoryVLA++ and SimpleMemVLA. As on the short -VLA tasks, the note is a single scene caption written at $t{=}0$. GMP trains one policy per task and Chameleon a small (about 60M-parameter) non-VLA policy evaluated with 30 episodes over three seeds, MemoryVLA, MemoryVLA++, and GMP report the best checkpoint, and the action spaces differ from our joint-delta actions, so the comparison indicates that a text note on an unmodified VLA is competitive with architectural memory on these tasks rather than establishing a ranking. \tbd{No-memory row.}
 
 \subsection{Discussion and limitations}
 Event notes are effective when a single attribute of a single object must be carried across a long delay, and they make the failure modes of a memory-augmented policy observable.

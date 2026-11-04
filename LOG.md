@@ -328,3 +328,5 @@ memory-critical step reweighting via ΔL = L_flow(no-mem) - L_flow(mem) (pointwi
 - 행동은 데이터 그대로 `pd_joint_delta_pos`(8차원). 언어 지시가 없어 -VLA RememberColor 지시문을 붙임. 상태는 -VLA와 같은 7차원(xyz, rpy, 그리퍼).
 - 이벤트 감지는 에피소드당 t=0 한 번만 잡힘(t13도 같음) → 짧은 RC의 v6 노트는 t=0 장면 캡션 하나.
 - `tools/evalq25.sh`: PART=prep(노트 생성, 1 에피소드 동작 확인) → PART=train(pi05_t1y_v6 10k → 과제당 100 에피소드 평가, 이어서 pi05_t1y_base). prep 완료와 t1x_v6 학습 종료 후 자동 시작.
+
+- 11/4 09:20: evalq25 train part split into tools/evalq26.sh: pi05_t1y_base trains now in parallel with pi05_t1y_v6 (GPU 7 had 101 GB free after the v7/visfull evals); v6 eval starts when its training exits. Saves ~4 h.
