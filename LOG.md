@@ -330,3 +330,4 @@ memory-critical step reweighting via ΔL = L_flow(no-mem) - L_flow(mem) (pointwi
 - `tools/evalq25.sh`: PART=prep(노트 생성, 1 에피소드 동작 확인) → PART=train(pi05_t1y_v6 10k → 과제당 100 에피소드 평가, 이어서 pi05_t1y_base). prep 완료와 t1x_v6 학습 종료 후 자동 시작.
 
 - 11/4 09:20: evalq25 train part split into tools/evalq26.sh: pi05_t1y_base trains now in parallel with pi05_t1y_v6 (GPU 7 had 101 GB free after the v7/visfull evals); v6 eval starts when its training exits. Saves ~4 h.
+- 11/4 12:55: all planned results in (RC-v0 base 0.19/0.14/0.14). GPU 7 idle, so the dropped delay-1000 evals on t50/t53/t56 (v6, base 45k) run now via tools/delay_more7.sh.

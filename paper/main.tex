@@ -34,7 +34,8 @@ We decompose the remaining gap to an oracle note (0.87) along three axes.
 Selection: writing only what disappeared removes distractor notes, and changing the note writer of a fixed policy at test time changes its success by up to 24 points.
 Representation: naming colors from measured pixels instead of free-form captions reduces confusions between similar colors from 13 to 5 of 50 episodes.
 Utilization: in the remaining failures the note is correct, yet the policy approaches the wrong object.
-Across 26 long-horizon memory tasks, the notes help single-cue recall of colors and shapes but not tasks that require multiple cues, object tracking, counting, or timing, which delineates where lightweight language memory is and is not sufficient for VLA policies.
+On the standard RememberColor3/5/9 tasks of MIKASA-Robo, the same pipeline reaches 0.65 / 0.84 / 0.51 (no memory: 0.19 / 0.14 / 0.14), comparable to recent architectural memory methods.
+Across 26 long-horizon memory tasks, the notes help single-cue recall of colors and shapes but not tasks that require multiple cues, object tracking, counting, or timing; a visual keyframe memory written at the same events does not help. Together, these results delineate where lightweight language memory is and is not sufficient for VLA policies.
 \end{abstract}
 
 \begin{keywords}
@@ -76,7 +77,7 @@ Our contributions are:
 \item An event-driven semantic memory pipeline that preserves task-relevant information disappearing from view, without modifying the VLA architecture.
 \item Controlled evidence that selective writing and normalized attribute names change downstream decisions, including test-time note swaps on a fixed policy, and that redundant or inconsistent notes degrade the policy.
 \item An analysis of the gap between memory correctness and action success using generated notes, oracle notes, content-swapped notes, and visual memory.
-\item An evaluation on 26 long-horizon memory tasks with one joint policy per method, characterizing where lightweight language memory helps and where it does not.
+\item An evaluation on 26 long-horizon memory tasks with one joint policy per method, characterizing where lightweight language memory helps and where it does not, and a comparison with memory-augmented policies on the standard and -VLA short RememberColor tasks.
 \end{itemize}
 
 %======================================================================
@@ -380,7 +381,7 @@ Memory that must track continuous motion, count, or measure elapsed time require
 %======================================================================
 We showed that a VLA policy can solve long-horizon memory tasks it otherwise cannot, without architectural changes, by appending short notes about what disappeared from the scene.
 Selecting only removed content and naming attributes in a stable vocabulary are necessary for this, but not sufficient: with correct notes, a remaining gap lies in how the policy grounds the remembered attribute in the current scene.
-Text memory makes each of these stages measurable, which we hope will help design memories that go beyond single-cue recall.
+On the standard RememberColor tasks, the same unmodified policy with a one-line note is competitive with architectural memory, whereas an image memory written at the same events is ignored. Text memory makes each of these stages measurable, which we hope will help design memories that go beyond single-cue recall.
 
 %======================================================================
 \section*{DECLARATIONS}
