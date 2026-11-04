@@ -331,3 +331,4 @@ memory-critical step reweighting via ΔL = L_flow(no-mem) - L_flow(mem) (pointwi
 
 - 11/4 09:20: evalq25 train part split into tools/evalq26.sh: pi05_t1y_base trains now in parallel with pi05_t1y_v6 (GPU 7 had 101 GB free after the v7/visfull evals); v6 eval starts when its training exits. Saves ~4 h.
 - 11/4 12:55: all planned results in (RC-v0 base 0.19/0.14/0.14). GPU 7 idle, so the dropped delay-1000 evals on t50/t53/t56 (v6, base 45k) run now via tools/delay_more7.sh.
+- 11/4 18:xx: all experiments done; GPU monitors (gpuguard, gpu7 usage logs) stopped. Paper: removed C/D placeholder, contribution 2 no longer claims inconsistent notes degrade (v7 contradicts).

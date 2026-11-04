@@ -75,7 +75,7 @@ We analyze the pipeline along three axes: \emph{selection} (when and what to wri
 Our contributions are:
 \begin{itemize}
 \item An event-driven semantic memory pipeline that preserves task-relevant information disappearing from view, without modifying the VLA architecture.
-\item Controlled evidence that selective writing and normalized attribute names change downstream decisions, including test-time note swaps on a fixed policy, and that redundant or inconsistent notes degrade the policy.
+\item Controlled evidence that selective writing and normalized attribute names change downstream decisions, including test-time note swaps on a fixed policy that redirect the robot to the object named by the note.
 \item An analysis of the gap between memory correctness and action success using generated notes, oracle notes, content-swapped notes, and visual memory.
 \item An evaluation on 26 long-horizon memory tasks with one joint policy per method, characterizing where lightweight language memory helps and where it does not, and a comparison with memory-augmented policies on the standard and -VLA short RememberColor tasks.
 \end{itemize}
@@ -374,7 +374,6 @@ Event notes are effective when a single attribute of a single object must be car
 The measured color names are specific to color attributes and are not a general representation.
 The 26-task results come from one training seed per method; for the main RememberColor comparison the confidence intervals are reported over 150 episodes.
 Memory that must track continuous motion, count, or measure elapsed time requires structured state rather than event descriptions, which we leave to future work, together with object-centric and learned retrieval memories.
-\tbd{Interference experiment (C) and event-selection analysis (D) if completed.}
 
 %======================================================================
 \section{CONCLUSION}
