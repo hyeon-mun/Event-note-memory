@@ -43,13 +43,17 @@ def pipeline():
         box(x + 0.3, y, w, 10, t, sub)
     for x in xs[:-1]:
         arrow(x + w + 0.4, y + 5, x + w + g + 0.2, y + 5)
-    box(xs[4] + 0.3, 1.5, 2 * w + g, 10, "(6) Note memory", "write order, drop repeats\nkeep last K = 8")
-    arrow(xs[5] + w / 2, y - 0.2, xs[5] + w / 2, 11.7)
-    box(0.3, 1.5, 45.5, 10, "instruction + \"Notes: (1) a blue cube. (2) Gone: a aqua cube.\"",
-        "+ current top / wrist images + proprio", hl=True, ts=5.3)
-    box(49.3, 1.5, 15.2, 10, "$\\pi_{0.5}$, fine-tuned", "-> action chunk")
-    arrow(xs[4] + 0.1, 6.5, 64.4, 6.5)
-    arrow(49.1, 6.5, 46.1, 6.5)
+    box(0.3, 1.5, 24, 10, "(6) Note memory", "write order, drop repeats\nkeep last K = 8")
+    # Route the writer output to memory, then to the input and finally the policy.
+    # The previous layout accidentally pointed from the policy back to its input.
+    ax.plot([xs[5] + w / 2, xs[5] + w / 2, 12.3], [15.1, 13.3, 13.3],
+            lw=0.7, color="#4a5262")
+    arrow(12.3, 13.3, 12.3, 11.8)
+    box(29.3, 1.5, 45.5, 10, "instruction + numbered notes",
+        '"a blue cube. ... Gone: a aqua cube."\n+ current top / wrist images + proprio', hl=True, ts=6.2)
+    box(79.8, 1.5, 19.2, 10, "$\\pi_{0.5}$, fine-tuned", "action chunk")
+    arrow(24.6, 6.5, 29, 6.5)
+    arrow(75.1, 6.5, 79.5, 6.5)
     save(fig, "fig_pipeline")
 
 
